@@ -1,0 +1,23 @@
+<svg width="200" height="80" viewBox="0 0 200 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Wave to arrow logo mark -->
+  <path d="M10 50 Q20 30, 30 40 T50 35 T70 25 T90 20 T110 15 L120 10 L125 5 L130 10 L135 15 L140 20" 
+        stroke="#4A90E2" 
+        stroke-width="4" 
+        fill="none" 
+        stroke-linecap="round" 
+        stroke-linejoin="round"/>
+  <!-- Arrow head -->
+  <path d="M135 15 L150 5 L145 10 L150 15 L145 20 L150 25" 
+        stroke="#4A90E2" 
+        stroke-width="4" 
+        fill="none" 
+        stroke-linecap="round" 
+        stroke-linejoin="round"/>
+  <!-- Arrow fill -->
+  <path d="M135 15 L150 5 L150 25 L135 15" 
+        fill="#4A90E2" 
+        opacity="0.3"/>
+  <!-- Company name -->
+  <text x="10" y="65" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#1F2937">WAVES</text>
+  <text x="10" y="78" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#1F2937">LOGIX LTD.</text>
+</svg>
