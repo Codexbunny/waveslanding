@@ -79,6 +79,13 @@ html {
   -webkit-backdrop-filter: blur(20px) saturate(180%);
   border-bottom: 1px solid rgba(139, 92, 246, 0.1);
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.05);
+  isolation: isolate;
+}
+
+/* Sphere blur - consistent filter that works under navbar */
+.sphere-blur {
+  filter: blur(25px);
+  will-change: transform, filter;
 }
 
 /* Liquid glass effect */

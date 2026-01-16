@@ -1,182 +1,267 @@
 'use client';
 
-import { motion, useSpring, useTransform, useMotionValueEvent, useMotionValue } from 'framer-motion';
-import { useState, useEffect } from 'react';
+import { useEffect, useRef, useLayoutEffect } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import CTAButton from './CTAButton';
 
 const TELEGRAM_URL = process.env.NEXT_PUBLIC_TELEGRAM_URL || 'https://t.me/waveslogix';
 
-// Elliott Wave pattern positions (5 points forming a wave)
-const ELLIOTT_WAVE_CIRCLES = [
-  { id: 1, baseX: 0.15, baseY: 0.7, color: 'purple', size: 'w-32 h-32 md:w-40 md:h-40' },
-  { id: 2, baseX: 0.35, baseY: 0.65, color: 'purple', size: 'w-32 h-32 md:w-40 md:h-40' },
-  { id: 3, baseX: 0.5, baseY: 0.3, color: 'blue', size: 'w-36 h-36 md:w-44 md:h-44' }, // Peak - slightly larger
-  { id: 4, baseX: 0.65, baseY: 0.55, color: 'purple', size: 'w-32 h-32 md:w-40 md:h-40' },
-  { id: 5, baseX: 0.85, baseY: 0.45, color: 'blue', size: 'w-32 h-32 md:w-40 md:h-40' },
+// Register GSAP plugins
+if (typeof window !== 'undefined') {
+  gsap.registerPlugin(ScrollTrigger);
+}
+
+// Sphere configuration - spread across the screen with different base positions
+const SPHERES_CONFIG = [
+  { id: 1, baseX: 8, baseY: 25, color: 'purple', size: 52, oscillationSpeed: 0.08, oscillationAmp: 18 },
+  { id: 2, baseX: 85, baseY: 15, color: 'blue', size: 58, oscillationSpeed: 0.07, oscillationAmp: 22 },
+  { id: 3, baseX: 15, baseY: 70, color: 'purple', size: 48, oscillationSpeed: 0.09, oscillationAmp: 16 },
+  { id: 4, baseX: 75, baseY: 55, color: 'blue', size: 54, oscillationSpeed: 0.075, oscillationAmp: 20 },
+  { id: 5, baseX: 45, baseY: 40, color: 'purple', size: 60, oscillationSpeed: 0.065, oscillationAmp: 24 },
 ];
 
-function ElliottWaveCircle({ circle, mousePos, hoveredCircle, setHoveredCircle }: {
-  circle: typeof ELLIOTT_WAVE_CIRCLES[0];
-  mousePos: { x: number; y: number };
-  hoveredCircle: number | null;
-  setHoveredCircle: (id: number | null) => void;
-}) {
-  const [mouseOffset, setMouseOffset] = useState({ x: 0, y: 0 });
+interface SphereProps {
+  config: typeof SPHERES_CONFIG[0];
+}
 
-  // Calculate mouse repulsion
+function Sphere({ config }: SphereProps) {
+  const sphereRef = useRef<HTMLDivElement>(null);
+  const animationRef = useRef<number | null>(null);
+
   useEffect(() => {
-    const distance = Math.sqrt(
-      Math.pow(mousePos.x - circle.baseX, 2) + 
-      Math.pow(mousePos.y - circle.baseY, 2)
-    );
-    const repulsionRadius = 0.18;
-    const repulsionStrength = hoveredCircle === circle.id ? 0.25 : 0.15;
-    
-    if (distance < repulsionRadius && distance > 0.01) {
-      const angle = Math.atan2(
-        circle.baseY - mousePos.y,
-        circle.baseX - mousePos.x
-      );
-      const repulsion = repulsionStrength * (1 - distance / repulsionRadius);
-      setMouseOffset({
-        x: Math.cos(angle) * repulsion * 100,
-        y: Math.sin(angle) * repulsion * 100,
-      });
-    } else {
-      setMouseOffset({ x: 0, y: 0 });
-    }
-  }, [mousePos, circle, hoveredCircle]);
+    if (!sphereRef.current) return;
 
-  const springX = useSpring(mouseOffset.x, { stiffness: 150, damping: 30 });
-  const springY = useSpring(mouseOffset.y, { stiffness: 150, damping: 30 });
+    const sphere = sphereRef.current;
+    const startTime = Date.now();
+
+    const animate = () => {
+      const elapsed = (Date.now() - startTime) / 1000;
+
+      // Oscillation for floating effect
+      const oscillationX = Math.sin(elapsed * config.oscillationSpeed * Math.PI * 2) * config.oscillationAmp * 0.6;
+      const oscillationY = Math.cos(elapsed * config.oscillationSpeed * Math.PI * 2 + config.id) * config.oscillationAmp;
+      
+      // Secondary slower oscillation for more organic movement
+      const oscillation2X = Math.sin(elapsed * config.oscillationSpeed * 0.7 * Math.PI * 2 + 2) * config.oscillationAmp * 0.3;
+      const oscillation2Y = Math.cos(elapsed * config.oscillationSpeed * 0.5 * Math.PI * 2 + 1) * config.oscillationAmp * 0.4;
+
+      // Final position
+      const finalX = config.baseX + oscillationX + oscillation2X;
+      const finalY = config.baseY + oscillationY + oscillation2Y;
+      
+      // Subtle scale pulsing
+      const scale = 1 + Math.sin(elapsed * config.oscillationSpeed * Math.PI) * 0.06;
+
+      // Apply transform
+      sphere.style.left = `${finalX}%`;
+      sphere.style.top = `${finalY}%`;
+      sphere.style.transform = `translate(-50%, -50%) scale(${scale})`;
+
+      animationRef.current = requestAnimationFrame(animate);
+    };
+
+    animate();
+
+    return () => {
+      if (animationRef.current) cancelAnimationFrame(animationRef.current);
+    };
+  }, [config]);
+
+  // 3D sphere gradient colors (35% less opacity)
+  const gradientColors = config.color === 'purple'
+    ? {
+        highlight: 'rgba(196, 167, 255, 0.39)',
+        mid: 'rgba(139, 92, 246, 0.23)',
+        base: 'rgba(109, 40, 217, 0.16)',
+        shadow: 'rgba(76, 29, 149, 0.10)',
+      }
+    : {
+        highlight: 'rgba(147, 197, 253, 0.39)',
+        mid: 'rgba(74, 144, 226, 0.23)',
+        base: 'rgba(59, 130, 246, 0.16)',
+        shadow: 'rgba(30, 64, 175, 0.10)',
+      };
 
   return (
-    <motion.div
+    <div
+      ref={sphereRef}
+      className="absolute sphere-blur"
       style={{
-        position: 'absolute',
-        left: `${circle.baseX * 100}%`,
-        top: `${circle.baseY * 100}%`,
-        x: springX,
-        y: springY,
+        width: `${config.size * 4}px`,
+        height: `${config.size * 4}px`,
+        left: `${config.baseX}%`,
+        top: `${config.baseY}%`,
         transform: 'translate(-50%, -50%)',
+        zIndex: 1,
+        pointerEvents: 'none',
       }}
-      onMouseEnter={() => setHoveredCircle(circle.id)}
-      onMouseLeave={() => setHoveredCircle(null)}
     >
-      <motion.div
-        className={`${circle.size} rounded-full ${
-          circle.color === 'purple' 
-            ? 'bg-gradient-to-br from-purple-400/25 via-purple-500/30 to-purple-600/25' 
-            : 'bg-gradient-to-br from-blue-400/25 via-blue-500/30 to-blue-600/25'
-        } backdrop-blur-[80px] border border-white/20 shadow-[0_0_100px_rgba(139,92,246,0.3),0_0_200px_rgba(139,92,246,0.15)] cursor-pointer`}
+      {/* 3D Sphere with radial gradient */}
+      <div
+        className="w-full h-full rounded-full"
         style={{
-          filter: 'blur(20px) drop-shadow(0 20px 40px rgba(139, 92, 246, 0.2))',
-        }}
-        animate={{
-          x: [
-            0,
-            Math.sin(circle.id * 1.5) * 60,
-            Math.cos(circle.id * 2) * 80,
-            Math.sin(circle.id * 0.8) * 50,
-            0,
-          ],
-          y: [
-            0,
-            Math.cos(circle.id * 1.2) * 70,
-            Math.sin(circle.id * 1.8) * 90,
-            Math.cos(circle.id * 1.5) * 60,
-            0,
-          ],
-          scale: [1, 1.15, 1.05, 1.1, 1],
-          rotateX: [0, 10, -10, 5, 0],
-          rotateY: [0, -10, 10, -5, 0],
-        }}
-        transition={{
-          x: {
-            duration: 12 + circle.id * 1.5,
-            repeat: Infinity,
-            ease: "easeInOut",
-          },
-          y: {
-            duration: 15 + circle.id * 1.2,
-            repeat: Infinity,
-            ease: "easeInOut",
-          },
-          scale: {
-            duration: 6 + circle.id * 0.8,
-            repeat: Infinity,
-            ease: "easeInOut",
-          },
-          rotateX: {
-            duration: 10 + circle.id,
-            repeat: Infinity,
-            ease: "easeInOut",
-          },
-          rotateY: {
-            duration: 12 + circle.id * 0.8,
-            repeat: Infinity,
-            ease: "easeInOut",
-          },
-        }}
-        whileHover={{
-          scale: 1.6,
-          filter: 'blur(15px) drop-shadow(0 30px 60px rgba(139, 92, 246, 0.5))',
-          borderColor: "rgba(255, 255, 255, 0.4)",
+          background: `
+            radial-gradient(
+              ellipse 30% 30% at 30% 25%,
+              ${gradientColors.highlight} 0%,
+              transparent 50%
+            ),
+            radial-gradient(
+              ellipse 100% 100% at 50% 50%,
+              ${gradientColors.mid} 0%,
+              ${gradientColors.base} 50%,
+              ${gradientColors.shadow} 80%,
+              transparent 100%
+            )
+          `,
+          boxShadow: `
+            inset -20px -20px 60px rgba(0, 0, 0, 0.1),
+            inset 10px 10px 40px ${gradientColors.highlight},
+            0 20px 60px rgba(139, 92, 246, 0.2),
+            0 40px 100px rgba(139, 92, 246, 0.1)
+          `,
         }}
       />
-    </motion.div>
+    </div>
   );
 }
 
 export default function Hero() {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const [hoveredCircle, setHoveredCircle] = useState<number | null>(null);
-  const [scrollY, setScrollY] = useState(0);
+  const sectionRef = useRef<HTMLElement>(null);
+  const headlineRef = useRef<HTMLDivElement>(null);
+  const tagRef = useRef<HTMLDivElement>(null);
+  const section2Ref = useRef<HTMLDivElement>(null);
+  const section3Ref = useRef<HTMLDivElement>(null);
+  const section3CtaRef = useRef<HTMLDivElement>(null);
+  
 
-  useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      setMousePosition({
-        x: e.clientX / window.innerWidth,
-        y: e.clientY / window.innerHeight,
+  // GSAP ScrollTrigger animations
+  useLayoutEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    const ctx = gsap.context(() => {
+      // Hero headline - visible immediately, fades out on scroll
+      gsap.to(headlineRef.current, {
+        opacity: 0,
+        y: -80,
+        scale: 0.95,
+        ease: 'power2.out',
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: 'top top',
+          end: '20% top',
+          scrub: 0.8,
+        },
       });
-    };
 
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
-    };
+      // Tag also fades out
+      gsap.to(tagRef.current, {
+        opacity: 0,
+        y: -50,
+        ease: 'power2.out',
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: 'top top',
+          end: '15% top',
+          scrub: 0.8,
+        },
+      });
 
-    window.addEventListener('mousemove', handleMouseMove);
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('mousemove', handleMouseMove);
-      window.removeEventListener('scroll', handleScroll);
-    };
+      // Section 2 - fade in from bottom (starts earlier for shorter gap)
+      gsap.fromTo(
+        section2Ref.current,
+        {
+          opacity: 0,
+          y: 80,
+          scale: 0.95,
+        },
+        {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          ease: 'power2.out',
+          scrollTrigger: {
+            trigger: section2Ref.current,
+            start: 'top 95%',
+            end: 'top 50%',
+            scrub: 0.8,
+          },
+        }
+      );
+
+      // Section 3 text - fade in from bottom
+      gsap.fromTo(
+        section3Ref.current,
+        {
+          opacity: 0,
+          y: 80,
+          scale: 0.95,
+        },
+        {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          ease: 'power2.out',
+          scrollTrigger: {
+            trigger: section3Ref.current,
+            start: 'top 95%',
+            end: 'top 50%',
+            scrub: 0.8,
+          },
+        }
+      );
+
+      // Section 3 CTA buttons - slightly delayed
+      gsap.fromTo(
+        section3CtaRef.current,
+        {
+          opacity: 0,
+          y: 50,
+          scale: 0.95,
+        },
+        {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          ease: 'power2.out',
+          scrollTrigger: {
+            trigger: section3CtaRef.current,
+            start: 'top 95%',
+            end: 'top 55%',
+            scrub: 0.8,
+          },
+        }
+      );
+    }, sectionRef);
+
+    return () => ctx.revert();
   }, []);
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-white via-purple-50/20 to-blue-50/30 pt-24" style={{ perspective: '1000px' }}>
-      {/* Elliott Wave Circles - 5 glass circles in wave pattern */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {ELLIOTT_WAVE_CIRCLES.map((circle) => (
-          <ElliottWaveCircle
-            key={circle.id}
-            circle={circle}
-            mousePos={mousePosition}
-            hoveredCircle={hoveredCircle}
-            setHoveredCircle={setHoveredCircle}
+    <section 
+      ref={sectionRef}
+      className="hero-section relative overflow-hidden bg-gradient-to-br from-white via-purple-50/20 to-blue-50/30 pt-24"
+    >
+      {/* Spheres - fixed to viewport, floating with scroll-based path drift */}
+      <div 
+        className="fixed inset-0 overflow-hidden pointer-events-none" 
+        style={{ zIndex: 0 }}
+      >
+        {SPHERES_CONFIG.map((config) => (
+          <Sphere
+            key={config.id}
+            config={config}
           />
         ))}
       </div>
 
       {/* Improved wave decorative element */}
-      <div className="absolute bottom-0 left-0 w-full opacity-20">
-        <motion.svg 
+      <div className="absolute bottom-0 left-0 w-full opacity-20" style={{ zIndex: 2 }}>
+        <svg 
           className="w-full h-48" 
           viewBox="0 0 1440 200" 
           preserveAspectRatio="none"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 0.2, y: 0 }}
-          transition={{ duration: 1.5 }}
         >
           <defs>
             <linearGradient id="waveGradientBottom" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -185,163 +270,96 @@ export default function Hero() {
               <stop offset="100%" stopColor="#4A90E2" stopOpacity="0.2" />
             </linearGradient>
           </defs>
-          <motion.path 
+          <path 
             d="M0,100 C240,140 480,80 720,120 C960,160 1200,100 1440,140 L1440,200 L0,200 Z" 
             fill="url(#waveGradientBottom)"
-            animate={{
-              d: [
-                "M0,100 C240,140 480,80 720,120 C960,160 1200,100 1440,140 L1440,200 L0,200 Z",
-                "M0,120 C240,100 480,140 720,100 C960,140 1200,120 1440,100 L1440,200 L0,200 Z",
-                "M0,100 C240,140 480,80 720,120 C960,160 1200,100 1440,140 L1440,200 L0,200 Z",
-              ]
-            }}
-            transition={{
-              duration: 8,
-              repeat: Infinity,
-              ease: "easeInOut"
-            }}
           />
-        </motion.svg>
+        </svg>
       </div>
 
-      {/* Tag */}
-      <div className="absolute top-32 left-1/2 transform -translate-x-1/2 z-20 w-full px-6">
-        <div className="max-w-5xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <motion.span 
-              className="inline-block px-6 py-3 rounded-full bg-gradient-to-r from-purple-100 to-blue-100 text-purple-700 text-sm font-semibold shadow-lg"
-              animate={{
-                y: [0, -8, 0],
-                scale: [1, 1.05, 1],
-              }}
-              transition={{
-                duration: 3,
-                repeat: Infinity,
-                ease: "easeInOut"
-              }}
-            >
-              Исследуй новые Forex возможности!
-            </motion.span>
-          </motion.div>
-        </div>
-      </div>
-
-      {/* Headline - появляется сразу, исчезает при скролле */}
-      <div className="h-[70vh] flex items-center justify-center relative z-10">
+      {/* Headline - visible immediately, fades out on scroll */}
+      <div 
+        ref={headlineRef}
+        className="h-[65vh] flex items-center justify-center"
+        style={{ zIndex: 10 }}
+      >
         <div className="container mx-auto px-6">
           <div className="max-w-5xl mx-auto text-center">
-            <motion.h1
-              className="text-5xl md:text-7xl font-extrabold leading-tight"
-              initial={{ opacity: 1, y: 0, scale: 1 }}
-              animate={{ 
-                opacity: scrollY > 100 ? 0 : 1,
-                y: scrollY > 100 ? -80 : 0,
-                scale: scrollY > 100 ? 0.9 : 1
-              }}
-              transition={{ 
-                duration: 0.6,
-                ease: [0.25, 0.1, 0.25, 1]
-              }}
-            >
+            <h1 className="text-5xl md:text-7xl font-extrabold leading-tight mb-8">
               <span className="text-gray-900">Where market science meets </span>
               <span className="gradient-text">automated intelligence</span>
-            </motion.h1>
+            </h1>
+            {/* Tag - under headline, clickable to scroll to next section */}
+            <div ref={tagRef}>
+              <a 
+                href="#hero-section-2"
+                className="inline-block px-6 py-3 rounded-full bg-gradient-to-r from-purple-100 to-blue-100 text-purple-700 text-sm font-semibold shadow-lg cursor-pointer hover:shadow-xl hover:scale-105 transition-all duration-300"
+              >
+                Explore new Forex opportunities!
+              </a>
+            </div>
           </div>
         </div>
       </div>
       
-      {/* Subheadline - появляется при скролле, когда headline исчезает */}
-      <div className="h-[60vh] flex items-center justify-center relative z-10 py-20">
+      {/* Subheadline - fades in from bottom on scroll (reduced height for shorter gap) */}
+      <div 
+        id="hero-section-2"
+        ref={section2Ref}
+        className="h-[45vh] flex items-center justify-center py-10"
+        style={{ zIndex: 10 }}
+      >
         <div className="container mx-auto px-6">
           <div className="max-w-5xl mx-auto text-center">
-            <motion.p
-              className="text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed"
-              initial={{ opacity: 0, y: 60, scale: 0.95 }}
-              whileInView={{ 
-                opacity: [0, 0.5, 1],
-                y: [60, 10, 0],
-                scale: [0.95, 1, 1]
-              }}
-              viewport={{ once: false, amount: 0.6 }}
-              transition={{ 
-                duration: 1.2,
-                ease: [0.25, 0.1, 0.25, 1]
-              }}
-            >
+            <p className="text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
               We apply Elliott Wave theory, quantitative research, and automated systems to professional account management and long-term strategy development.
-            </motion.p>
+            </p>
           </div>
         </div>
       </div>
 
-      {/* Scroll-trigger строка и кнопки - появляются вместе при дальнейшем скролле */}
-      <div className="h-[60vh] flex items-center justify-center relative z-10 py-20">
+      {/* CTA Section - fades in from bottom on scroll */}
+      <div 
+        className="h-[75vh] flex items-center justify-center py-10"
+        style={{ zIndex: 10 }}
+      >
         <div className="container mx-auto px-6">
-          <div className="max-w-5xl mx-auto text-center space-y-12">
-            <motion.p
-              className="text-2xl md:text-4xl font-bold text-gray-900 max-w-5xl mx-auto"
-              initial={{ opacity: 0, y: 60, scale: 0.95 }}
-              whileInView={{ 
-                opacity: [0, 0.5, 1],
-                y: [60, 10, 0],
-                scale: [0.95, 1, 1]
-              }}
-              viewport={{ once: false, amount: 0.6 }}
-              transition={{ 
-                duration: 1.2,
-                ease: [0.25, 0.1, 0.25, 1]
-              }}
+          <div className="max-w-5xl mx-auto text-center">
+            {/* "Not signals" text moved up with more margin below */}
+            <p 
+              ref={section3Ref}
+              className="text-2xl md:text-4xl font-bold text-gray-900 max-w-5xl mx-auto mb-24"
             >
               Not signals. Not speculation. A structured approach to the market.
-            </motion.p>
+            </p>
 
-            <motion.div
+            <div
+              ref={section3CtaRef}
               className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-              initial={{ opacity: 0, y: 40, scale: 0.95 }}
-              whileInView={{ 
-                opacity: [0, 0.7, 1],
-                y: [40, 5, 0],
-                scale: [0.95, 1, 1]
-              }}
-              viewport={{ once: false, amount: 0.6 }}
-              transition={{ 
-                duration: 1.2,
-                delay: 0.3,
-                ease: [0.25, 0.1, 0.25, 1]
-              }}
             >
               <CTAButton href={TELEGRAM_URL} variant="primary" className="text-lg px-10 py-5 min-w-[250px]">
-                Начать сотрудничество
+                Start Collaboration
               </CTAButton>
               <a 
                 href="#services" 
                 className="text-gray-700 hover:text-purple-600 font-semibold transition-colors flex items-center gap-2"
               >
-                Узнать больше
+                Learn More
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </a>
-            </motion.div>
+            </div>
           </div>
         </div>
       </div>
 
       {/* Scroll indicator */}
-      <motion.div
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-        animate={{ y: [0, 10, 0] }}
-        transition={{ duration: 2, repeat: Infinity }}
-      >
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce" style={{ zIndex: 10 }}>
         <svg className="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
         </svg>
-      </motion.div>
+      </div>
     </section>
   );
 }
-
