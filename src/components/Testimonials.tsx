@@ -38,10 +38,10 @@ export default function Testimonials() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">
+          <h2 className="text-5xl md:text-6xl font-extrabold mb-6">
             Отзывы <span className="gradient-text">клиентов</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto">
             What our clients say about working with us
           </p>
         </motion.div>
@@ -50,21 +50,22 @@ export default function Testimonials() {
           {testimonials.map((testimonial, index) => (
             <motion.div
               key={testimonial.id}
-              className="liquid-glass rounded-2xl p-6"
+              className="liquid-glass rounded-3xl p-8 hover:shadow-xl transition-all duration-300"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
+              whileHover={{ y: -5 }}
             >
-              <div className="flex items-center gap-1 mb-4">
+              <div className="flex items-center gap-1 mb-6">
                 {[...Array(testimonial.rating)].map((_, i) => (
                   <span key={i} className="text-yellow-400 text-xl">★</span>
                 ))}
               </div>
-              <p className="text-gray-700 mb-6 italic">"{testimonial.content}"</p>
-              <div>
-                <p className="font-semibold text-gray-900">{testimonial.name}</p>
-                <p className="text-sm text-gray-600">{testimonial.role}</p>
+              <p className="text-gray-700 mb-8 italic text-lg leading-relaxed">"{testimonial.content}"</p>
+              <div className="pt-6 border-t border-gray-200">
+                <p className="font-bold text-gray-900 text-lg">{testimonial.name}</p>
+                <p className="text-sm text-gray-600 mt-1">{testimonial.role}</p>
               </div>
             </motion.div>
           ))}
@@ -73,4 +74,3 @@ export default function Testimonials() {
     </section>
   );
 }
-
