@@ -61,7 +61,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* About */}
+          {/* About & Resources */}
           <div>
             <h4 className="font-bold text-lg mb-6 text-white">{t('aboutTitle')}</h4>
             <ul className="space-y-3">
@@ -81,6 +81,24 @@ export default function Footer() {
                 >
                   <span className="w-1 h-1 bg-purple-500 rounded-full group-hover:scale-150 transition-transform"></span>
                   {tNav('leadership')}
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  href="/research" 
+                  className="text-gray-300 hover:text-white transition-colors flex items-center gap-2 group"
+                >
+                  <span className="w-1 h-1 bg-purple-500 rounded-full group-hover:scale-150 transition-transform"></span>
+                  {tNav('research')}
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  href="/faq" 
+                  className="text-gray-300 hover:text-white transition-colors flex items-center gap-2 group"
+                >
+                  <span className="w-1 h-1 bg-purple-500 rounded-full group-hover:scale-150 transition-transform"></span>
+                  {tNav('faq')}
                 </Link>
               </li>
             </ul>

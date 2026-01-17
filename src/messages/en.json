@@ -1,4 +1,26 @@
 {
+  "seo": {
+    "home": {
+      "title": "Waves Logix - Professional Forex Analysis & Advisory Services",
+      "description": "Independent analytical and advisory firm specializing in Forex, gold, and oil markets. Professional market analysis for high-net-worth clients and institutions."
+    },
+    "accountManagement": {
+      "title": "Professional Account Advisory Services | Waves Logix",
+      "description": "Premium brokerage account advisory for clients with $300,000+ capital. Personalized Forex, gold, and oil market guidance with full transparency."
+    },
+    "analytics": {
+      "title": "Advanced Forex Market Analysis | Waves Logix",
+      "description": "High-precision Forex analysis for professional traders and brokerage companies. AI-assisted, data-driven market intelligence."
+    },
+    "aboutCompany": {
+      "title": "About Waves Logix Ltd. | Company Overview",
+      "description": "Independent analytical and advisory firm based in Saint Lucia. Non-custodial advisory model with transparent operations and professional standards."
+    },
+    "leadership": {
+      "title": "Leadership | Dr. Georg Gershinski | Waves Logix",
+      "description": "Meet Dr. Georg Gershinski, Founder and Managing Director of Waves Logix. Over a decade of experience in global financial markets."
+    }
+  },
   "common": {
     "learnMore": "Learn More",
     "contact": "Contact",
@@ -19,6 +41,8 @@
     "about": "About",
     "aboutCompany": "About Company",
     "leadership": "Leadership",
+    "faq": "FAQ",
+    "research": "Research",
     "contact": "Contact",
     "certificate": "Certificate"
   },
@@ -243,5 +267,299 @@
     "contactTitle": "Contact",
     "telegramChannel": "Telegram Channel",
     "certificateInfo": "Certificate of Incorporation: 23 May 2025 | International Business Companies Act, Cap 12.14: Section 6"
+  },
+  "research": {
+    "metaTitle": "Research & Insights | Waves Logix",
+    "metaDescription": "In-depth market analysis, research articles, and trading insights from Waves Logix experts.",
+    "title": "Research &",
+    "titleHighlight": "Insights",
+    "subtitle": "In-depth analysis and market research from our team of experts.",
+    "noPosts": "New research articles coming soon.",
+    "backToResearch": "Back to Research",
+    "disclaimer": {
+      "title": "Disclaimer",
+      "text": "This article is for informational purposes only and does not constitute investment advice. Trading involves risk and may result in loss of capital. Past performance does not guarantee future results."
+    },
+    "ctaText": "Interested in professional market analysis? Contact us to learn more about our services.",
+    "posts": {
+      "elliott-wave-introduction": {
+        "title": "Introduction to Elliott Wave Theory",
+        "excerpt": "A comprehensive overview of Elliott Wave Theory and its application in modern Forex market analysis.",
+        "content": "Elliott Wave Theory is one of the most sophisticated methods of technical analysis, developed by Ralph Nelson Elliott in the 1930s. This methodology provides a framework for understanding market psychology and price movements.\n\n## The Foundation of Wave Theory\n\nAt its core, Elliott Wave Theory suggests that market prices move in predictable patterns called waves. These patterns reflect the collective psychology of market participants and tend to repeat across different timeframes.\n\n## Five-Wave and Three-Wave Patterns\n\nThe basic structure consists of five-wave impulse moves in the direction of the main trend, followed by three-wave corrective moves against the trend. Understanding these patterns helps analysts identify potential turning points and forecast future price movements.\n\n## Application in Forex Markets\n\nIn the Forex market, Elliott Wave analysis is particularly effective due to the market's high liquidity and continuous trading. Waves Logix applies this methodology alongside quantitative validation to enhance accuracy.\n\n### Key Benefits\n\nElliott Wave analysis provides clear invalidation levels, helping traders manage risk effectively. When combined with macroeconomic analysis, it offers a comprehensive view of market structure.",
+        "author": "Dr. Georg Gershinski",
+        "date": "January 15, 2026",
+        "readTime": "8 min read",
+        "category": "Market Theory"
+      },
+      "forex-market-structure": {
+        "title": "Understanding Forex Market Structure",
+        "excerpt": "How institutional traders analyze market structure and liquidity zones for better trading decisions.",
+        "content": "Market structure analysis is fundamental to professional Forex trading. Understanding how prices move and where liquidity concentrates gives traders a significant edge.\n\n## What is Market Structure?\n\nMarket structure refers to the pattern of higher highs, higher lows (uptrend) or lower highs, lower lows (downtrend) that prices create over time. This simple concept forms the foundation of trend analysis.\n\n## Liquidity Zones\n\nLiquidity zones are areas where significant buy or sell orders are concentrated. These often form around previous swing highs and lows, round numbers, and technical levels.\n\n## Institutional vs. Retail Perspective\n\nInstitutional traders often target areas where retail traders place their stop losses. Understanding this dynamic helps professional traders position themselves more effectively.\n\n### Practical Application\n\nAt Waves Logix, we combine market structure analysis with wave-based methodologies to identify high-probability trading scenarios. This integrated approach provides clarity in complex market conditions.",
+        "author": "Dr. Georg Gershinski",
+        "date": "January 10, 2026",
+        "readTime": "6 min read",
+        "category": "Technical Analysis"
+      },
+      "risk-management-principles": {
+        "title": "Professional Risk Management Principles",
+        "excerpt": "Essential risk management strategies for protecting capital in volatile Forex markets.",
+        "content": "Effective risk management is the cornerstone of long-term trading success. Without proper risk controls, even the best analysis can lead to significant losses.\n\n## Position Sizing Fundamentals\n\nPosition sizing determines how much capital to risk on each trade. Professional traders typically risk 1-2% of their account per trade, allowing them to survive losing streaks.\n\n## Stop Loss Strategies\n\nStop losses should be placed at logical technical levels where the trade thesis is invalidated. This approach ensures that stops are meaningful rather than arbitrary.\n\n## Correlation Management\n\nIn Forex trading, many currency pairs are correlated. Trading multiple correlated positions effectively increases your risk exposure. Managing correlation is essential for portfolio stability.\n\n### The Role of Advisory Support\n\nWaves Logix provides advisory support that includes risk management frameworks tailored to individual client profiles. This personalized approach helps clients maintain discipline and protect their capital.",
+        "author": "Dr. Georg Gershinski",
+        "date": "January 5, 2026",
+        "readTime": "7 min read",
+        "category": "Risk Management"
+      }
+    }
+  },
+  "faq": {
+    "metaTitle": "FAQ - Frequently Asked Questions | Waves Logix",
+    "metaDescription": "Find answers to common questions about Waves Logix services, advisory model, markets covered, and how we work with clients.",
+    "title": "Frequently Asked",
+    "titleHighlight": "Questions",
+    "subtitle": "Find answers to common questions about our services, advisory model, and how we work with clients.",
+    "disclaimerTitle": "Important Notice",
+    "disclaimerText": "The information provided on this page is for informational purposes only and does not constitute investment advice or a recommendation to buy or sell any financial instrument. Trading involves risk and may result in loss of capital.",
+    "categories": [
+      {
+        "title": "About Waves Logix",
+        "items": [
+          {
+            "question": "What is Waves Logix?",
+            "answer": "Waves Logix is an independent analytical and advisory firm providing market analysis and non-discretionary advisory support in Forex, gold, and oil markets."
+          },
+          {
+            "question": "Is Waves Logix an asset management company?",
+            "answer": "No. Waves Logix does not provide asset management or discretionary portfolio management services."
+          }
+        ]
+      },
+      {
+        "title": "Funds & Control",
+        "items": [
+          {
+            "question": "Do you manage or control client funds?",
+            "answer": "No. Client funds always remain under the client's full control within their brokerage account."
+          },
+          {
+            "question": "Do you execute trades on behalf of clients?",
+            "answer": "No. We do not execute trades or place orders unless explicitly authorized under a limited power of attorney, and only with client consent."
+          },
+          {
+            "question": "Do you accept deposits or hold client money?",
+            "answer": "No. Waves Logix does not accept, hold, or custody client funds."
+          },
+          {
+            "question": "Can Waves Logix access my brokerage account?",
+            "answer": "Only if explicitly authorized and within defined limits."
+          },
+          {
+            "question": "Can I withdraw funds at any time?",
+            "answer": "Yes. Clients retain full withdrawal rights at all times."
+          }
+        ]
+      },
+      {
+        "title": "Services & Audience",
+        "items": [
+          {
+            "question": "What services does Waves Logix provide?",
+            "answer": "We provide market analysis, analytical research, and non-discretionary advisory support related to Forex, gold, and oil markets."
+          },
+          {
+            "question": "Who are your services designed for?",
+            "answer": "Our services are designed for professional traders, high-net-worth individuals, and brokerage companies."
+          },
+          {
+            "question": "Is there a minimum capital requirement?",
+            "answer": "Yes. Advisory services are typically offered to clients with capital starting from $300,000."
+          },
+          {
+            "question": "Do you provide services to retail investors?",
+            "answer": "No. We do not offer mass-market or retail investment services."
+          },
+          {
+            "question": "Is your service suitable for brokerage companies?",
+            "answer": "Yes. We work with brokerage firms and internal analyst teams requiring external analytical support."
+          },
+          {
+            "question": "Do you offer education or training?",
+            "answer": "Educational explanations may be provided as part of advisory communication."
+          }
+        ]
+      },
+      {
+        "title": "Advisory Nature",
+        "items": [
+          {
+            "question": "Do you provide investment advice?",
+            "answer": "We provide analytical and advisory information only. All final investment decisions remain the responsibility of the client."
+          },
+          {
+            "question": "Is your analysis regulated financial advice?",
+            "answer": "No. Our analysis is informational and advisory in nature and does not constitute regulated financial advice."
+          },
+          {
+            "question": "Do you guarantee profits or performance?",
+            "answer": "No. We do not guarantee results or profitability."
+          }
+        ]
+      },
+      {
+        "title": "Markets & Analysis",
+        "items": [
+          {
+            "question": "What markets do you cover?",
+            "answer": "We specialize in Forex, gold, and oil markets."
+          },
+          {
+            "question": "Do you provide stock or equity analysis?",
+            "answer": "No. We do not provide analysis or advisory services related to equities or stock markets."
+          },
+          {
+            "question": "How is your analysis created?",
+            "answer": "Our analysis combines technical analysis, wave-based methodologies, macroeconomic research, and AI-assisted data processing."
+          },
+          {
+            "question": "Do you use artificial intelligence?",
+            "answer": "Yes. AI tools are used to support data processing and scenario validation, while final conclusions are made by human analysts."
+          },
+          {
+            "question": "Who is responsible for final analytical decisions?",
+            "answer": "All final conclusions are reviewed and approved by experienced human analysts."
+          },
+          {
+            "question": "How is risk addressed in your analysis?",
+            "answer": "Risk considerations are incorporated through volatility assessment, structural boundaries, and scenario invalidation levels."
+          },
+          {
+            "question": "Can your analysis be customized?",
+            "answer": "Yes. Analytical output can be adapted to specific trading styles, instruments, and timeframes."
+          },
+          {
+            "question": "Do you provide trading signals?",
+            "answer": "We provide analytical insights and structured scenarios, not automated or guaranteed trading signals."
+          },
+          {
+            "question": "How often is analysis provided?",
+            "answer": "Frequency depends on the service agreement and market conditions."
+          },
+          {
+            "question": "How do clients receive analysis?",
+            "answer": "Analysis is delivered through written reports, charts, and structured updates."
+          }
+        ]
+      },
+      {
+        "title": "Legal & Compliance",
+        "items": [
+          {
+            "question": "Is Waves Logix legally incorporated?",
+            "answer": "Yes. Waves Logix Ltd. is a legally incorporated company."
+          },
+          {
+            "question": "Can I verify your company registration?",
+            "answer": "Yes. Corporate documentation can be reviewed upon request."
+          },
+          {
+            "question": "Are you licensed as an investment manager?",
+            "answer": "No. Waves Logix is not licensed as an asset manager."
+          },
+          {
+            "question": "Do you require a contract?",
+            "answer": "Yes. All cooperation is governed by a formal agreement."
+          },
+          {
+            "question": "Is your service compliant with international standards?",
+            "answer": "Yes. Our operations are structured to align with applicable international legal and compliance standards."
+          },
+          {
+            "question": "Do you operate globally?",
+            "answer": "Yes. We work with international clients, subject to legal and jurisdictional considerations."
+          },
+          {
+            "question": "Is your service suitable for UK-based clients?",
+            "answer": "Yes, provided services are used in an advisory, non-discretionary capacity."
+          },
+          {
+            "question": "Does Waves Logix provide regulated financial promotions?",
+            "answer": "No. We do not issue regulated financial promotions."
+          },
+          {
+            "question": "Where can I find legal disclaimers?",
+            "answer": "Legal disclaimers are published on our website and included in service agreements."
+          }
+        ]
+      },
+      {
+        "title": "Fees & Privacy",
+        "items": [
+          {
+            "question": "How are fees structured?",
+            "answer": "Fees depend on the service model and may be performance-based where legally permitted."
+          },
+          {
+            "question": "Are fees charged if no profit is generated?",
+            "answer": "Fee terms are defined contractually and may vary by service."
+          },
+          {
+            "question": "Is client information confidential?",
+            "answer": "Yes. All client information is handled with strict confidentiality."
+          },
+          {
+            "question": "Do you share client data with third parties?",
+            "answer": "No. Client data is not shared except where legally required."
+          }
+        ]
+      },
+      {
+        "title": "Operations & Working with Us",
+        "items": [
+          {
+            "question": "Can your analysis be used for automated trading?",
+            "answer": "Our analysis is not designed as an automated trading system."
+          },
+          {
+            "question": "How do you avoid conflicts of interest?",
+            "answer": "We do not trade against clients or profit from client losses."
+          },
+          {
+            "question": "Do you trade your own capital?",
+            "answer": "Company principals may trade independently, subject to internal policies."
+          },
+          {
+            "question": "Is past performance published?",
+            "answer": "No. Past performance is not promoted as an indicator of future results."
+          },
+          {
+            "question": "How do you ensure analytical quality?",
+            "answer": "Quality is maintained through documented methodologies and senior oversight."
+          },
+          {
+            "question": "Can services be terminated?",
+            "answer": "Yes. Cooperation can be terminated according to contractual terms."
+          },
+          {
+            "question": "What happens if market conditions change?",
+            "answer": "Analysis is updated to reflect evolving market structures."
+          },
+          {
+            "question": "Do you provide legal or tax advice?",
+            "answer": "No. We do not provide legal or tax advice."
+          },
+          {
+            "question": "Are clients required to follow your analysis?",
+            "answer": "No. Clients are free to make independent decisions."
+          },
+          {
+            "question": "Is there a conflict with broker services?",
+            "answer": "No. We are independent from brokerage execution services."
+          },
+          {
+            "question": "How can I start working with Waves Logix?",
+            "answer": "You can contact us to discuss your requirements and eligibility."
+          }
+        ]
+      }
+    ]
   }
 }

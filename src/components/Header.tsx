@@ -1,9 +1,10 @@
 'use client';
 
 import { motion, AnimatePresence } from 'framer-motion';
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
+import { usePathname, useRouter } from 'next/navigation';
 import Logo from './Logo';
 import CTAButton from './CTAButton';
 import LanguageSwitcher from './LanguageSwitcher';
@@ -103,6 +104,29 @@ export default function Header() {
   const [servicesOpen, setServicesOpen] = useState(false);
   const [aboutOpen, setAboutOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  
+  const pathname = usePathname();
+  const router = useRouter();
+  const isHomePage = pathname === '/';
+
+  // Smart contact scroll - works on home page and navigates from other pages
+  const handleContactClick = useCallback((e: React.MouseEvent) => {
+    e.preventDefault();
+    
+    if (isHomePage) {
+      // On home page, just scroll to contact section
+      const contactSection = document.getElementById('contact');
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      // On other pages, navigate to home and then scroll
+      router.push('/#contact');
+    }
+    
+    // Close mobile menu if open
+    setMobileMenuOpen(false);
+  }, [isHomePage, router]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -162,13 +186,27 @@ export default function Header() {
               }}
               onClose={() => setAboutOpen(false)}
             />
-            <a 
-              href="#contact" 
+            <Link 
+              href="/research"
+              className="text-gray-700 hover:text-purple-600 transition-colors font-medium relative group"
+            >
+              {t('research')}
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-purple-600 transition-all group-hover:w-full"></span>
+            </Link>
+            <Link 
+              href="/faq"
+              className="text-gray-700 hover:text-purple-600 transition-colors font-medium relative group"
+            >
+              {t('faq')}
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-purple-600 transition-all group-hover:w-full"></span>
+            </Link>
+            <button 
+              onClick={handleContactClick}
               className="text-gray-700 hover:text-purple-600 transition-colors font-medium relative group"
             >
               {t('contact')}
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-purple-600 transition-all group-hover:w-full"></span>
-            </a>
+            </button>
             
             <LanguageSwitcher />
             
@@ -236,15 +274,32 @@ export default function Header() {
                   </div>
                 </div>
 
-                {/* Contact */}
+                {/* Research & FAQ */}
                 <div className="pt-4 border-t border-gray-200">
-                  <a
-                    href="#contact"
+                  <Link
+                    href="/research"
                     onClick={() => setMobileMenuOpen(false)}
                     className="block py-3 text-lg font-medium text-gray-900 hover:text-purple-600 transition-colors"
                   >
+                    {t('research')}
+                  </Link>
+                  <Link
+                    href="/faq"
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="block py-3 text-lg font-medium text-gray-900 hover:text-purple-600 transition-colors"
+                  >
+                    {t('faq')}
+                  </Link>
+                </div>
+
+                {/* Contact */}
+                <div className="pt-4 border-t border-gray-200">
+                  <button
+                    onClick={handleContactClick}
+                    className="block py-3 text-lg font-medium text-gray-900 hover:text-purple-600 transition-colors w-full text-left"
+                  >
                     {t('contact')}
-                  </a>
+                  </button>
                 </div>
 
                 {/* CTA */}

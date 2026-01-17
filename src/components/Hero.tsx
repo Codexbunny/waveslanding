@@ -1,8 +1,8 @@
 'use client';
 
-import { useEffect, useRef, useLayoutEffect, useState } from 'react';
+import { useEffect, useRef, useLayoutEffect, useState, useMemo } from 'react';
 import { useTranslations } from 'next-intl';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import CTAButton from './CTAButton';
@@ -12,6 +12,23 @@ const TELEGRAM_URL = process.env.NEXT_PUBLIC_TELEGRAM_URL || 'https://t.me/waves
 // Register GSAP plugins
 if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger);
+}
+
+// Hook to detect mobile devices
+function useIsMobile() {
+  const [isMobile, setIsMobile] = useState(false);
+  
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.matchMedia('(max-width: 768px)').matches);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+  
+  return isMobile;
 }
 
 // Sphere configuration - spread across the screen with different base positions
@@ -132,6 +149,7 @@ function Sphere({ config }: SphereProps) {
 export default function Hero() {
   const t = useTranslations('hero');
   const tCommon = useTranslations('common');
+  const isMobile = useIsMobile();
   
   const sectionRef = useRef<HTMLElement>(null);
   const headlineRef = useRef<HTMLDivElement>(null);
@@ -141,35 +159,38 @@ export default function Hero() {
   const section3CtaRef = useRef<HTMLDivElement>(null);
   
 
-  // GSAP ScrollTrigger animations
+  // GSAP ScrollTrigger animations - simplified on mobile
   useLayoutEffect(() => {
     if (typeof window === 'undefined') return;
+    
+    // Use higher scrub values on mobile for smoother performance
+    const scrubValue = isMobile ? 1.5 : 0.8;
 
     const ctx = gsap.context(() => {
       // Hero headline - visible immediately, fades out on scroll
       gsap.to(headlineRef.current, {
         opacity: 0,
-        y: -80,
-        scale: 0.95,
+        y: isMobile ? -40 : -80,
+        scale: isMobile ? 1 : 0.95,
         ease: 'power2.out',
         scrollTrigger: {
           trigger: sectionRef.current,
           start: 'top top',
           end: '20% top',
-          scrub: 0.8,
+          scrub: scrubValue,
         },
       });
 
       // Tag also fades out
       gsap.to(tagRef.current, {
         opacity: 0,
-        y: -50,
+        y: isMobile ? -25 : -50,
         ease: 'power2.out',
         scrollTrigger: {
           trigger: sectionRef.current,
           start: 'top top',
           end: '15% top',
-          scrub: 0.8,
+          scrub: scrubValue,
         },
       });
 
@@ -178,8 +199,8 @@ export default function Hero() {
         section2Ref.current,
         {
           opacity: 0,
-          y: 80,
-          scale: 0.95,
+          y: isMobile ? 40 : 80,
+          scale: isMobile ? 1 : 0.95,
         },
         {
           opacity: 1,
@@ -190,7 +211,7 @@ export default function Hero() {
             trigger: section2Ref.current,
             start: 'top 95%',
             end: 'top 50%',
-            scrub: 0.8,
+            scrub: scrubValue,
           },
         }
       );
@@ -200,8 +221,8 @@ export default function Hero() {
         section3Ref.current,
         {
           opacity: 0,
-          y: 80,
-          scale: 0.95,
+          y: isMobile ? 40 : 80,
+          scale: isMobile ? 1 : 0.95,
         },
         {
           opacity: 1,
@@ -212,7 +233,7 @@ export default function Hero() {
             trigger: section3Ref.current,
             start: 'top 95%',
             end: 'top 50%',
-            scrub: 0.8,
+            scrub: scrubValue,
           },
         }
       );
@@ -222,8 +243,8 @@ export default function Hero() {
         section3CtaRef.current,
         {
           opacity: 0,
-          y: 50,
-          scale: 0.95,
+          y: isMobile ? 25 : 50,
+          scale: isMobile ? 1 : 0.95,
         },
         {
           opacity: 1,
@@ -234,14 +255,14 @@ export default function Hero() {
             trigger: section3CtaRef.current,
             start: 'top 95%',
             end: 'top 55%',
-            scrub: 0.8,
+            scrub: scrubValue,
           },
         }
       );
     }, sectionRef);
 
     return () => ctx.revert();
-  }, []);
+  }, [isMobile]);
 
   return (
     <section 
@@ -249,17 +270,20 @@ export default function Hero() {
       className="hero-section relative overflow-hidden bg-gradient-to-br from-white via-purple-50/20 to-blue-50/30 pt-24"
     >
       {/* Spheres - fixed to viewport, floating with scroll-based path drift */}
-      <div 
-        className="fixed inset-0 overflow-hidden pointer-events-none" 
-        style={{ zIndex: 0 }}
-      >
-        {SPHERES_CONFIG.map((config) => (
-          <Sphere
-            key={config.id}
-            config={config}
-          />
-        ))}
-      </div>
+      {/* Disabled on mobile for performance */}
+      {!isMobile && (
+        <div 
+          className="fixed inset-0 overflow-hidden pointer-events-none" 
+          style={{ zIndex: 0 }}
+        >
+          {SPHERES_CONFIG.map((config) => (
+            <Sphere
+              key={config.id}
+              config={config}
+            />
+          ))}
+        </div>
+      )}
 
       {/* Improved wave decorative element */}
       <div className="absolute bottom-0 left-0 w-full opacity-20" style={{ zIndex: 2 }}>
