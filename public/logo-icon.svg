@@ -1,21 +1,20 @@
 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="waveIconGradient" x1="0%" y1="50%" x2="100%" y2="50%">
+    <linearGradient id="waveIconGrad" x1="0%" y1="50%" x2="100%" y2="50%">
       <stop offset="0%" stop-color="#4B7C9B" />
       <stop offset="50%" stop-color="#5A8FB0" />
       <stop offset="100%" stop-color="#4A7A99" />
     </linearGradient>
   </defs>
   
-  <!-- Elliott Wave icon - simplified for small sizes -->
+  <!-- Elliott Wave icon - ascending pattern -->
   <path 
-    d="M4 20 
-       C6 20, 7 17, 9 17 
-       C11 17, 12 20, 14 20
-       C16 20, 18 13, 20 13
-       C22 13, 23 18, 25 18
-       C27 18, 29 8, 28 8"
-    stroke="url(#waveIconGradient)" 
+    d="M2 22 
+       C5 22, 7 18, 10 18 
+       C13 18, 15 22, 18 22
+       C21 22, 24 12, 27 12
+       C29 12, 30 8, 30 8"
+    stroke="url(#waveIconGrad)" 
     stroke-width="3" 
     fill="none" 
     stroke-linecap="round" 

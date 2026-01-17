@@ -31,41 +31,50 @@ export default function Logo({
         aria-label="Waves Logical TD"
       >
         <defs>
-          <linearGradient id="waveGradientMain" x1="0%" y1="50%" x2="100%" y2="50%">
+          <linearGradient id="waveGradientLogo" x1="0%" y1="50%" x2="100%" y2="50%">
             <stop offset="0%" stopColor="#4B7C9B" />
-            <stop offset="50%" stopColor="#5A8FB0" />
+            <stop offset="40%" stopColor="#5A8FB0" />
             <stop offset="100%" stopColor="#4A7A99" />
           </linearGradient>
+          
+          {/* Mask to clip wave behind text area */}
+          <mask id="textMask">
+            <rect x="0" y="0" width="180" height="50" fill="white" />
+            {/* Black areas will hide the wave - covering text region */}
+            <rect x="4" y="28" width="58" height="22" fill="black" rx="2" />
+          </mask>
         </defs>
         
-        {/* Elliott Wave - 5 waves pattern, clean and professional */}
-        <path 
-          className={animated ? 'wave-path-animated' : ''}
-          d="M8 28 
-             C12 28, 14 24, 18 24 
-             C22 24, 24 28, 28 28
-             C32 28, 35 18, 40 18
-             C45 18, 47 26, 52 26
-             C57 26, 62 10, 68 10
-             C74 10, 76 22, 82 22
-             C88 22, 94 6, 100 6"
-          stroke="url(#waveGradientMain)" 
-          strokeWidth="4" 
-          fill="none" 
-          strokeLinecap="round" 
-          strokeLinejoin="round"
-          style={{
-            strokeDasharray: animated ? 200 : 'none',
-            strokeDashoffset: 0,
-          }}
-        />
+        {/* Wave layer - BEHIND text (rendered first, masked) */}
+        <g mask="url(#textMask)">
+          <path 
+            className={animated ? 'wave-path-animated' : ''}
+            d="M-10 22 
+               C-4 22, 0 18, 6 18 
+               C12 18, 16 24, 22 24
+               C28 24, 34 12, 42 12
+               C50 12, 54 20, 62 20
+               C70 20, 78 6, 88 6
+               C98 6, 104 16, 112 16
+               C120 16, 128 2, 138 2"
+            stroke="url(#waveGradientLogo)" 
+            strokeWidth="3.5" 
+            fill="none" 
+            strokeLinecap="round" 
+            strokeLinejoin="round"
+            style={{
+              strokeDasharray: animated ? 280 : 'none',
+              strokeDashoffset: 0,
+            }}
+          />
+        </g>
         
-        {/* Company name - WAVES */}
+        {/* Text layer - FRONT (rendered after wave) */}
         <text 
-          x="8" 
-          y="38" 
+          x="6" 
+          y="40" 
           fontFamily="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" 
-          fontSize="13" 
+          fontSize="14" 
           fontWeight="700" 
           fill="#1E293B" 
           letterSpacing="2.5px"
@@ -73,10 +82,9 @@ export default function Logo({
           WAVES
         </text>
         
-        {/* Company name - LOGICAL TD */}
         <text 
-          x="8" 
-          y="47" 
+          x="6" 
+          y="48" 
           fontFamily="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" 
           fontSize="7" 
           fontWeight="600" 
@@ -89,30 +97,15 @@ export default function Logo({
       
       <style jsx>{`
         .wave-path-animated {
-          animation: waveFlow 3s ease-in-out infinite;
+          animation: waveFlowSmooth 6s ease-in-out infinite;
         }
         
-        @keyframes waveFlow {
-          0%, 100% {
-            stroke-dashoffset: 0;
-            opacity: 1;
-          }
-          50% {
-            stroke-dashoffset: -15;
-            opacity: 0.85;
-          }
-        }
-        
-        .logo-svg:hover .wave-path-animated {
-          animation: waveFlowHover 1.5s ease-in-out infinite;
-        }
-        
-        @keyframes waveFlowHover {
+        @keyframes waveFlowSmooth {
           0%, 100% {
             stroke-dashoffset: 0;
           }
           50% {
-            stroke-dashoffset: -25;
+            stroke-dashoffset: -40;
           }
         }
       `}</style>
