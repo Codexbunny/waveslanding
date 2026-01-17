@@ -1,5 +1,5 @@
 <svg width="220" height="70" viewBox="0 0 220 70" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- Wave to arrow logo mark - improved -->
+  <!-- Wave to arrow logo mark - refined version -->
   <defs>
     <linearGradient id="waveGradient" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" style="stop-color:#4A90E2;stop-opacity:1" />
@@ -7,28 +7,42 @@
     </linearGradient>
   </defs>
   
-  <!-- Smooth wave path -->
-  <path d="M5 45 Q15 25, 25 35 T45 30 T65 20 T85 15 T105 10 L115 5 L120 0 L125 5 L130 10 L140 15" 
-        stroke="url(#waveGradient)" 
-        stroke-width="5" 
-        fill="none" 
-        stroke-linecap="round" 
-        stroke-linejoin="round"/>
+  <!-- Smooth wave path with organic arrow transition -->
+  <path 
+    d="M8 42 
+       Q18 28, 28 35 
+       Q38 42, 48 32 
+       Q58 22, 68 26 
+       Q78 30, 88 20 
+       Q98 10, 108 14 
+       L118 8 
+       L128 2" 
+    stroke="url(#waveGradient)" 
+    stroke-width="4.5" 
+    fill="none" 
+    stroke-linecap="round" 
+    stroke-linejoin="round"/>
   
-  <!-- Arrow head - improved -->
-  <path d="M140 15 L160 0 L155 5 L160 10 L155 15 L160 20 L155 25" 
-        stroke="url(#waveGradient)" 
-        stroke-width="5" 
-        fill="none" 
-        stroke-linecap="round" 
-        stroke-linejoin="round"/>
+  <!-- Arrow head - clean chevron design -->
+  <path 
+    d="M118 2 L140 14 M128 2 L140 14 L128 26" 
+    stroke="url(#waveGradient)" 
+    stroke-width="4.5" 
+    fill="none" 
+    stroke-linecap="round" 
+    stroke-linejoin="round"/>
   
-  <!-- Arrow fill -->
-  <path d="M140 15 L160 0 L160 25 L140 15" 
-        fill="url(#waveGradient)" 
-        opacity="0.2"/>
+  <!-- Subtle glow effect -->
+  <path 
+    d="M118 2 L140 14 L128 26" 
+    stroke="url(#waveGradient)" 
+    stroke-width="8" 
+    fill="none" 
+    stroke-linecap="round" 
+    stroke-linejoin="round"
+    opacity="0.15"/>
   
-  <!-- Company name - improved typography -->
-  <text x="5" y="55" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="700" fill="#1F2937" letter-spacing="1px">WAVES</text>
-  <text x="5" y="68" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600" fill="#6B7280" letter-spacing="0.5px">LOGIX LTD.</text>
+  <!-- Company name - refined typography -->
+  <text x="8" y="52" font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif" font-size="17" font-weight="700" fill="#1F2937" letter-spacing="2px">WAVES</text>
+  <text x="8" y="65" font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="600" fill="#6B7280" letter-spacing="1px">LOGIX LTD.</text>
 </svg>

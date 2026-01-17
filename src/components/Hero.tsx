@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useLayoutEffect } from 'react';
+import { useTranslations } from 'next-intl';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import CTAButton from './CTAButton';
@@ -128,6 +129,9 @@ function Sphere({ config }: SphereProps) {
 }
 
 export default function Hero() {
+  const t = useTranslations('hero');
+  const tCommon = useTranslations('common');
+  
   const sectionRef = useRef<HTMLElement>(null);
   const headlineRef = useRef<HTMLDivElement>(null);
   const tagRef = useRef<HTMLDivElement>(null);
@@ -286,8 +290,8 @@ export default function Hero() {
         <div className="container mx-auto px-6">
           <div className="max-w-5xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-extrabold leading-tight mb-8">
-              <span className="text-gray-900">Where market science meets </span>
-              <span className="gradient-text">automated intelligence</span>
+              <span className="text-gray-900">{t('headline')} </span>
+              <span className="gradient-text">{t('headlineHighlight')}</span>
             </h1>
             {/* Tag - under headline, clickable to scroll to next section */}
             <div ref={tagRef}>
@@ -295,7 +299,7 @@ export default function Hero() {
                 href="#hero-section-2"
                 className="inline-block px-6 py-3 rounded-full bg-gradient-to-r from-purple-100 to-blue-100 text-purple-700 text-sm font-semibold shadow-lg cursor-pointer hover:shadow-xl hover:scale-105 transition-all duration-300"
               >
-                Explore new Forex opportunities!
+                {t('tagline')}
               </a>
             </div>
           </div>
@@ -312,7 +316,7 @@ export default function Hero() {
         <div className="container mx-auto px-6">
           <div className="max-w-5xl mx-auto text-center">
             <p className="text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
-              We apply Elliott Wave theory, quantitative research, and automated systems to professional account management and long-term strategy development.
+              {t('subheadline')}
             </p>
           </div>
         </div>
@@ -330,7 +334,7 @@ export default function Hero() {
               ref={section3Ref}
               className="text-2xl md:text-4xl font-bold text-gray-900 max-w-5xl mx-auto mb-24"
             >
-              Not signals. Not speculation. A structured approach to the market.
+              {t('notSignals')}
             </p>
 
             <div
@@ -338,13 +342,13 @@ export default function Hero() {
               className="flex flex-col sm:flex-row gap-4 justify-center items-center"
             >
               <CTAButton href={TELEGRAM_URL} variant="primary" className="text-lg px-10 py-5 min-w-[250px]">
-                Start Collaboration
+                {tCommon('startCollaboration')}
               </CTAButton>
               <a 
                 href="#services" 
                 className="text-gray-700 hover:text-purple-600 font-semibold transition-colors flex items-center gap-2"
               >
-                Learn More
+                {tCommon('learnMore')}
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>

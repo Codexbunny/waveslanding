@@ -1,0 +1,247 @@
+{
+  "common": {
+    "learnMore": "Learn More",
+    "contact": "Contact",
+    "telegram": "Telegram",
+    "startCollaboration": "Start Collaboration",
+    "exploreAnalytics": "Explore Analytics",
+    "discussObjectives": "Discuss Your Objectives",
+    "requestProposal": "Request Proposal",
+    "readMore": "Read More",
+    "viewCertificate": "View Certificate",
+    "companyName": "Waves Logix Ltd.",
+    "copyright": "All rights reserved."
+  },
+  "nav": {
+    "services": "Services",
+    "accountManagement": "Account Management",
+    "analytics": "Analytics",
+    "about": "About",
+    "aboutCompany": "About Company",
+    "leadership": "Leadership",
+    "contact": "Contact",
+    "certificate": "Certificate"
+  },
+  "hero": {
+    "headline": "Where market science meets",
+    "headlineHighlight": "automated intelligence",
+    "tagline": "Explore new Forex opportunities!",
+    "subheadline": "We apply Elliott Wave theory, quantitative research, and automated systems to professional account management and long-term strategy development.",
+    "notSignals": "Not signals. Not speculation. A structured approach to the market."
+  },
+  "services": {
+    "title": "Our",
+    "titleHighlight": "Services",
+    "subtitle": "Professional solutions for traders and investors"
+  },
+  "serviceAccountManagement": {
+    "badge": "Premium Advisory",
+    "title": "Professional Brokerage Account Advisory",
+    "subtitle": "For Large Capital",
+    "capitalRequirement": "$300,000+",
+    "description": "Waves Logix provides professional advisory and analytical support for high-net-worth clients managing brokerage accounts in the Forex, gold, and oil markets.",
+    "transparencyTitle": "Full Transparency",
+    "transparencySubtitle": "Complete Control of Your Funds",
+    "transparencyPoints": [
+      "Your capital always remains fully under your ownership",
+      "We do not receive, hold, or manage client funds",
+      "All actions performed only with your explicit consent"
+    ],
+    "features": {
+      "advisory": {
+        "title": "Personalized Investment Advisory",
+        "description": "Individual market guidance tailored to your financial objectives, risk profile, and investment horizon."
+      },
+      "monitoring": {
+        "title": "Daily Market Monitoring",
+        "description": "Ongoing analysis of Forex, gold, and oil markets, combining technical structures and macroeconomic factors."
+      },
+      "recommendations": {
+        "title": "Clear Trade Recommendations",
+        "description": "Structured trade ideas with defined logic, entry zones, exit targets, and risk parameters."
+      },
+      "risk": {
+        "title": "Risk Management Framework",
+        "description": "Guidance on position sizing, stop-loss placement, diversification, and capital preservation."
+      },
+      "support": {
+        "title": "24/7 Communication",
+        "description": "Continuous access to consultations, strategic discussions, and educational support."
+      }
+    },
+    "paymentTitle": "Performance-Based Fee Structure",
+    "paymentDescription": "Service fees are charged exclusively based on profits generated. You pay only for results.",
+    "howItWorks": {
+      "title": "How Our Cooperation Is Structured",
+      "steps": [
+        "A formal advisory and analytical support agreement is signed",
+        "Your brokerage account remains under your control at all times",
+        "All operations require your consent and oversight",
+        "No access to funds without direct authorization"
+      ]
+    },
+    "whyChoose": {
+      "title": "Why Clients Choose Waves Logix",
+      "reasons": [
+        "Proven experience working with large-capital accounts",
+        "Personalized, confidential, and professional approach",
+        "Transparent legal and operational structure",
+        "Focus on Forex, gold, and oil markets only",
+        "Selective cooperation with verified clients"
+      ]
+    },
+    "note": "Please note: Waves Logix does not provide analysis or advisory services related to stock or equity markets.",
+    "cta": "Ready to Start?"
+  },
+  "serviceAnalytics": {
+    "badge": "Data-Driven Analysis",
+    "title": "Advanced Forex Market Analysis",
+    "subtitle": "For Independent Traders & Brokerage Companies",
+    "description": "High-precision Forex market analysis designed for independent traders and brokerage companies that require more than generic forecasts.",
+    "approachTitle": "Technology-Driven, Scientific Approach",
+    "approachPoints": [
+      "Advanced technical market structure analysis",
+      "Volatility and liquidity modeling",
+      "Macroeconomic and monetary policy factors",
+      "AI-assisted pattern recognition and validation"
+    ],
+    "independentTitle": "Independent Analysis",
+    "independentSubtitle": "No Execution, No Capital Access",
+    "independentDescription": "Waves Logix does not manage trading accounts, execute trades, or access client funds. All execution remains fully under your control.",
+    "whatIncluded": {
+      "title": "What the Analysis Includes",
+      "items": {
+        "structure": {
+          "title": "High-Precision Market Structure",
+          "description": "Identification of dominant trends, corrective phases, and structural breakpoints across key Forex pairs."
+        },
+        "scenarios": {
+          "title": "Scenario-Based Forecasting",
+          "description": "Multiple validated scenarios with confirmation and invalidation levels for different market outcomes."
+        },
+        "levels": {
+          "title": "Key Price Levels & Liquidity Zones",
+          "description": "Precise mapping of support, resistance, liquidity clusters, and institutional interest areas."
+        },
+        "macro": {
+          "title": "Macro & Fundamental Integration",
+          "description": "Analysis of interest rates, inflation, central bank actions, and global macro drivers."
+        },
+        "risk": {
+          "title": "Risk-Aware Framework",
+          "description": "Volatility expectations, structural risk boundaries, and contextual risk considerations."
+        }
+      }
+    },
+    "forWhom": {
+      "title": "Who This Service Is Designed For",
+      "audiences": [
+        "Independent professional Forex traders",
+        "Proprietary traders and trading desks",
+        "Brokerage companies and analyst teams",
+        "Asset managers seeking external validation",
+        "Institutions requiring third-party analysis"
+      ]
+    },
+    "delivery": {
+      "title": "Delivery Format",
+      "formats": [
+        "Structured written reports",
+        "Annotated charts and technical breakdowns",
+        "Ongoing analytical updates"
+      ]
+    },
+    "whyChoose": {
+      "title": "Why Traders Work With Waves Logix",
+      "reasons": [
+        "Data-driven and scientifically structured analysis",
+        "AI-assisted validation and scenario modeling",
+        "Objective, execution-independent perspective",
+        "Deep specialization in Forex markets",
+        "Confidential and professional cooperation"
+      ]
+    },
+    "cta": "Ready for Institutional-Grade Analysis?"
+  },
+  "miniAbout": {
+    "title": "About",
+    "titleHighlight": "Waves Logix",
+    "description": "Waves Logix is an independent analytical and advisory firm specializing in structured Forex, gold, and oil market intelligence for professional investors, traders, and institutions.",
+    "descriptionContinued": "We operate strictly within an advisory framework, combining deep market expertise, scientific analytical methods, and technology-driven data processing. All client capital remains fully under client control at all times.",
+    "motto": "Clarity, discipline, and transparency in complex financial markets.",
+    "linkCompany": "About Company",
+    "linkLeadership": "Leadership"
+  },
+  "certificate": {
+    "title": "Official",
+    "titleHighlight": "Registration",
+    "subtitle": "Waves Logix Ltd. is officially incorporated and regulated",
+    "type": "Certificate of Incorporation",
+    "country": "Saint Lucia",
+    "companyNumber": "2025-00384",
+    "incorporationDate": "23 May 2025",
+    "law": "International Business Companies Act, Cap 12.14: Section 6",
+    "clickToView": "Click to view certificate"
+  },
+  "aboutCompany": {
+    "heroTitle": "About",
+    "heroHighlight": "Waves Logix Ltd.",
+    "heroSubtitle": "Independent market analysis and advisory support for professional clients",
+    "modelTitle": "Our Business Model",
+    "modelDescription": "The firm works exclusively within a transparent, non-custodial advisory model. Waves Logix does not hold client funds, does not provide brokerage services, and does not perform discretionary asset management. Clients retain full ownership and control over their brokerage accounts at all times.",
+    "methodologyTitle": "Analytical Framework",
+    "methodologyDescription": "Our analytical framework combines market structure analysis, macroeconomic research, wave-based methodologies, and AI-assisted data processing. Artificial intelligence tools are used to enhance data efficiency and scenario validation, while all final conclusions are made by experienced human analysts.",
+    "complianceTitle": "Compliance & Standards",
+    "complianceDescription": "Waves Logix operates with a strong emphasis on compliance, documentation, and professional standards. Official incorporation and corporate documentation are publicly available and may be reviewed for verification purposes.",
+    "disclaimerTitle": "Legal Disclaimer",
+    "disclaimerContent": [
+      "All information provided by Waves Logix Ltd. is for informational and educational purposes only and does not constitute investment advice, financial advice, or a recommendation to buy or sell any financial instrument.",
+      "Trading and investing involve risk and may result in loss of capital. Past performance does not guarantee future results. Waves Logix Ltd. makes no guarantees regarding performance or outcomes.",
+      "Clients are solely responsible for all trading decisions and must ensure compliance with applicable laws and regulations in their jurisdiction."
+    ],
+    "leadershipLink": "Meet Our Leadership"
+  },
+  "leadership": {
+    "heroTitle": "Founder &",
+    "heroHighlight": "Leadership",
+    "heroSubtitle": "Meet the mind behind Waves Logix",
+    "founderName": "Dr. Georg Gershinski",
+    "founderRole": "Founder & Managing Director",
+    "founderBio": "Waves Logix was founded and is led by Dr. Georg Gershinski, a senior market analyst with more than a decade of professional experience in global financial markets.",
+    "backgroundTitle": "Background",
+    "backgroundContent": "Dr. Gershinski's background combines extensive practical market expertise with advanced academic education in law. This dual foundation enables a disciplined approach to market analysis that integrates financial logic, regulatory awareness, and risk control.",
+    "experienceTitle": "Experience",
+    "experienceContent": "Over the course of his career, he has worked across multiple market cycles, volatility regimes, and macroeconomic environments, developing structured analytical methodologies grounded in wave theory, macroeconomic research, and quantitative validation.",
+    "roleTitle": "Role at Waves Logix",
+    "roleContent": "As Founder and Managing Director, Dr. Gershinski defines the firm's analytical standards, strategic direction, and ethical framework. All research methodologies and advisory practices at Waves Logix are developed under his direct oversight to ensure consistency, objectivity, and professional accountability.",
+    "companyLink": "About Waves Logix Ltd."
+  },
+  "contact": {
+    "title": "Get in",
+    "titleHighlight": "Touch",
+    "subtitle": "Fill out the form below or contact us via Telegram",
+    "formTitle": "Send us a message",
+    "formSubtitle": "We'll get back to you as soon as possible",
+    "nameLabel": "Name",
+    "namePlaceholder": "Your name",
+    "emailLabel": "Email",
+    "emailPlaceholder": "your.email@example.com",
+    "phoneLabel": "Phone",
+    "phonePlaceholder": "+1 (555) 123-4567",
+    "messageLabel": "Message (optional)",
+    "messagePlaceholder": "Your message...",
+    "submitButton": "Send Message",
+    "submitting": "Sending...",
+    "directContact": "Or contact us directly",
+    "directContactDescription": "Get in touch with us via Telegram for immediate assistance. We're here to help you with any questions about our services."
+  },
+  "footer": {
+    "description": "Development of trading strategies based on Elliott Wave theory - scientific approach to the market, the right course in the ocean of the Forex market.",
+    "quickLinks": "Quick Links",
+    "servicesTitle": "Services",
+    "aboutTitle": "About",
+    "contactTitle": "Contact",
+    "telegramChannel": "Telegram Channel",
+    "certificateInfo": "Certificate of Incorporation: 23 May 2025 | International Business Companies Act, Cap 12.14: Section 6"
+  }
+}

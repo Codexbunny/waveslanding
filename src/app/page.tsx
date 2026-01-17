@@ -1,7 +1,8 @@
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
-import Services from '@/components/Services';
-import Certificate from '@/components/Certificate';
+import ServiceBlockAccountManagement from '@/components/ServiceBlockAccountManagement';
+import ServiceBlockAnalytics from '@/components/ServiceBlockAnalytics';
+import MiniAbout from '@/components/MiniAbout';
 import Partners from '@/components/Partners';
 import Testimonials from '@/components/Testimonials';
 import ContactForm from '@/components/ContactForm';
@@ -12,8 +13,9 @@ export default function Home() {
     <main className="min-h-screen">
       <Header />
       <Hero />
-      <Services />
-      <Certificate />
+      <ServiceBlockAccountManagement />
+      <ServiceBlockAnalytics />
+      <MiniAbout />
       <Partners />
       <Testimonials />
       <ContactForm />

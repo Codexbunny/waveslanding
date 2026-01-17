@@ -1,0 +1,166 @@
+'use client';
+
+import { motion } from 'framer-motion';
+import { useTranslations } from 'next-intl';
+import Link from 'next/link';
+
+// Icons
+const IconShield = ({ className = "w-6 h-6" }: { className?: string }) => (
+  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+  </svg>
+);
+
+const IconLock = ({ className = "w-6 h-6" }: { className?: string }) => (
+  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+  </svg>
+);
+
+const IconTrendingUp = ({ className = "w-6 h-6" }: { className?: string }) => (
+  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+  </svg>
+);
+
+export default function ServiceBlockAccountManagement() {
+  const t = useTranslations('serviceAccountManagement');
+  const tCommon = useTranslations('common');
+
+  return (
+    <section className="relative py-24 overflow-hidden">
+      {/* Dark premium background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-purple-950 to-gray-900" />
+      
+      {/* Subtle pattern overlay */}
+      <div 
+        className="absolute inset-0 opacity-5"
+        style={{
+          backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.3) 1px, transparent 0)`,
+          backgroundSize: '40px 40px'
+        }}
+      />
+      
+      {/* Gradient orbs */}
+      <div className="absolute top-20 right-20 w-96 h-96 bg-purple-600/20 rounded-full blur-3xl" />
+      <div className="absolute bottom-20 left-20 w-80 h-80 bg-blue-600/15 rounded-full blur-3xl" />
+
+      <div className="container mx-auto px-6 relative z-10">
+        <div className="max-w-6xl mx-auto">
+          {/* Header */}
+          <motion.div
+            className="mb-16"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+          >
+            {/* Badge */}
+            <motion.div 
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-amber-500/20 to-amber-600/20 border border-amber-500/30 mb-8"
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+            >
+              <IconShield className="w-4 h-4 text-amber-400" />
+              <span className="text-amber-400 text-sm font-semibold tracking-wide">{t('badge')}</span>
+            </motion.div>
+
+            {/* Title */}
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">
+              {t('title')}
+            </h2>
+            <p className="text-xl md:text-2xl text-purple-300 font-medium mb-6">
+              {t('subtitle')}
+            </p>
+            
+            {/* Capital requirement - big statement */}
+            <div className="flex items-center gap-6 mb-8">
+              <span className="text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-amber-400 to-amber-500 bg-clip-text text-transparent">
+                {t('capitalRequirement')}
+              </span>
+              <div className="h-12 w-px bg-gray-700" />
+              <p className="text-gray-400 max-w-md">
+                {t('description')}
+              </p>
+            </div>
+          </motion.div>
+
+          {/* Key points grid */}
+          <div className="grid md:grid-cols-3 gap-6 mb-12">
+            {/* Transparency */}
+            <motion.div
+              className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-purple-500/30 transition-colors"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+            >
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center mb-4">
+                <IconLock className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-lg font-bold text-white mb-2">{t('transparencyTitle')}</h3>
+              <p className="text-gray-400 text-sm">{t('transparencySubtitle')}</p>
+            </motion.div>
+
+            {/* Performance */}
+            <motion.div
+              className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-purple-500/30 transition-colors"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+            >
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-500 to-amber-600 flex items-center justify-center mb-4">
+                <IconTrendingUp className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-lg font-bold text-white mb-2">{t('paymentTitle')}</h3>
+              <p className="text-gray-400 text-sm">{t('paymentDescription')}</p>
+            </motion.div>
+
+            {/* Shield */}
+            <motion.div
+              className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-purple-500/30 transition-colors"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+            >
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center mb-4">
+                <IconShield className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-lg font-bold text-white mb-2">Forex, Gold & Oil</h3>
+              <p className="text-gray-400 text-sm">Specialized focus on high-liquidity markets</p>
+            </motion.div>
+          </div>
+
+          {/* CTA */}
+          <motion.div
+            className="flex flex-col sm:flex-row items-center gap-6"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+          >
+            <Link
+              href="/services/account-management"
+              className="group inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-amber-500 to-amber-600 text-gray-900 font-bold rounded-full hover:shadow-lg hover:shadow-amber-500/25 transition-all duration-300"
+            >
+              {tCommon('discussObjectives')}
+              <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </Link>
+            <Link
+              href="/services/account-management"
+              className="text-gray-400 hover:text-white transition-colors font-medium"
+            >
+              {tCommon('learnMore')} →
+            </Link>
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  );
+}
