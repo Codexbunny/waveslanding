@@ -113,29 +113,6 @@ html {
   }
 }
 
-/* Logo subtle wave animation */
-.logo-animated {
-  transition: transform 0.3s ease;
-}
-
-.logo-animated:hover {
-  animation: logoWave 1.5s ease-in-out;
-}
-
-@keyframes logoWave {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  25% {
-    transform: translateY(-2px);
-  }
-  50% {
-    transform: translateY(0);
-  }
-  75% {
-    transform: translateY(-1px);
-  }
-}
 
 /* Hero text animation styles */
 .hero-text-animate {

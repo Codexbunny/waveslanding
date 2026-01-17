@@ -134,12 +134,10 @@ export default function Header() {
       >
         <nav className="container mx-auto px-6 py-4 flex items-center justify-between">
           <motion.div
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
           >
-            <Link href="/">
-              <Logo width={180} height={50} />
-            </Link>
+            <Logo width={180} height={50} />
           </motion.div>
 
           {/* Desktop Navigation */}
