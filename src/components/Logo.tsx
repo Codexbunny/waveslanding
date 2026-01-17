@@ -28,7 +28,7 @@ export default function Logo({
         fill="none" 
         xmlns="http://www.w3.org/2000/svg"
         className="logo-svg"
-        aria-label="Waves Logical TD"
+        aria-label="Waves Logix Ltd."
       >
         <defs>
           <linearGradient id="waveGradientLogo" x1="0%" y1="50%" x2="100%" y2="50%">
@@ -91,7 +91,7 @@ export default function Logo({
           fill="#64748B" 
           letterSpacing="1.2px"
         >
-          LOGICAL TD
+          LOGIX LTD.
         </text>
       </svg>
       
