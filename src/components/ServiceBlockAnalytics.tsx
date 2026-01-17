@@ -95,7 +95,7 @@ export default function ServiceBlockAnalytics() {
           </motion.div>
 
           {/* Main content grid */}
-          <div className="grid lg:grid-cols-5 gap-8 mb-12">
+          <div className="grid lg:grid-cols-5 gap-8 mb-6">
             {/* Left: Features */}
             <div className="lg:col-span-3 space-y-4">
               {/* Feature cards */}
