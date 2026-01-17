@@ -44,10 +44,10 @@ export default function MiniAbout() {
             {/* Section header */}
             <motion.div
               className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.4 }}
             >
               <h2 className="text-4xl md:text-5xl font-extrabold mb-4">
                 {t('title')} <span className="gradient-text">{t('titleHighlight')}</span>
@@ -59,10 +59,10 @@ export default function MiniAbout() {
               {/* Left: Mini About */}
               <motion.div
                 className="liquid-glass rounded-3xl p-8 md:p-10"
-                initial={{ opacity: 0, x: -30 }}
+                initial={{ opacity: 0, x: -15 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
+                viewport={{ once: true, margin: "-30px" }}
+                transition={{ duration: 0.4 }}
               >
                 <p className="text-gray-700 text-lg leading-relaxed mb-6">
                   {t('description')}
@@ -109,10 +109,10 @@ export default function MiniAbout() {
               {/* Right: Certificate */}
               <motion.div
                 className="liquid-glass rounded-3xl p-8 md:p-10"
-                initial={{ opacity: 0, x: 30 }}
+                initial={{ opacity: 0, x: 15 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
+                viewport={{ once: true, margin: "-30px" }}
+                transition={{ duration: 0.4, delay: 0.05 }}
               >
                 {/* Header */}
                 <div className="flex items-start gap-4 mb-6">

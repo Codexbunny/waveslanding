@@ -15,15 +15,18 @@ const partners = [
 ];
 
 export default function Partners() {
+  // Duplicate partners for seamless loop
+  const duplicatedPartners = [...partners, ...partners];
+
   return (
-    <section id="partners" className="py-24 bg-gradient-to-b from-white to-gray-50 relative isolate overflow-hidden">
+    <section id="partners" className="py-16 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
       <div className="container mx-auto px-6 relative z-10">
         <motion.div
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 30 }}
+          className="text-center mb-12"
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.5 }}
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold mb-4 tracking-tight text-gray-900">
             Compatible with <span className="gradient-text">industry-standard</span>
@@ -34,29 +37,25 @@ export default function Partners() {
         </motion.div>
 
         {/* Desktop: Marquee carousel */}
-        <div className="hidden md:block relative overflow-hidden py-8">
+        <div className="hidden md:block relative py-6">
           {/* Fade edges */}
-          <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
-          <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-gray-50 to-transparent z-10 pointer-events-none" />
+          <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
+          <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-gray-50 to-transparent z-10 pointer-events-none" />
           
           {/* CSS-based infinite marquee */}
           <div className="partners-marquee">
             <div className="partners-track">
-              {/* Triple the partners for seamless loop */}
-              {[...partners, ...partners, ...partners].map((partner, index) => (
+              {duplicatedPartners.map((partner, index) => (
                 <div
                   key={`${partner.id}-${index}`}
-                  className="flex-shrink-0 w-44 h-20 flex items-center justify-center mx-4"
+                  className="flex-shrink-0 w-40 h-16 flex items-center justify-center mx-6"
                 >
                   <Image
                     src={partner.logo}
                     alt={partner.name}
-                    width={160}
-                    height={48}
-                    className="max-h-12 w-auto object-contain opacity-50 hover:opacity-100 transition-opacity duration-300"
-                    style={{ filter: 'grayscale(100%)' }}
-                    onMouseEnter={(e) => e.currentTarget.style.filter = 'grayscale(0%)'}
-                    onMouseLeave={(e) => e.currentTarget.style.filter = 'grayscale(100%)'}
+                    width={140}
+                    height={40}
+                    className="max-h-10 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
                   />
                 </div>
               ))}
@@ -65,53 +64,23 @@ export default function Partners() {
         </div>
 
         {/* Mobile: Static grid */}
-        <div className="md:hidden grid grid-cols-2 gap-4">
-          {partners.map((partner, index) => (
-            <motion.div
+        <div className="md:hidden grid grid-cols-2 gap-3">
+          {partners.map((partner) => (
+            <div
               key={partner.id}
-              className="flex items-center justify-center p-6 bg-white rounded-2xl border border-gray-100 shadow-sm"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: index * 0.05 }}
+              className="flex items-center justify-center p-4 bg-white rounded-xl border border-gray-100 shadow-sm"
             >
               <Image
                 src={partner.logo}
                 alt={partner.name}
-                width={120}
-                height={36}
-                className="max-h-8 w-auto object-contain opacity-60"
-                style={{ filter: 'grayscale(100%)' }}
+                width={100}
+                height={30}
+                className="max-h-7 w-auto object-contain grayscale opacity-60"
               />
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>
-      
-      <style jsx>{`
-        .partners-marquee {
-          overflow: hidden;
-        }
-        
-        .partners-track {
-          display: flex;
-          animation: marquee 40s linear infinite;
-          will-change: transform;
-        }
-        
-        .partners-track:hover {
-          animation-play-state: paused;
-        }
-        
-        @keyframes marquee {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(calc(-176px * 8));
-          }
-        }
-      `}</style>
     </section>
   );
 }

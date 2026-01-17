@@ -41,14 +41,14 @@ export default function ContactForm() {
   };
 
   return (
-    <section id="contact" className="py-24 bg-gradient-to-b from-white to-gray-50 relative isolate overflow-hidden">
+    <section id="contact" className="pt-24 pb-12 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
       <div className="container mx-auto px-6 relative z-10">
         <motion.div
           className="text-center mb-16"
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.4 }}
         >
           <h2 className="text-4xl md:text-5xl font-extrabold mb-6 tracking-tight">
             {t('title')} <span className="gradient-text">{t('titleHighlight')}</span>
@@ -61,10 +61,10 @@ export default function ContactForm() {
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
           <motion.div
             className="liquid-glass rounded-3xl p-8 md:p-10"
-            initial={{ opacity: 0, x: -50 }}
+            initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            viewport={{ once: true, margin: "-30px" }}
+            transition={{ duration: 0.4 }}
           >
             <div className="mb-8">
               <h3 className="text-3xl font-bold mb-2 text-gray-900">{t('formTitle')}</h3>
@@ -144,10 +144,10 @@ export default function ContactForm() {
 
           <motion.div
             className="flex flex-col justify-center"
-            initial={{ opacity: 0, x: 50 }}
+            initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            viewport={{ once: true, margin: "-30px" }}
+            transition={{ duration: 0.4, delay: 0.05 }}
           >
             <div className="liquid-glass rounded-3xl p-10 text-center h-full flex flex-col justify-center">
               <div className="w-20 h-20 purple-gradient rounded-2xl flex items-center justify-center text-white mb-6 mx-auto shadow-lg">

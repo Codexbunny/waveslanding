@@ -24,13 +24,21 @@ export const metadata: Metadata = {
   authors: [{ name: "Waves Logix Ltd." }],
   creator: "Waves Logix Ltd.",
   publisher: "Waves Logix Ltd.",
-  metadataBase: new URL('https://waveslogix.com'),
+  metadataBase: new URL('https://waveslogix.space'),
+  alternates: {
+    canonical: 'https://waveslogix.space',
+    languages: {
+      'en': 'https://waveslogix.space',
+      'ru': 'https://waveslogix.space',
+    },
+  },
   openGraph: {
     type: 'website',
     locale: 'en_US',
     siteName: 'Waves Logix',
     title: 'Waves Logix - Professional Forex Analysis & Advisory Services',
     description: 'Independent analytical and advisory firm specializing in Forex, gold, and oil markets.',
+    url: 'https://waveslogix.space',
   },
   twitter: {
     card: 'summary_large_image',
@@ -55,8 +63,8 @@ const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
   name: 'Waves Logix Ltd.',
-  url: 'https://waveslogix.com',
-  logo: 'https://waveslogix.com/logo.svg',
+  url: 'https://waveslogix.space',
+  logo: 'https://waveslogix.space/logo.svg',
   description: 'Independent analytical and advisory firm specializing in Forex, gold, and oil markets.',
   address: {
     '@type': 'PostalAddress',

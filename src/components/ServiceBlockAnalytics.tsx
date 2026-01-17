@@ -64,22 +64,16 @@ export default function ServiceBlockAnalytics() {
           {/* Header */}
           <motion.div
             className="mb-16"
-            initial={{ opacity: 0, y: 40 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.5 }}
           >
             {/* Badge */}
-            <motion.div 
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-purple-100 to-blue-100 border border-purple-200 mb-8"
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-            >
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-purple-100 to-blue-100 border border-purple-200 mb-8">
               <IconCpu className="w-4 h-4 text-purple-600" />
               <span className="text-purple-700 text-sm font-semibold tracking-wide">{t('badge')}</span>
-            </motion.div>
+            </div>
 
             {/* Title */}
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 leading-tight">
@@ -101,10 +95,10 @@ export default function ServiceBlockAnalytics() {
               {/* Feature cards */}
               <motion.div
                 className="liquid-glass rounded-2xl p-6 hover:shadow-xl transition-all duration-300 group"
-                initial={{ opacity: 0, x: -30 }}
+                initial={{ opacity: 0, x: -15 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true, margin: "-30px" }}
+                transition={{ duration: 0.4, delay: 0.05 }}
               >
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
@@ -119,10 +113,10 @@ export default function ServiceBlockAnalytics() {
 
               <motion.div
                 className="liquid-glass rounded-2xl p-6 hover:shadow-xl transition-all duration-300 group"
-                initial={{ opacity: 0, x: -30 }}
+                initial={{ opacity: 0, x: -15 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true, margin: "-30px" }}
+                transition={{ duration: 0.4, delay: 0.1 }}
               >
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
@@ -137,10 +131,10 @@ export default function ServiceBlockAnalytics() {
 
               <motion.div
                 className="liquid-glass rounded-2xl p-6 hover:shadow-xl transition-all duration-300 group"
-                initial={{ opacity: 0, x: -30 }}
+                initial={{ opacity: 0, x: -15 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.3 }}
+                viewport={{ once: true, margin: "-30px" }}
+                transition={{ duration: 0.4, delay: 0.15 }}
               >
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-500 to-indigo-600 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
@@ -157,10 +151,10 @@ export default function ServiceBlockAnalytics() {
             {/* Right: Target audience */}
             <motion.div
               className="lg:col-span-2"
-              initial={{ opacity: 0, x: 30 }}
+              initial={{ opacity: 0, x: 15 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.2 }}
+              viewport={{ once: true, margin: "-30px" }}
+              transition={{ duration: 0.4, delay: 0.1 }}
             >
               <div className="liquid-glass rounded-2xl p-6 h-full">
                 <div className="flex items-center gap-3 mb-6">
@@ -172,16 +166,12 @@ export default function ServiceBlockAnalytics() {
                 
                 <div className="flex flex-wrap gap-2">
                   {audiences.map((audience: string, index: number) => (
-                    <motion.span
+                    <span
                       key={index}
                       className="inline-flex items-center px-3 py-2 rounded-lg bg-gradient-to-r from-purple-50 to-blue-50 text-gray-700 text-sm font-medium border border-purple-100 hover:border-purple-300 transition-colors"
-                      initial={{ opacity: 0, scale: 0.9 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.3, delay: 0.1 * index }}
                     >
                       {audience}
-                    </motion.span>
+                    </span>
                   ))}
                 </div>
 
@@ -207,10 +197,10 @@ export default function ServiceBlockAnalytics() {
           {/* CTA */}
           <motion.div
             className="flex flex-col sm:flex-row items-center gap-6"
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.4 }}
+            viewport={{ once: true, margin: "-30px" }}
+            transition={{ duration: 0.4, delay: 0.2 }}
           >
             <Link
               href="/services/analytics"

@@ -37,7 +37,7 @@ export default function Testimonials() {
   ];
 
   return (
-    <section id="testimonials" className="py-24 bg-white relative isolate overflow-hidden">
+    <section id="testimonials" className="py-20 bg-white relative overflow-hidden">
       {/* Subtle background pattern */}
       <div 
         className="absolute inset-0 opacity-[0.02]"
@@ -50,10 +50,10 @@ export default function Testimonials() {
       <div className="container mx-auto px-6 relative z-10">
         <motion.div
           className="text-center mb-16"
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.4 }}
         >
           <h2 className="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight">
             Client <span className="gradient-text">Testimonials</span>
@@ -68,10 +68,10 @@ export default function Testimonials() {
             <motion.div
               key={testimonial.id}
               className="relative bg-gradient-to-b from-white to-gray-50/50 rounded-3xl p-8 border border-gray-100 hover:border-indigo-100 transition-all duration-300 hover:shadow-lg group"
-              initial={{ opacity: 0, y: 40 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.15 }}
+              viewport={{ once: true, margin: "-30px" }}
+              transition={{ duration: 0.3, delay: index * 0.1 }}
             >
               {/* Quote icon */}
               <div className="absolute top-6 right-6 text-indigo-100 group-hover:text-indigo-200 transition-colors">

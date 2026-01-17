@@ -50,22 +50,16 @@ export default function ServiceBlockAccountManagement() {
           {/* Header */}
           <motion.div
             className="mb-16"
-            initial={{ opacity: 0, y: 40 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.5 }}
           >
             {/* Badge */}
-            <motion.div 
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-amber-500/15 to-amber-600/15 border border-amber-500/25 mb-8"
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-            >
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-amber-500/15 to-amber-600/15 border border-amber-500/25 mb-8">
               <IconShield className="w-4 h-4 text-amber-400/80" />
               <span className="text-amber-400/90 text-sm font-semibold tracking-wide">{t('badge')}</span>
-            </motion.div>
+            </div>
 
             {/* Title */}
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight tracking-tight">
@@ -92,20 +86,14 @@ export default function ServiceBlockAccountManagement() {
             {/* Full Transparency */}
             <motion.div
               className="bg-white/[0.03] backdrop-blur-sm rounded-2xl p-6 border border-white/[0.06] hover:border-indigo-400/20 transition-all duration-300 hover:bg-white/[0.05]"
-              initial={{ opacity: 0, y: 40, scale: 0.95 }}
-              whileInView={{ opacity: 1, y: 0, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-30px" }}
+              transition={{ duration: 0.4, delay: 0.1 }}
             >
-              <motion.div 
-                className="w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-500/80 to-indigo-600/80 flex items-center justify-center mb-4"
-                initial={{ scale: 0 }}
-                whileInView={{ scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: 0.3, type: "spring", stiffness: 200 }}
-              >
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-500/80 to-indigo-600/80 flex items-center justify-center mb-4">
                 <IconLock className="w-6 h-6 text-white" />
-              </motion.div>
+              </div>
               <h3 className="text-lg font-bold text-white mb-2">{t('transparencyTitle')}</h3>
               <p className="text-slate-400 text-sm">{t('transparencySubtitle')}</p>
             </motion.div>
@@ -126,7 +114,7 @@ export default function ServiceBlockAccountManagement() {
                 transition={{ duration: 0.4, delay: 0.4, type: "spring", stiffness: 200 }}
               >
                 <IconTrendingUp className="w-6 h-6 text-white" />
-              </motion.div>
+              </div>
               <h3 className="text-lg font-bold text-white mb-2">{t('paymentTitle')}</h3>
               <p className="text-slate-400 text-sm">{t('paymentDescription')}</p>
             </motion.div>
@@ -134,20 +122,14 @@ export default function ServiceBlockAccountManagement() {
             {/* Forex, Gold & Oil */}
             <motion.div
               className="bg-white/[0.03] backdrop-blur-sm rounded-2xl p-6 border border-white/[0.06] hover:border-cyan-400/20 transition-all duration-300 hover:bg-white/[0.05]"
-              initial={{ opacity: 0, y: 40, scale: 0.95 }}
-              whileInView={{ opacity: 1, y: 0, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-30px" }}
+              transition={{ duration: 0.4, delay: 0.2 }}
             >
-              <motion.div 
-                className="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-500/70 to-cyan-600/70 flex items-center justify-center mb-4"
-                initial={{ scale: 0 }}
-                whileInView={{ scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: 0.5, type: "spring", stiffness: 200 }}
-              >
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-500/70 to-cyan-600/70 flex items-center justify-center mb-4">
                 <IconShield className="w-6 h-6 text-white" />
-              </motion.div>
+              </div>
               <h3 className="text-lg font-bold text-white mb-2">Forex, Gold & Oil</h3>
               <p className="text-slate-400 text-sm">Specialized focus on high-liquidity markets</p>
             </motion.div>
@@ -156,10 +138,10 @@ export default function ServiceBlockAccountManagement() {
           {/* CTA */}
           <motion.div
             className="flex flex-col sm:flex-row items-center gap-6"
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.5 }}
+            viewport={{ once: true, margin: "-30px" }}
+            transition={{ duration: 0.4, delay: 0.25 }}
           >
             <Link
               href="/services/account-management"

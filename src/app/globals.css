@@ -174,3 +174,29 @@ html {
     background-position: -200% 0;
   }
 }
+
+/* Partners carousel */
+.partners-marquee {
+  overflow: hidden;
+  width: 100%;
+}
+
+.partners-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 30s linear infinite;
+  will-change: transform;
+}
+
+.partners-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
