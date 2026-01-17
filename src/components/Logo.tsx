@@ -15,9 +15,18 @@ export default function Logo({
   height = 50,
   animated = true
 }: LogoProps) {
-  // Calculate scale factor based on width
   const scale = width / 180;
   const scaledHeight = 50 * scale;
+  
+  // Wave path - reused for both base and highlight
+  const wavePath = `M-10 22 
+     C-4 22, 0 18, 6 18 
+     C12 18, 16 24, 22 24
+     C28 24, 34 12, 42 12
+     C50 12, 54 20, 62 20
+     C70 20, 78 6, 88 6
+     C98 6, 104 16, 112 16
+     C120 16, 128 2, 138 2`;
   
   return (
     <Link href="/" className={`inline-block ${className}`}>
@@ -27,49 +36,60 @@ export default function Logo({
         viewBox="0 0 180 50" 
         fill="none" 
         xmlns="http://www.w3.org/2000/svg"
-        className="logo-svg"
+        className={`logo-svg ${animated ? 'logo-animated' : ''}`}
         aria-label="Waves Logix Ltd."
       >
         <defs>
-          <linearGradient id="waveGradientLogo" x1="0%" y1="50%" x2="100%" y2="50%">
+          <linearGradient id="waveBase" x1="0%" y1="50%" x2="100%" y2="50%">
             <stop offset="0%" stopColor="#4B7C9B" />
-            <stop offset="40%" stopColor="#5A8FB0" />
+            <stop offset="50%" stopColor="#5A8FB0" />
             <stop offset="100%" stopColor="#4A7A99" />
           </linearGradient>
           
-          {/* Mask to clip wave behind text area */}
-          <mask id="textMask">
+          <linearGradient id="waveHighlight" x1="0%" y1="50%" x2="100%" y2="50%">
+            <stop offset="0%" stopColor="rgba(255,255,255,0)" />
+            <stop offset="40%" stopColor="rgba(255,255,255,0.4)" />
+            <stop offset="60%" stopColor="rgba(255,255,255,0.4)" />
+            <stop offset="100%" stopColor="rgba(255,255,255,0)" />
+          </linearGradient>
+          
+          <mask id="textMaskLogo">
             <rect x="0" y="0" width="180" height="50" fill="white" />
-            {/* Black areas will hide the wave - covering text region */}
             <rect x="4" y="28" width="58" height="22" fill="black" rx="2" />
           </mask>
         </defs>
         
-        {/* Wave layer - BEHIND text (rendered first, masked) */}
-        <g mask="url(#textMask)">
+        {/* Wave layers - BEHIND text */}
+        <g mask="url(#textMaskLogo)">
+          {/* Base wave - always visible */}
           <path 
-            className={animated ? 'wave-path-animated' : ''}
-            d="M-10 22 
-               C-4 22, 0 18, 6 18 
-               C12 18, 16 24, 22 24
-               C28 24, 34 12, 42 12
-               C50 12, 54 20, 62 20
-               C70 20, 78 6, 88 6
-               C98 6, 104 16, 112 16
-               C120 16, 128 2, 138 2"
-            stroke="url(#waveGradientLogo)" 
+            d={wavePath}
+            stroke="url(#waveBase)" 
             strokeWidth="3.5" 
             fill="none" 
             strokeLinecap="round" 
             strokeLinejoin="round"
-            style={{
-              strokeDasharray: animated ? 280 : 'none',
-              strokeDashoffset: 0,
-            }}
           />
+          
+          {/* Highlight wave - animated shimmer moving right to left */}
+          {animated && (
+            <path 
+              className="wave-highlight"
+              d={wavePath}
+              stroke="url(#waveHighlight)" 
+              strokeWidth="3.5" 
+              fill="none" 
+              strokeLinecap="round" 
+              strokeLinejoin="round"
+              style={{
+                strokeDasharray: '30 170',
+                strokeDashoffset: 0,
+              }}
+            />
+          )}
         </g>
         
-        {/* Text layer - FRONT (rendered after wave) */}
+        {/* Text layer - FRONT */}
         <text 
           x="6" 
           y="40" 
@@ -96,16 +116,20 @@ export default function Logo({
       </svg>
       
       <style jsx>{`
-        .wave-path-animated {
-          animation: waveFlowSmooth 6s ease-in-out infinite;
+        .logo-animated .wave-highlight {
+          animation: highlightFlow 2.5s linear infinite;
         }
         
-        @keyframes waveFlowSmooth {
-          0%, 100% {
-            stroke-dashoffset: 0;
+        .logo-animated:hover .wave-highlight {
+          animation-duration: 0.8s;
+        }
+        
+        @keyframes highlightFlow {
+          0% {
+            stroke-dashoffset: 200;
           }
-          50% {
-            stroke-dashoffset: -40;
+          100% {
+            stroke-dashoffset: 0;
           }
         }
       `}</style>
