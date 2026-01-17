@@ -25,8 +25,8 @@ export default function Footer() {
         <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
           {/* Logo & Description */}
           <div className="lg:col-span-2">
-            <div className="mb-6 [&_svg]:brightness-0 [&_svg]:invert">
-              <Logo width={180} height={50} />
+            <div className="mb-6">
+              <Logo width={180} height={50} variant="dark" />
             </div>
             <p className="text-gray-300 mb-6 max-w-md leading-relaxed">
               {t('description')}

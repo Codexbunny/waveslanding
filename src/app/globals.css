@@ -153,3 +153,24 @@ html {
 .animate-text-cycle {
   animation: textFadeInOut 8s ease-in-out infinite;
 }
+
+/* Certificate shimmer overlay */
+.shimmer-overlay {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255,255,255,0.15) 50%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
