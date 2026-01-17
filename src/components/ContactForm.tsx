@@ -40,8 +40,8 @@ export default function ContactForm() {
   };
 
   return (
-    <section id="contact" className="py-24 bg-gradient-to-b from-white to-gray-50">
-      <div className="container mx-auto px-6">
+    <section id="contact" className="py-24 bg-gradient-to-b from-white to-gray-50 relative isolate overflow-hidden">
+      <div className="container mx-auto px-6 relative z-10">
         <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 30 }}
@@ -49,7 +49,7 @@ export default function ContactForm() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-5xl md:text-6xl font-extrabold mb-6">
+          <h2 className="text-4xl md:text-5xl font-extrabold mb-6 tracking-tight">
             {t('title')} <span className="gradient-text">{t('titleHighlight')}</span>
           </h2>
           <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto">

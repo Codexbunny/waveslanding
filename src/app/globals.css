@@ -112,3 +112,47 @@ html {
     padding: 4rem 0;
   }
 }
+
+/* Logo subtle wave animation */
+.logo-animated {
+  transition: transform 0.3s ease;
+}
+
+.logo-animated:hover {
+  animation: logoWave 1.5s ease-in-out;
+}
+
+@keyframes logoWave {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-2px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(-1px);
+  }
+}
+
+/* Hero text animation styles */
+.hero-text-animate {
+  will-change: opacity, transform;
+}
+
+@keyframes textFadeInOut {
+  0%, 100% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  15%, 85% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-text-cycle {
+  animation: textFadeInOut 8s ease-in-out infinite;
+}

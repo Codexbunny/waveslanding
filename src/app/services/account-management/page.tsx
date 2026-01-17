@@ -67,12 +67,12 @@ export default function AccountManagementPage() {
       
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
-        {/* Dark premium background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-purple-950 to-gray-900" />
+        {/* Dark premium background - refined, professional */}
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-gray-900" />
         
-        {/* Gradient orbs */}
-        <div className="absolute top-20 right-20 w-96 h-96 bg-purple-600/20 rounded-full blur-3xl" />
-        <div className="absolute bottom-20 left-20 w-80 h-80 bg-blue-600/15 rounded-full blur-3xl" />
+        {/* Gradient orbs - softer, less saturated */}
+        <div className="absolute top-20 right-20 w-96 h-96 bg-indigo-600/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-20 left-20 w-80 h-80 bg-slate-600/10 rounded-full blur-3xl" />
         
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-4xl">
@@ -82,25 +82,25 @@ export default function AccountManagementPage() {
               transition={{ duration: 0.7 }}
             >
               {/* Badge */}
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-amber-500/20 to-amber-600/20 border border-amber-500/30 mb-8">
-                <IconShield className="w-4 h-4 text-amber-400" />
-                <span className="text-amber-400 text-sm font-semibold tracking-wide">{t('badge')}</span>
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-amber-500/15 to-amber-600/15 border border-amber-500/25 mb-8">
+                <IconShield className="w-4 h-4 text-amber-400/80" />
+                <span className="text-amber-400/90 text-sm font-semibold tracking-wide">{t('badge')}</span>
               </div>
 
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight tracking-tight">
                 {t('title')}
               </h1>
-              <p className="text-xl md:text-2xl text-purple-300 font-medium mb-8">
+              <p className="text-xl md:text-2xl text-indigo-300/80 font-medium mb-8">
                 {t('subtitle')}
               </p>
               
-              {/* Capital requirement */}
+              {/* Capital requirement - refined */}
               <div className="flex flex-col md:flex-row items-start md:items-center gap-6 mb-12">
-                <span className="text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-amber-400 to-amber-500 bg-clip-text text-transparent">
+                <span className="text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-amber-500/80 to-amber-600/70 bg-clip-text text-transparent">
                   {t('capitalRequirement')}
                 </span>
-                <div className="hidden md:block h-12 w-px bg-gray-700" />
-                <p className="text-gray-400 max-w-lg text-lg">
+                <div className="hidden md:block h-12 w-px bg-slate-600" />
+                <p className="text-slate-400 max-w-lg text-lg">
                   {t('description')}
                 </p>
               </div>
@@ -274,7 +274,7 @@ export default function AccountManagementPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-gray-900 via-purple-950 to-gray-900">
+      <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-gray-900">
         <div className="container mx-auto px-6">
           <motion.div
             className="max-w-3xl mx-auto text-center"

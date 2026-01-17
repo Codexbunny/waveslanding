@@ -1,7 +1,8 @@
 'use client';
 
-import { useEffect, useRef, useLayoutEffect } from 'react';
+import { useEffect, useRef, useLayoutEffect, useState } from 'react';
 import { useTranslations } from 'next-intl';
+import { motion, AnimatePresence } from 'framer-motion';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import CTAButton from './CTAButton';
@@ -289,10 +290,22 @@ export default function Hero() {
       >
         <div className="container mx-auto px-6">
           <div className="max-w-5xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-extrabold leading-tight mb-8">
+            <motion.h1 
+              className="text-5xl md:text-7xl font-extrabold leading-tight mb-8 tracking-tight"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
+            >
               <span className="text-gray-900">{t('headline')} </span>
-              <span className="gradient-text">{t('headlineHighlight')}</span>
-            </h1>
+              <motion.span 
+                className="gradient-text inline-block"
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+              >
+                {t('headlineHighlight')}
+              </motion.span>
+            </motion.h1>
             {/* Tag - under headline, clickable to scroll to next section */}
             <div ref={tagRef}>
               <a 
@@ -315,9 +328,27 @@ export default function Hero() {
       >
         <div className="container mx-auto px-6">
           <div className="max-w-5xl mx-auto text-center">
-            <p className="text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
-              {t('subheadline')}
-            </p>
+            <motion.p 
+              className="text-xl md:text-2xl lg:text-3xl text-gray-700 max-w-4xl mx-auto leading-relaxed font-medium tracking-tight hero-text-animate"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ 
+                duration: 0.8, 
+                ease: [0.25, 0.46, 0.45, 0.94] 
+              }}
+            >
+              <motion.span
+                className="inline-block"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+              >
+                <span className="bg-gradient-to-r from-gray-800 via-gray-700 to-gray-600 bg-clip-text text-transparent">
+                  {t('subheadline')}
+                </span>
+              </motion.span>
+            </motion.p>
           </div>
         </div>
       </div>
@@ -330,12 +361,18 @@ export default function Hero() {
         <div className="container mx-auto px-6">
           <div className="max-w-5xl mx-auto text-center">
             {/* "Not signals" text moved up with more margin below */}
-            <p 
+            <motion.p 
               ref={section3Ref}
-              className="text-2xl md:text-4xl font-bold text-gray-900 max-w-5xl mx-auto mb-24"
+              className="text-2xl md:text-4xl font-bold text-gray-900 max-w-5xl mx-auto mb-24 tracking-tight leading-snug"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
             >
-              {t('notSignals')}
-            </p>
+              <span className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-700 bg-clip-text text-transparent">
+                {t('notSignals')}
+              </span>
+            </motion.p>
 
             <div
               ref={section3CtaRef}

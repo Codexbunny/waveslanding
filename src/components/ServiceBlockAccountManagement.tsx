@@ -29,21 +29,21 @@ export default function ServiceBlockAccountManagement() {
 
   return (
     <section className="relative py-24 overflow-hidden">
-      {/* Dark premium background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-purple-950 to-gray-900" />
+      {/* Dark premium background - more muted, professional */}
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-gray-900" />
       
       {/* Subtle pattern overlay */}
       <div 
-        className="absolute inset-0 opacity-5"
+        className="absolute inset-0 opacity-[0.03]"
         style={{
-          backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.3) 1px, transparent 0)`,
+          backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.4) 1px, transparent 0)`,
           backgroundSize: '40px 40px'
         }}
       />
       
-      {/* Gradient orbs */}
-      <div className="absolute top-20 right-20 w-96 h-96 bg-purple-600/20 rounded-full blur-3xl" />
-      <div className="absolute bottom-20 left-20 w-80 h-80 bg-blue-600/15 rounded-full blur-3xl" />
+      {/* Gradient orbs - softer, less saturated */}
+      <div className="absolute top-20 right-20 w-96 h-96 bg-indigo-600/10 rounded-full blur-3xl" />
+      <div className="absolute bottom-20 left-20 w-80 h-80 bg-slate-600/10 rounded-full blur-3xl" />
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-6xl mx-auto">
@@ -57,81 +57,99 @@ export default function ServiceBlockAccountManagement() {
           >
             {/* Badge */}
             <motion.div 
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-amber-500/20 to-amber-600/20 border border-amber-500/30 mb-8"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-amber-500/15 to-amber-600/15 border border-amber-500/25 mb-8"
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              <IconShield className="w-4 h-4 text-amber-400" />
-              <span className="text-amber-400 text-sm font-semibold tracking-wide">{t('badge')}</span>
+              <IconShield className="w-4 h-4 text-amber-400/80" />
+              <span className="text-amber-400/90 text-sm font-semibold tracking-wide">{t('badge')}</span>
             </motion.div>
 
             {/* Title */}
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight tracking-tight">
               {t('title')}
             </h2>
-            <p className="text-xl md:text-2xl text-purple-300 font-medium mb-6">
+            <p className="text-xl md:text-2xl text-indigo-300/80 font-medium mb-6">
               {t('subtitle')}
             </p>
             
-            {/* Capital requirement - big statement */}
+            {/* Capital requirement - refined, professional */}
             <div className="flex items-center gap-6 mb-8">
-              <span className="text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-amber-400 to-amber-500 bg-clip-text text-transparent">
+              <span className="text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-amber-500/80 to-amber-600/70 bg-clip-text text-transparent">
                 {t('capitalRequirement')}
               </span>
-              <div className="h-12 w-px bg-gray-700" />
-              <p className="text-gray-400 max-w-md">
+              <div className="h-12 w-px bg-slate-600" />
+              <p className="text-slate-400 max-w-md">
                 {t('description')}
               </p>
             </div>
           </motion.div>
 
-          {/* Key points grid */}
+          {/* Key points grid - staggered animations */}
           <div className="grid md:grid-cols-3 gap-6 mb-12">
-            {/* Transparency */}
+            {/* Full Transparency */}
             <motion.div
-              className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-purple-500/30 transition-colors"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              className="bg-white/[0.03] backdrop-blur-sm rounded-2xl p-6 border border-white/[0.06] hover:border-indigo-400/20 transition-all duration-300 hover:bg-white/[0.05]"
+              initial={{ opacity: 0, y: 40, scale: 0.95 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.1 }}
+              transition={{ duration: 0.6, delay: 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
             >
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center mb-4">
+              <motion.div 
+                className="w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-500/80 to-indigo-600/80 flex items-center justify-center mb-4"
+                initial={{ scale: 0 }}
+                whileInView={{ scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: 0.3, type: "spring", stiffness: 200 }}
+              >
                 <IconLock className="w-6 h-6 text-white" />
-              </div>
+              </motion.div>
               <h3 className="text-lg font-bold text-white mb-2">{t('transparencyTitle')}</h3>
-              <p className="text-gray-400 text-sm">{t('transparencySubtitle')}</p>
+              <p className="text-slate-400 text-sm">{t('transparencySubtitle')}</p>
             </motion.div>
 
-            {/* Performance */}
+            {/* Performance-Based */}
             <motion.div
-              className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-purple-500/30 transition-colors"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              className="bg-white/[0.03] backdrop-blur-sm rounded-2xl p-6 border border-white/[0.06] hover:border-amber-400/20 transition-all duration-300 hover:bg-white/[0.05]"
+              initial={{ opacity: 0, y: 40, scale: 0.95 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.2 }}
+              transition={{ duration: 0.6, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
             >
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-500 to-amber-600 flex items-center justify-center mb-4">
+              <motion.div 
+                className="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-500/70 to-amber-600/70 flex items-center justify-center mb-4"
+                initial={{ scale: 0 }}
+                whileInView={{ scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: 0.4, type: "spring", stiffness: 200 }}
+              >
                 <IconTrendingUp className="w-6 h-6 text-white" />
-              </div>
+              </motion.div>
               <h3 className="text-lg font-bold text-white mb-2">{t('paymentTitle')}</h3>
-              <p className="text-gray-400 text-sm">{t('paymentDescription')}</p>
+              <p className="text-slate-400 text-sm">{t('paymentDescription')}</p>
             </motion.div>
 
-            {/* Shield */}
+            {/* Forex, Gold & Oil */}
             <motion.div
-              className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-purple-500/30 transition-colors"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              className="bg-white/[0.03] backdrop-blur-sm rounded-2xl p-6 border border-white/[0.06] hover:border-cyan-400/20 transition-all duration-300 hover:bg-white/[0.05]"
+              initial={{ opacity: 0, y: 40, scale: 0.95 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.3 }}
+              transition={{ duration: 0.6, delay: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
             >
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center mb-4">
+              <motion.div 
+                className="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-500/70 to-cyan-600/70 flex items-center justify-center mb-4"
+                initial={{ scale: 0 }}
+                whileInView={{ scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: 0.5, type: "spring", stiffness: 200 }}
+              >
                 <IconShield className="w-6 h-6 text-white" />
-              </div>
+              </motion.div>
               <h3 className="text-lg font-bold text-white mb-2">Forex, Gold & Oil</h3>
-              <p className="text-gray-400 text-sm">Specialized focus on high-liquidity markets</p>
+              <p className="text-slate-400 text-sm">Specialized focus on high-liquidity markets</p>
             </motion.div>
           </div>
 
@@ -141,11 +159,11 @@ export default function ServiceBlockAccountManagement() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.4 }}
+            transition={{ duration: 0.6, delay: 0.5 }}
           >
             <Link
               href="/services/account-management"
-              className="group inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-amber-500 to-amber-600 text-gray-900 font-bold rounded-full hover:shadow-lg hover:shadow-amber-500/25 transition-all duration-300"
+              className="group inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-amber-500/90 to-amber-600/80 text-slate-900 font-bold rounded-full hover:shadow-lg hover:shadow-amber-500/15 transition-all duration-300 hover:from-amber-500 hover:to-amber-600"
             >
               {tCommon('discussObjectives')}
               <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -154,7 +172,7 @@ export default function ServiceBlockAccountManagement() {
             </Link>
             <Link
               href="/services/account-management"
-              className="text-gray-400 hover:text-white transition-colors font-medium"
+              className="text-slate-400 hover:text-white transition-colors font-medium"
             >
               {tCommon('learnMore')} →
             </Link>

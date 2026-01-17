@@ -1,48 +1,80 @@
-<svg width="220" height="70" viewBox="0 0 220 70" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- Wave to arrow logo mark - refined version -->
+<svg width="240" height="70" viewBox="0 0 240 70" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="waveGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#4A90E2;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#8B5CF6;stop-opacity:1" />
+    <linearGradient id="waveGradient" x1="0%" y1="50%" x2="100%" y2="50%">
+      <stop offset="0%" style="stop-color:#5B8FB9;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4A7FA8;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="arrowGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4A7FA8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3D6A8A;stop-opacity:1" />
     </linearGradient>
   </defs>
   
-  <!-- Smooth wave path with organic arrow transition -->
+  <!-- Elliott Wave Pattern - ascending waves ending in arrow -->
+  <!-- Wave 1 (smallest) -->
   <path 
-    d="M8 42 
-       Q18 28, 28 35 
-       Q38 42, 48 32 
-       Q58 22, 68 26 
-       Q78 30, 88 20 
-       Q98 10, 108 14 
-       L118 8 
-       L128 2" 
+    d="M6 38 
+       Q10 34, 14 36 
+       Q18 38, 22 32"
+    stroke="url(#waveGradient)" 
+    stroke-width="4" 
+    fill="none" 
+    stroke-linecap="round" 
+    stroke-linejoin="round"/>
+  
+  <!-- Wave 2 -->
+  <path 
+    d="M22 32 
+       Q28 26, 34 30 
+       Q40 34, 46 24"
     stroke="url(#waveGradient)" 
     stroke-width="4.5" 
     fill="none" 
     stroke-linecap="round" 
     stroke-linejoin="round"/>
   
-  <!-- Arrow head - clean chevron design -->
+  <!-- Wave 3 -->
   <path 
-    d="M118 2 L140 14 M128 2 L140 14 L128 26" 
+    d="M46 24 
+       Q54 16, 62 22 
+       Q70 28, 78 14"
     stroke="url(#waveGradient)" 
-    stroke-width="4.5" 
+    stroke-width="5" 
     fill="none" 
     stroke-linecap="round" 
     stroke-linejoin="round"/>
   
-  <!-- Subtle glow effect -->
+  <!-- Wave 4 (ascending to arrow) -->
   <path 
-    d="M118 2 L140 14 L128 26" 
+    d="M78 14 
+       Q88 4, 98 10 
+       Q108 16, 118 4"
     stroke="url(#waveGradient)" 
-    stroke-width="8" 
+    stroke-width="5.5" 
     fill="none" 
     stroke-linecap="round" 
-    stroke-linejoin="round"
-    opacity="0.15"/>
+    stroke-linejoin="round"/>
   
-  <!-- Company name - refined typography -->
-  <text x="8" y="52" font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif" font-size="17" font-weight="700" fill="#1F2937" letter-spacing="2px">WAVES</text>
-  <text x="8" y="65" font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="600" fill="#6B7280" letter-spacing="1px">LOGIX LTD.</text>
+  <!-- Arrow head -->
+  <path 
+    d="M108 14 L118 4 L128 14"
+    stroke="url(#arrowGradient)" 
+    stroke-width="5.5" 
+    fill="none" 
+    stroke-linecap="round" 
+    stroke-linejoin="round"/>
+  
+  <!-- Vertical arrow stem extension -->
+  <path 
+    d="M118 4 L118 2"
+    stroke="url(#arrowGradient)" 
+    stroke-width="5.5" 
+    fill="none" 
+    stroke-linecap="round"/>
+  
+  <!-- Company name - WAVES -->
+  <text x="6" y="56" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="18" font-weight="800" fill="#2D3748" letter-spacing="3px">WAVES</text>
+  
+  <!-- Company name - LOGICAL TD. -->
+  <text x="6" y="68" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="10" font-weight="600" fill="#4A5568" letter-spacing="1.5px">LOGICAL TD.</text>
 </svg>
