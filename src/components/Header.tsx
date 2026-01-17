@@ -2,6 +2,7 @@
 
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect, useRef, useCallback } from 'react';
+import { createPortal } from 'react-dom';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
@@ -38,11 +39,32 @@ interface DropdownProps {
 }
 
 function Dropdown({ label, items, isOpen, onToggle, onClose }: DropdownProps) {
+  const triggerRef = useRef<HTMLButtonElement>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const [position, setPosition] = useState({ top: 0, left: 0 });
+  const [mounted, setMounted] = useState(false);
 
+  // Calculate dropdown position relative to trigger
+  useEffect(() => {
+    if (isOpen && triggerRef.current) {
+      const rect = triggerRef.current.getBoundingClientRect();
+      setPosition({
+        top: rect.bottom + 8, // 8px gap (mt-2)
+        left: rect.left,
+      });
+    }
+  }, [isOpen]);
+
+  // Handle click outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+      const target = event.target as Node;
+      if (
+        dropdownRef.current && 
+        !dropdownRef.current.contains(target) &&
+        triggerRef.current &&
+        !triggerRef.current.contains(target)
+      ) {
         onClose();
       }
     };
@@ -56,9 +78,55 @@ function Dropdown({ label, items, isOpen, onToggle, onClose }: DropdownProps) {
     };
   }, [isOpen, onClose]);
 
+  // Close on scroll (optional, prevents misaligned dropdown)
+  useEffect(() => {
+    if (isOpen) {
+      const handleScroll = () => onClose();
+      window.addEventListener('scroll', handleScroll, { passive: true });
+      return () => window.removeEventListener('scroll', handleScroll);
+    }
+  }, [isOpen, onClose]);
+
+  // Client-side only for portal
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const dropdownContent = (
+    <AnimatePresence>
+      {isOpen && (
+        <motion.div
+          ref={dropdownRef}
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -10 }}
+          transition={{ duration: 0.2 }}
+          className="fixed w-56 bg-white rounded-xl shadow-xl border border-gray-100 py-2"
+          style={{
+            top: position.top,
+            left: position.left,
+            zIndex: 9999,
+          }}
+        >
+          {items.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              onClick={onClose}
+              className="block px-4 py-3 text-gray-700 hover:text-purple-600 hover:bg-purple-50 transition-colors font-medium"
+            >
+              {item.label}
+            </Link>
+          ))}
+        </motion.div>
+      )}
+    </AnimatePresence>
+  );
+
   return (
-    <div ref={dropdownRef} className="relative">
+    <div className="relative">
       <button
+        ref={triggerRef}
         onClick={onToggle}
         className="flex items-center gap-1 text-gray-700 hover:text-purple-600 transition-colors font-medium relative group"
       >
@@ -72,28 +140,8 @@ function Dropdown({ label, items, isOpen, onToggle, onClose }: DropdownProps) {
         <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-purple-600 transition-all group-hover:w-full"></span>
       </button>
 
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            transition={{ duration: 0.2 }}
-            className="absolute top-full left-0 mt-2 w-56 bg-white rounded-xl shadow-xl border border-gray-100 py-2 z-50"
-          >
-            {items.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                onClick={onClose}
-                className="block px-4 py-3 text-gray-700 hover:text-purple-600 hover:bg-purple-50 transition-colors font-medium"
-              >
-                {item.label}
-              </Link>
-            ))}
-          </motion.div>
-        )}
-      </AnimatePresence>
+      {/* Render dropdown via Portal to escape stacking context */}
+      {mounted && createPortal(dropdownContent, document.body)}
     </div>
   );
 }
