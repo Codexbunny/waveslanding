@@ -114,7 +114,7 @@ export default function ServiceBlockAccountManagement() {
                 transition={{ duration: 0.4, delay: 0.4, type: "spring", stiffness: 200 }}
               >
                 <IconTrendingUp className="w-6 h-6 text-white" />
-              </div>
+              </motion.div>
               <h3 className="text-lg font-bold text-white mb-2">{t('paymentTitle')}</h3>
               <p className="text-slate-400 text-sm">{t('paymentDescription')}</p>
             </motion.div>
