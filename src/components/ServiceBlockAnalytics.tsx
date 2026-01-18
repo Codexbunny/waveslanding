@@ -42,7 +42,7 @@ export default function ServiceBlockAnalytics() {
   const audiences = t.raw('forWhom.audiences') as string[];
 
   return (
-    <section className="relative py-24 overflow-hidden bg-gradient-to-b from-gray-50 to-white">
+    <section className="relative py-24 bg-gradient-to-b from-gray-50 to-white">
       {/* Grid pattern background */}
       <div 
         className="absolute inset-0 opacity-[0.03]"

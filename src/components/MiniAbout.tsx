@@ -54,8 +54,8 @@ export default function MiniAbout() {
               </h2>
             </motion.div>
 
-            {/* Two-column layout */}
-            <div className="grid lg:grid-cols-2 gap-8">
+            {/* Two-column layout - extra padding for shadow visibility */}
+            <div className="grid lg:grid-cols-2 gap-8 py-4">
               {/* Left: Mini About */}
               <motion.div
                 className="liquid-glass rounded-3xl p-8 md:p-10"
@@ -159,7 +159,7 @@ export default function MiniAbout() {
                   whileTap={{ scale: 0.98 }}
                 >
                   <Image
-                    src="/certificate.jpg"
+                    src="/certificates/incorporation.webp"
                     alt="Certificate of Incorporation"
                     fill
                     className="object-cover opacity-90 group-hover:opacity-100 transition-opacity"
@@ -181,7 +181,7 @@ export default function MiniAbout() {
       <Lightbox
         isOpen={isLightboxOpen}
         onClose={() => setIsLightboxOpen(false)}
-        imageSrc="/certificate.jpg"
+        imageSrc="/certificates/incorporation.webp"
         imageAlt="Certificate of Incorporation - Waves Logix Ltd."
       />
     </>

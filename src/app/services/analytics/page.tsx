@@ -8,19 +8,27 @@ export async function generateMetadata(): Promise<Metadata> {
   
   const seo = messages.seo?.analytics;
   const title = seo?.title || 'Advanced Forex Market Analysis | Waves Logix';
-  const description = seo?.description || 'High-precision Forex analysis for professional traders and brokerage companies.';
+  const description = seo?.description || 'High-precision Forex market analysis using Elliott Wave Theory and quantitative research for professional traders and brokerage companies.';
   
   return {
     title,
     description,
+    keywords: ['Forex analysis', 'Elliott wave analysis', 'market research', 'trading signals', 'technical analysis', 'XAUUSD', 'gold analysis'],
     openGraph: {
       title,
       description,
       locale,
       type: 'website',
       siteName: 'Waves Logix',
+      url: 'https://waveslogix.space/services/analytics',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
     },
     alternates: {
+      canonical: 'https://waveslogix.space/services/analytics',
       languages: {
         'en': '/services/analytics',
         'ru': '/services/analytics',

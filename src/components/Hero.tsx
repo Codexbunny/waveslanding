@@ -194,71 +194,100 @@ export default function Hero() {
         },
       });
 
-      // Section 2 - fade in from bottom (starts earlier for shorter gap)
-      gsap.fromTo(
-        section2Ref.current,
-        {
-          opacity: 0,
-          y: isMobile ? 40 : 80,
-          scale: isMobile ? 1 : 0.95,
+      // Section 2 - SCROLL-BASED: appears when hero section is reached, disappears on further scroll
+      // Initial state: hidden
+      gsap.set(section2Ref.current, { 
+        opacity: 0, 
+        y: isMobile ? 40 : 60,
+        visibility: 'hidden'
+      });
+      
+      // Timeline for appear and disappear
+      const section2Timeline = gsap.timeline({
+        scrollTrigger: {
+          trigger: section2Ref.current,
+          start: 'top 90%',
+          end: 'bottom 20%',
+          scrub: scrubValue,
         },
-        {
+      });
+      
+      section2Timeline
+        .to(section2Ref.current, {
           opacity: 1,
           y: 0,
-          scale: 1,
+          visibility: 'visible',
           ease: 'power2.out',
-          scrollTrigger: {
-            trigger: section2Ref.current,
-            start: 'top 95%',
-            end: 'top 50%',
-            scrub: scrubValue,
-          },
-        }
-      );
+          duration: 0.4,
+        })
+        .to(section2Ref.current, {
+          opacity: 0,
+          y: isMobile ? -30 : -50,
+          ease: 'power2.in',
+          duration: 0.4,
+        }, '+=0.2');
 
-      // Section 3 text - fade in from bottom
-      gsap.fromTo(
-        section3Ref.current,
-        {
-          opacity: 0,
-          y: isMobile ? 40 : 80,
-          scale: isMobile ? 1 : 0.95,
+      // Section 3 text - fade in from bottom, then fade out
+      gsap.set(section3Ref.current, { 
+        opacity: 0, 
+        y: isMobile ? 40 : 60,
+        visibility: 'hidden'
+      });
+      
+      const section3Timeline = gsap.timeline({
+        scrollTrigger: {
+          trigger: section3Ref.current,
+          start: 'top 90%',
+          end: 'bottom 30%',
+          scrub: scrubValue,
         },
-        {
+      });
+      
+      section3Timeline
+        .to(section3Ref.current, {
           opacity: 1,
           y: 0,
-          scale: 1,
+          visibility: 'visible',
           ease: 'power2.out',
-          scrollTrigger: {
-            trigger: section3Ref.current,
-            start: 'top 95%',
-            end: 'top 50%',
-            scrub: scrubValue,
-          },
-        }
-      );
+          duration: 0.4,
+        })
+        .to(section3Ref.current, {
+          opacity: 0,
+          y: isMobile ? -20 : -40,
+          ease: 'power2.in',
+          duration: 0.4,
+        }, '+=0.3');
 
-      // Section 3 CTA buttons - slightly delayed
-      gsap.fromTo(
-        section3CtaRef.current,
-        {
-          opacity: 0,
-          y: isMobile ? 25 : 50,
-          scale: isMobile ? 1 : 0.95,
+      // Section 3 CTA buttons - appear and stay longer
+      gsap.set(section3CtaRef.current, { 
+        opacity: 0, 
+        y: isMobile ? 25 : 40,
+        visibility: 'hidden'
+      });
+      
+      const ctaTimeline = gsap.timeline({
+        scrollTrigger: {
+          trigger: section3CtaRef.current,
+          start: 'top 85%',
+          end: 'bottom 25%',
+          scrub: scrubValue,
         },
-        {
+      });
+      
+      ctaTimeline
+        .to(section3CtaRef.current, {
           opacity: 1,
           y: 0,
-          scale: 1,
+          visibility: 'visible',
           ease: 'power2.out',
-          scrollTrigger: {
-            trigger: section3CtaRef.current,
-            start: 'top 95%',
-            end: 'top 55%',
-            scrub: scrubValue,
-          },
-        }
-      );
+          duration: 0.4,
+        })
+        .to(section3CtaRef.current, {
+          opacity: 0,
+          y: isMobile ? -15 : -30,
+          ease: 'power2.in',
+          duration: 0.4,
+        }, '+=0.4');
     }, sectionRef);
 
     return () => ctx.revert();
@@ -267,7 +296,7 @@ export default function Hero() {
   return (
     <section 
       ref={sectionRef}
-      className="hero-section relative overflow-hidden bg-gradient-to-br from-white via-purple-50/20 to-blue-50/30 pt-24"
+      className="hero-section relative bg-gradient-to-br from-white via-purple-50/20 to-blue-50/30 pt-24"
     >
       {/* Spheres - fixed to viewport, floating with scroll-based path drift */}
       {/* Disabled on mobile for performance */}
@@ -343,64 +372,46 @@ export default function Hero() {
         </div>
       </div>
       
-      {/* Subheadline - fades in from bottom on scroll (reduced height for shorter gap) */}
+      {/* Subheadline - scroll-based: appears when reached, disappears on further scroll */}
       <div 
         id="hero-section-2"
         ref={section2Ref}
         className="h-[45vh] flex items-center justify-center py-10"
-        style={{ zIndex: 10 }}
+        style={{ zIndex: 10, opacity: 0, visibility: 'hidden', willChange: 'opacity, transform' }}
       >
         <div className="container mx-auto px-6">
           <div className="max-w-5xl mx-auto text-center">
-            <motion.p 
-              className="text-xl md:text-2xl lg:text-3xl text-gray-700 max-w-4xl mx-auto leading-relaxed font-medium tracking-tight hero-text-animate"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ 
-                duration: 0.8, 
-                ease: [0.25, 0.46, 0.45, 0.94] 
-              }}
-            >
-              <motion.span
-                className="inline-block"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.6, delay: 0.3 }}
-              >
-                <span className="bg-gradient-to-r from-gray-800 via-gray-700 to-gray-600 bg-clip-text text-transparent">
-                  {t('subheadline')}
-                </span>
-              </motion.span>
-            </motion.p>
+            <p className="text-xl md:text-2xl lg:text-3xl text-gray-700 max-w-4xl mx-auto leading-relaxed font-medium tracking-tight hero-text-animate">
+              <span className="bg-gradient-to-r from-gray-800 via-gray-700 to-gray-600 bg-clip-text text-transparent">
+                {t('subheadline')}
+              </span>
+            </p>
           </div>
         </div>
       </div>
 
-      {/* CTA Section - fades in from bottom on scroll */}
+      {/* CTA Section - scroll-based appear/disappear */}
       <div 
         className="h-[75vh] flex items-center justify-center py-10"
         style={{ zIndex: 10 }}
       >
         <div className="container mx-auto px-6">
           <div className="max-w-5xl mx-auto text-center">
-            {/* "Not signals" text moved up with more margin below */}
-            <motion.p 
+            {/* "Not signals" text - scroll animated */}
+            <p 
               ref={section3Ref}
               className="text-2xl md:text-4xl font-bold text-gray-900 max-w-5xl mx-auto mb-24 tracking-tight leading-snug"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
+              style={{ opacity: 0, visibility: 'hidden', willChange: 'opacity, transform' }}
             >
               <span className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-700 bg-clip-text text-transparent">
                 {t('notSignals')}
               </span>
-            </motion.p>
+            </p>
 
             <div
               ref={section3CtaRef}
               className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+              style={{ opacity: 0, visibility: 'hidden', willChange: 'opacity, transform' }}
             >
               <CTAButton href={TELEGRAM_URL} variant="primary" className="text-lg px-10 py-5 min-w-[250px]">
                 {tCommon('startCollaboration')}

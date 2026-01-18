@@ -73,7 +73,7 @@ export default function AnalyticsClient() {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden bg-gradient-to-b from-gray-50 to-white">
+      <section className="relative pt-32 pb-20 bg-gradient-to-b from-gray-50 to-white">
         {/* Grid pattern */}
         <div 
           className="absolute inset-0 opacity-[0.03]"
@@ -109,16 +109,32 @@ export default function AnalyticsClient() {
                 {t('subtitle')}
               </p>
               
-              <p className="text-gray-600 text-lg max-w-2xl">
+              <p className="text-gray-600 text-lg max-w-2xl mb-8">
                 {t('description')}
               </p>
+              
+              {/* CTA Buttons - directly under description */}
+              <div className="flex flex-col sm:flex-row gap-4">
+                <CTAButton href={TELEGRAM_URL} variant="primary" className="px-8 py-4">
+                  {tCommon('exploreAnalytics')}
+                </CTAButton>
+                <a 
+                  href="#approach"
+                  className="inline-flex items-center justify-center gap-2 px-8 py-4 text-gray-700 hover:text-purple-600 font-semibold transition-colors border border-gray-200 rounded-full hover:border-purple-300"
+                >
+                  {tCommon('learnMore')}
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </a>
+              </div>
             </motion.div>
           </div>
         </div>
       </section>
 
       {/* Approach Section */}
-      <section className="py-20 bg-white">
+      <section id="approach" className="py-20 bg-white">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
             <motion.div

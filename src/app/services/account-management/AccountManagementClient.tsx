@@ -66,7 +66,7 @@ export default function AccountManagementClient() {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
+      <section className="relative pt-32 pb-20">
         {/* Dark premium background - refined, professional */}
         <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-gray-900" />
         

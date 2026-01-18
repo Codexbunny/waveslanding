@@ -28,7 +28,7 @@ export default function ServiceBlockAccountManagement() {
   const tCommon = useTranslations('common');
 
   return (
-    <section className="relative py-24 overflow-hidden">
+    <section className="relative py-24">
       {/* Dark premium background - more muted, professional */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-gray-900" />
       

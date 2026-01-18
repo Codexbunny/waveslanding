@@ -17,18 +17,35 @@
   --font-mono: var(--font-geist-mono);
 }
 
+html {
+  height: 100%;
+  overflow-x: hidden;
+  overscroll-behavior: none;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
+  min-height: 100%;
   overflow-x: hidden;
+  overflow-y: auto;
   -webkit-overflow-scrolling: touch;
+  overscroll-behavior: none;
 }
 
-/* Prevent horizontal overflow on all containers */
-main, section, .container {
+/* Prevent horizontal overflow without creating scroll traps */
+main {
   max-width: 100vw;
-  overflow-x: hidden;
+}
+
+.container {
+  max-width: 100%;
+}
+
+/* Sections should not create nested scrollbars */
+section {
+  overflow: visible;
 }
 
 /* Smooth scrolling */
@@ -95,13 +112,17 @@ html {
   will-change: transform, filter;
 }
 
-/* Liquid glass effect */
+/* Liquid glass effect - premium shadows that display correctly */
 .liquid-glass {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(139, 92, 246, 0.05) 100%);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(139, 92, 246, 0.03) 100%);
   backdrop-filter: blur(40px) saturate(180%);
   -webkit-backdrop-filter: blur(40px) saturate(180%);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0 8px 32px 0 rgba(139, 92, 246, 0.15), 0 0 0 1px rgba(255, 255, 255, 0.5) inset;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 
+    0 4px 16px -2px rgba(139, 92, 246, 0.08),
+    0 8px 32px -4px rgba(139, 92, 246, 0.12),
+    0 16px 48px -8px rgba(139, 92, 246, 0.06),
+    0 0 0 1px rgba(255, 255, 255, 0.5) inset;
 }
 
 /* Simplified liquid-glass for mobile (better performance) */
@@ -199,4 +220,148 @@ html {
   100% {
     transform: translateX(-50%);
   }
+}
+
+/* ========================================
+   PART 9: GLOBAL UI/UX UPGRADE UTILITIES
+   ======================================== */
+
+/* Clip corner - cut corners for modern geometric look */
+.clip-corner {
+  clip-path: polygon(0 12px, 12px 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%);
+}
+
+.clip-corner-sm {
+  clip-path: polygon(0 8px, 8px 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%);
+}
+
+.clip-corner-lg {
+  clip-path: polygon(0 16px, 16px 0, 100% 0, 100% calc(100% - 16px), calc(100% - 16px) 100%, 0 100%);
+}
+
+/* Enhanced glass morphism */
+.glass-morphism {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+  backdrop-filter: blur(20px) saturate(150%);
+  -webkit-backdrop-filter: blur(20px) saturate(150%);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 
+    0 8px 32px 0 rgba(31, 38, 135, 0.15),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+/* Subtle border glow on hover */
+.border-glow {
+  position: relative;
+}
+
+.border-glow::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  background: linear-gradient(135deg, #8B5CF6 0%, #4A90E2 100%);
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.border-glow:hover::before {
+  opacity: 0.5;
+}
+
+/* Premium button style */
+.btn-premium {
+  position: relative;
+  background: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%);
+  border: none;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.btn-premium::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.btn-premium:hover::before {
+  left: 100%;
+}
+
+.btn-premium:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 40px -10px rgba(139, 92, 246, 0.5);
+}
+
+/* Asymmetric card with gradient border */
+.card-asymmetric {
+  position: relative;
+  background: white;
+  border-radius: 24px 8px 24px 8px;
+  padding: 2rem;
+  border: 1px solid rgba(139, 92, 246, 0.1);
+  transition: all 0.3s ease;
+}
+
+.card-asymmetric:hover {
+  border-color: rgba(139, 92, 246, 0.3);
+  box-shadow: 0 20px 60px -20px rgba(139, 92, 246, 0.2);
+}
+
+/* Diagonal stripe pattern overlay */
+.pattern-diagonal {
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 10px,
+    rgba(139, 92, 246, 0.02) 10px,
+    rgba(139, 92, 246, 0.02) 20px
+  );
+}
+
+/* Floating animation for elements */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Pulse glow effect */
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(139, 92, 246, 0.5);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+/* Performance optimizations for animations */
+.gpu-accelerated {
+  transform: translateZ(0);
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+/* Content visibility for performance */
+.content-auto {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 500px;
 }

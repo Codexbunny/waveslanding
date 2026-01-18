@@ -20,21 +20,20 @@ export default function Logo({
   const scale = width / 180;
   const scaledHeight = 50 * scale;
   
-  // Colors based on variant
+  // Colors based on variant - improved contrast for dark backgrounds
   const textColor = variant === 'dark' ? '#FFFFFF' : '#1E293B';
-  const subtextColor = variant === 'dark' ? '#94A3B8' : '#64748B';
+  const subtextColor = variant === 'dark' ? '#CBD5E1' : '#64748B';
   const waveColors = variant === 'dark' 
-    ? { start: '#7DD3FC', mid: '#38BDF8', end: '#0EA5E9' }  // Lighter blue for dark bg
-    : { start: '#4B7C9B', mid: '#5A8FB0', end: '#4A7A99' };
+    ? { start: '#7DD3FC', mid: '#38BDF8', end: '#0EA5E9' }
+    : { start: '#6366F1', mid: '#8B5CF6', end: '#A855F7' };
   
-  // Wave path - compact Elliott wave pattern
-  // Starts from left, goes through 5 waves, ends balanced
-  const wavePath = `M-5 22 
-     C2 22, 6 16, 14 16 
-     C22 16, 26 26, 34 26
-     C42 26, 48 10, 58 10
-     C68 10, 72 22, 82 22
-     C92 22, 96 14, 105 14`;
+  // Compact wave path - starts over W, ends over S
+  // 3 smooth Elliott wave peaks, balanced and proportional to text
+  const wavePath = `M8 18 
+     C14 18, 18 10, 26 10
+     C34 10, 38 22, 46 22
+     C54 22, 58 8, 66 8
+     C72 8, 76 16, 80 16`;
   
   return (
     <Link href="/" className={`inline-block ${className}`}>
@@ -56,69 +55,75 @@ export default function Logo({
           
           <linearGradient id={`waveHighlight-${variant}`} x1="0%" y1="50%" x2="100%" y2="50%">
             <stop offset="0%" stopColor="rgba(255,255,255,0)" />
-            <stop offset="40%" stopColor="rgba(255,255,255,0.5)" />
-            <stop offset="60%" stopColor="rgba(255,255,255,0.5)" />
+            <stop offset="40%" stopColor="rgba(255,255,255,0.6)" />
+            <stop offset="60%" stopColor="rgba(255,255,255,0.6)" />
             <stop offset="100%" stopColor="rgba(255,255,255,0)" />
           </linearGradient>
           
-          {/* Mask to keep wave behind the text area */}
-          <mask id={`textMaskLogo-${variant}`}>
-            <rect x="0" y="0" width="180" height="50" fill="white" />
-            <rect x="4" y="30" width="72" height="22" fill="black" rx="2" />
-          </mask>
+          {/* Filter for text glow on dark backgrounds */}
+          {variant === 'dark' && (
+            <filter id="textGlow" x="-20%" y="-20%" width="140%" height="140%">
+              <feGaussianBlur stdDeviation="1" result="blur" />
+              <feMerge>
+                <feMergeNode in="blur" />
+                <feMergeNode in="SourceGraphic" />
+              </feMerge>
+            </filter>
+          )}
         </defs>
         
-        {/* Wave layers - BEHIND text */}
-        <g mask={`url(#textMaskLogo-${variant})`}>
+        {/* Wave layers - positioned above text */}
+        <g>
           {/* Base wave - always visible */}
           <path 
             d={wavePath}
             stroke={`url(#waveBase-${variant})`}
-            strokeWidth="3.5" 
+            strokeWidth="3" 
             fill="none" 
             strokeLinecap="round" 
             strokeLinejoin="round"
           />
           
-          {/* Highlight wave - animated shimmer moving right to left */}
+          {/* Highlight wave - animated shimmer */}
           {animated && (
             <path 
               className="wave-highlight"
               d={wavePath}
               stroke={`url(#waveHighlight-${variant})`}
-              strokeWidth="3.5" 
+              strokeWidth="3" 
               fill="none" 
               strokeLinecap="round" 
               strokeLinejoin="round"
               style={{
-                strokeDasharray: '25 120',
+                strokeDasharray: '20 80',
                 strokeDashoffset: 0,
               }}
             />
           )}
         </g>
         
-        {/* Text layer - FRONT - larger and bolder */}
+        {/* Text layer - larger, bolder, better contrast */}
         <text 
           x="6" 
-          y="42" 
+          y="40" 
           fontFamily="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" 
-          fontSize="17" 
+          fontSize="22" 
           fontWeight="800" 
           fill={textColor}
-          letterSpacing="2.8px"
+          letterSpacing="3.5px"
+          filter={variant === 'dark' ? 'url(#textGlow)' : undefined}
         >
           WAVES
         </text>
         
         <text 
           x="6" 
-          y="50" 
+          y="49" 
           fontFamily="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" 
-          fontSize="8" 
+          fontSize="9" 
           fontWeight="600" 
           fill={subtextColor}
-          letterSpacing="1.4px"
+          letterSpacing="1.6px"
         >
           LOGIX LTD.
         </text>
@@ -131,7 +136,7 @@ export default function Logo({
         
         @keyframes highlightFlow {
           0% {
-            stroke-dashoffset: 150;
+            stroke-dashoffset: 100;
           }
           100% {
             stroke-dashoffset: 0;
