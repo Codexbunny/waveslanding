@@ -129,6 +129,38 @@ export default function Footer() {
                 Company No: 2025-00384
               </li>
             </ul>
+
+            {/* Legal */}
+            <h4 className="font-bold text-lg mt-8 mb-4 text-white">{t('legalTitle')}</h4>
+            <ul className="space-y-3">
+              <li>
+                <Link 
+                  href="/legal/terms" 
+                  className="text-gray-300 hover:text-white transition-colors flex items-center gap-2 group text-sm"
+                >
+                  <span className="w-1 h-1 bg-purple-500 rounded-full group-hover:scale-150 transition-transform"></span>
+                  {tNav('termsOfUse')}
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  href="/legal/kyc-aml" 
+                  className="text-gray-300 hover:text-white transition-colors flex items-center gap-2 group text-sm"
+                >
+                  <span className="w-1 h-1 bg-purple-500 rounded-full group-hover:scale-150 transition-transform"></span>
+                  {tNav('kycAml')}
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  href="/legal/privacy" 
+                  className="text-gray-300 hover:text-white transition-colors flex items-center gap-2 group text-sm"
+                >
+                  <span className="w-1 h-1 bg-purple-500 rounded-full group-hover:scale-150 transition-transform"></span>
+                  {tNav('privacyPolicy')}
+                </Link>
+              </li>
+            </ul>
           </div>
         </div>
 

@@ -120,4 +120,32 @@
 | Sitemap | src/app/sitemap.ts |
 | Robots | src/app/robots.ts |
 
+---
+
+## 12. Domain Migration: waveslogix.com
+
+### Checklist
+
+1. **Vercel:** Go to Project → Settings → Domains. Add `waveslogix.com` (and optionally `www.waveslogix.com`). Vercel will display required DNS records (A / CNAME / TXT for verification).
+
+2. **DNS (at waveslogix.com registrar):** Remove or update existing records that point to the old Hyperspace host. Add the records specified by Vercel. Typical setup:
+   - A record `@` → `76.76.21.21` (Vercel)
+   - CNAME `www` → `cname.vercel-dns.com`
+
+3. **SSL:** Vercel issues SSL automatically once DNS resolves correctly. No manual action needed.
+
+4. **Codebase canonical switch (after DNS propagates):**
+   - `src/app/layout.tsx`: change `metadataBase` to `https://waveslogix.com`, update `alternates.canonical` and `alternates.languages`, update `openGraph.url`.
+   - `src/app/sitemap.ts`: change `baseUrl` to `https://waveslogix.com`.
+   - `src/app/robots.ts`: change `baseUrl` to `https://waveslogix.com`.
+   - All page-level `generateMetadata` with hardcoded canonical URLs: update to `waveslogix.com`.
+
+5. **Redirect (optional):** In Vercel Domains, set `waveslogix.space` → 301 redirect to `waveslogix.com` (or keep both). Pick one canonical domain to avoid duplicate content in search engines.
+
+6. **Verify:** After DNS propagates (up to 48h), confirm:
+   - `https://waveslogix.com` serves the site with valid SSL.
+   - `https://waveslogix.space` either redirects or is removed.
+   - `sitemap.xml` and `robots.txt` reference the canonical domain.
+   - Google Search Console: add new property for `waveslogix.com` if applicable.
+
 This is the full summary of the active Waves Logix website as implemented in the current codebase.

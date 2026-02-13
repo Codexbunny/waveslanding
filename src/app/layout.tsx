@@ -46,13 +46,13 @@ export const metadata: Metadata = {
     canonical: 'https://waveslogix.space',
     languages: {
       'en': 'https://waveslogix.space',
-      'ru': 'https://waveslogix.space/ru',
+      'es': 'https://waveslogix.space/es',
     },
   },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    alternateLocale: 'ru_RU',
+    alternateLocale: 'es_ES',
     siteName: 'Waves Logix',
     title: 'Waves Logix - Professional Forex Analysis & Advisory Services',
     description: 'Independent analytical and advisory firm. Elliott Wave analysis, quantitative research, and professional account management.',
@@ -125,7 +125,7 @@ const websiteSchema = {
   name: 'Waves Logix',
   url: 'https://waveslogix.space',
   description: 'Professional Forex Analysis & Advisory Services',
-  inLanguage: ['en', 'ru'],
+  inLanguage: ['en', 'es'],
   publisher: {
     '@type': 'Organization',
     name: 'Waves Logix Ltd.',

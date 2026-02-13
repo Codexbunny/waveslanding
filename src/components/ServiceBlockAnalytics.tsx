@@ -89,9 +89,9 @@ export default function ServiceBlockAnalytics() {
           </motion.div>
 
           {/* Main content grid */}
-          <div className="grid lg:grid-cols-5 gap-8 mb-6">
+          <div className="grid lg:grid-cols-5 gap-8">
             {/* Left: Features */}
-            <div className="lg:col-span-3 space-y-4">
+            <div className="lg:col-span-3 space-y-4 flex flex-col">
               {/* Feature cards */}
               <motion.div
                 className="liquid-glass rounded-2xl p-6 hover:shadow-xl transition-all duration-300 group"
@@ -146,6 +146,31 @@ export default function ServiceBlockAnalytics() {
                   </div>
                 </div>
               </motion.div>
+
+              {/* CTA - aligned with info block */}
+              <motion.div
+                className="flex flex-col sm:flex-row items-start gap-4 mt-auto pt-4"
+                initial={{ opacity: 0, y: 15 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-30px" }}
+                transition={{ duration: 0.4, delay: 0.2 }}
+              >
+                <Link
+                  href="/services/analytics"
+                  className="group inline-flex items-center gap-3 px-8 py-4 purple-gradient text-white font-bold rounded-full hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300"
+                >
+                  {tCommon('exploreAnalytics')}
+                  <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </Link>
+                <Link
+                  href="/services/analytics"
+                  className="text-gray-600 hover:text-purple-600 transition-colors font-medium py-4"
+                >
+                  {tCommon('learnMore')} →
+                </Link>
+              </motion.div>
             </div>
 
             {/* Right: Target audience */}
@@ -194,30 +219,6 @@ export default function ServiceBlockAnalytics() {
             </motion.div>
           </div>
 
-          {/* CTA */}
-          <motion.div
-            className="flex flex-col sm:flex-row items-center gap-6"
-            initial={{ opacity: 0, y: 15 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-30px" }}
-            transition={{ duration: 0.4, delay: 0.2 }}
-          >
-            <Link
-              href="/services/analytics"
-              className="group inline-flex items-center gap-3 px-8 py-4 purple-gradient text-white font-bold rounded-full hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300"
-            >
-              {tCommon('exploreAnalytics')}
-              <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </Link>
-            <Link
-              href="/services/analytics"
-              className="text-gray-600 hover:text-purple-600 transition-colors font-medium"
-            >
-              {tCommon('learnMore')} →
-            </Link>
-          </motion.div>
         </div>
       </div>
     </section>

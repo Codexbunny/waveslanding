@@ -181,6 +181,33 @@ export default function AboutCompanyClient() {
                   </div>
                 </motion.div>
               </div>
+
+              {/* Legal Policy Links */}
+              <div className="border-t border-gray-200 pt-6 mt-6">
+                <div className="flex flex-wrap gap-3">
+                  <Link
+                    href="/legal/terms"
+                    className="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-lg border border-gray-200 hover:border-purple-300 hover:text-purple-600 transition-colors text-sm font-medium text-gray-700"
+                  >
+                    <IconDocument className="w-4 h-4" />
+                    Terms of Use
+                  </Link>
+                  <Link
+                    href="/legal/kyc-aml"
+                    className="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-lg border border-gray-200 hover:border-purple-300 hover:text-purple-600 transition-colors text-sm font-medium text-gray-700"
+                  >
+                    <IconShield className="w-4 h-4" />
+                    KYC / AML
+                  </Link>
+                  <Link
+                    href="/legal/privacy"
+                    className="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-lg border border-gray-200 hover:border-purple-300 hover:text-purple-600 transition-colors text-sm font-medium text-gray-700"
+                  >
+                    <IconDocument className="w-4 h-4" />
+                    Privacy Policy
+                  </Link>
+                </div>
+              </div>
             </motion.div>
           </div>
         </div>

@@ -31,7 +31,7 @@ export async function generateMetadata(): Promise<Metadata> {
       canonical: 'https://waveslogix.space/services/analytics',
       languages: {
         'en': '/services/analytics',
-        'ru': '/services/analytics',
+        'es': '/services/analytics',
       },
     },
   };

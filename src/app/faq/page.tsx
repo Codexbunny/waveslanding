@@ -30,7 +30,7 @@ export async function generateMetadata(): Promise<Metadata> {
       canonical: 'https://waveslogix.space/faq',
       languages: {
         'en': '/faq',
-        'ru': '/faq',
+        'es': '/faq',
       },
     },
   };

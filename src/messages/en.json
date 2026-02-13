@@ -17,8 +17,8 @@
       "description": "Independent analytical and advisory firm based in Saint Lucia. Non-custodial advisory model with transparent operations and professional standards."
     },
     "leadership": {
-      "title": "Leadership | Dr. Georg Gershinski | Waves Logix",
-      "description": "Meet Dr. Georg Gershinski, Founder and Managing Director of Waves Logix. Over a decade of experience in global financial markets."
+      "title": "Team & Structure | Waves Logix",
+      "description": "A multidisciplinary team applying quantitative research, wave-based methodologies, and institutional standards to professional market analysis."
     }
   },
   "common": {
@@ -44,7 +44,11 @@
     "faq": "FAQ",
     "research": "Research",
     "contact": "Contact",
-    "certificate": "Certificate"
+    "certificate": "Certificate",
+    "termsOfUse": "Terms of Use",
+    "kycAml": "KYC / AML",
+    "privacyPolicy": "Privacy Policy",
+    "legal": "Legal"
   },
   "hero": {
     "headline": "Where market science meets",
@@ -223,21 +227,18 @@
       "Trading and investing involve risk and may result in loss of capital. Past performance does not guarantee future results. Waves Logix Ltd. makes no guarantees regarding performance or outcomes.",
       "Clients are solely responsible for all trading decisions and must ensure compliance with applicable laws and regulations in their jurisdiction."
     ],
-    "leadershipLink": "Meet Our Leadership"
+    "leadershipLink": "Meet Our Team"
   },
   "leadership": {
-    "heroTitle": "Founder &",
-    "heroHighlight": "Leadership",
-    "heroSubtitle": "Meet the mind behind Waves Logix",
-    "founderName": "Dr. Georg Gershinski",
-    "founderRole": "Founder & Managing Director",
-    "founderBio": "Waves Logix was founded and is led by Dr. Georg Gershinski, a senior market analyst with more than a decade of professional experience in global financial markets.",
-    "backgroundTitle": "Background",
-    "backgroundContent": "Dr. Gershinski's background combines extensive practical market expertise with advanced academic education in law. This dual foundation enables a disciplined approach to market analysis that integrates financial logic, regulatory awareness, and risk control.",
-    "experienceTitle": "Experience",
-    "experienceContent": "Over the course of his career, he has worked across multiple market cycles, volatility regimes, and macroeconomic environments, developing structured analytical methodologies grounded in wave theory, macroeconomic research, and quantitative validation.",
-    "roleTitle": "Role at Waves Logix",
-    "roleContent": "As Founder and Managing Director, Dr. Gershinski defines the firm's analytical standards, strategic direction, and ethical framework. All research methodologies and advisory practices at Waves Logix are developed under his direct oversight to ensure consistency, objectivity, and professional accountability.",
+    "heroTitle": "Team &",
+    "heroHighlight": "Structure",
+    "heroSubtitle": "Multidisciplinary expertise driving market analysis",
+    "approachTitle": "Analytical Approach",
+    "approachContent": "Our team combines practical financial market expertise with advanced academic backgrounds in economics, law, and quantitative analysis. This multidisciplinary foundation enables a rigorous approach to market analysis that integrates financial logic, regulatory awareness, and risk control.",
+    "expertiseTitle": "Expertise & Capabilities",
+    "expertiseContent": "Across multiple market cycles, volatility regimes, and macroeconomic environments, the team has developed structured analytical methodologies grounded in wave theory, macroeconomic research, and quantitative validation.",
+    "standardsTitle": "Institutional Standards",
+    "standardsContent": "The firm's analytical standards, strategic direction, and ethical framework are defined under direct leadership oversight. All research methodologies and advisory practices at Waves Logix are developed to ensure consistency, objectivity, and professional accountability.",
     "companyLink": "About Waves Logix Ltd."
   },
   "contact": {
@@ -266,7 +267,8 @@
     "aboutTitle": "About",
     "contactTitle": "Contact",
     "telegramChannel": "Telegram Channel",
-    "certificateInfo": "Certificate of Incorporation: 23 May 2025 | International Business Companies Act, Cap 12.14: Section 6"
+    "certificateInfo": "Certificate of Incorporation: 23 May 2025 | International Business Companies Act, Cap 12.14: Section 6",
+    "legalTitle": "Legal"
   },
   "research": {
     "metaTitle": "Research & Insights | Waves Logix",
@@ -286,7 +288,7 @@
         "title": "Introduction to Elliott Wave Theory",
         "excerpt": "A comprehensive overview of Elliott Wave Theory and its application in modern Forex market analysis.",
         "content": "Elliott Wave Theory is one of the most sophisticated methods of technical analysis, developed by Ralph Nelson Elliott in the 1930s. This methodology provides a framework for understanding market psychology and price movements.\n\n## The Foundation of Wave Theory\n\nAt its core, Elliott Wave Theory suggests that market prices move in predictable patterns called waves. These patterns reflect the collective psychology of market participants and tend to repeat across different timeframes.\n\n## Five-Wave and Three-Wave Patterns\n\nThe basic structure consists of five-wave impulse moves in the direction of the main trend, followed by three-wave corrective moves against the trend. Understanding these patterns helps analysts identify potential turning points and forecast future price movements.\n\n## Application in Forex Markets\n\nIn the Forex market, Elliott Wave analysis is particularly effective due to the market's high liquidity and continuous trading. Waves Logix applies this methodology alongside quantitative validation to enhance accuracy.\n\n### Key Benefits\n\nElliott Wave analysis provides clear invalidation levels, helping traders manage risk effectively. When combined with macroeconomic analysis, it offers a comprehensive view of market structure.",
-        "author": "Dr. Georg Gershinski",
+        "author": "Waves Logix Research",
         "date": "January 15, 2026",
         "readTime": "8 min read",
         "category": "Market Theory"
@@ -295,7 +297,7 @@
         "title": "Understanding Forex Market Structure",
         "excerpt": "How institutional traders analyze market structure and liquidity zones for better trading decisions.",
         "content": "Market structure analysis is fundamental to professional Forex trading. Understanding how prices move and where liquidity concentrates gives traders a significant edge.\n\n## What is Market Structure?\n\nMarket structure refers to the pattern of higher highs, higher lows (uptrend) or lower highs, lower lows (downtrend) that prices create over time. This simple concept forms the foundation of trend analysis.\n\n## Liquidity Zones\n\nLiquidity zones are areas where significant buy or sell orders are concentrated. These often form around previous swing highs and lows, round numbers, and technical levels.\n\n## Institutional vs. Retail Perspective\n\nInstitutional traders often target areas where retail traders place their stop losses. Understanding this dynamic helps professional traders position themselves more effectively.\n\n### Practical Application\n\nAt Waves Logix, we combine market structure analysis with wave-based methodologies to identify high-probability trading scenarios. This integrated approach provides clarity in complex market conditions.",
-        "author": "Dr. Georg Gershinski",
+        "author": "Waves Logix Research",
         "date": "January 10, 2026",
         "readTime": "6 min read",
         "category": "Technical Analysis"
@@ -304,7 +306,7 @@
         "title": "Professional Risk Management Principles",
         "excerpt": "Essential risk management strategies for protecting capital in volatile Forex markets.",
         "content": "Effective risk management is the cornerstone of long-term trading success. Without proper risk controls, even the best analysis can lead to significant losses.\n\n## Position Sizing Fundamentals\n\nPosition sizing determines how much capital to risk on each trade. Professional traders typically risk 1-2% of their account per trade, allowing them to survive losing streaks.\n\n## Stop Loss Strategies\n\nStop losses should be placed at logical technical levels where the trade thesis is invalidated. This approach ensures that stops are meaningful rather than arbitrary.\n\n## Correlation Management\n\nIn Forex trading, many currency pairs are correlated. Trading multiple correlated positions effectively increases your risk exposure. Managing correlation is essential for portfolio stability.\n\n### The Role of Advisory Support\n\nWaves Logix provides advisory support that includes risk management frameworks tailored to individual client profiles. This personalized approach helps clients maintain discipline and protect their capital.",
-        "author": "Dr. Georg Gershinski",
+        "author": "Waves Logix Research",
         "date": "January 5, 2026",
         "readTime": "7 min read",
         "category": "Risk Management"
@@ -561,5 +563,151 @@
         ]
       }
     ]
+  },
+  "legal": {
+    "terms": {
+      "title": "Terms of Use",
+      "lastUpdated": "Last updated: January 2026",
+      "introduction": "These Terms of Use govern your access to and use of the website and services provided by Waves Logix Ltd. By accessing or using our services, you agree to be bound by these terms. If you do not agree, please do not use our services.",
+      "sections": [
+        {
+          "title": "Scope of Services",
+          "content": "Waves Logix Ltd. provides analytical and advisory services related to Forex, gold, and oil markets. Our services are informational and advisory in nature and do not constitute regulated investment advice, asset management, or brokerage services."
+        },
+        {
+          "title": "Eligibility",
+          "content": "Our services are intended for professional traders, high-net-worth individuals, and institutional clients. By using our services, you represent that you meet the applicable eligibility requirements and that use of our services is lawful in your jurisdiction."
+        },
+        {
+          "title": "No Investment Advice",
+          "content": "All information, analysis, and recommendations provided by Waves Logix are for informational and educational purposes only. They do not constitute investment advice or a recommendation to buy or sell any financial instrument. All trading and investment decisions are your sole responsibility."
+        },
+        {
+          "title": "Risk Disclosure",
+          "content": "Trading in Forex, gold, oil, and other financial instruments involves significant risk of loss. Past performance does not guarantee future results. You should carefully consider your financial situation and risk tolerance before engaging with financial markets."
+        },
+        {
+          "title": "Intellectual Property",
+          "content": "All content, analysis, reports, and materials provided by Waves Logix are the intellectual property of Waves Logix Ltd. Unauthorized reproduction, distribution, or commercial use is strictly prohibited."
+        },
+        {
+          "title": "Client Funds",
+          "content": "Waves Logix does not accept, hold, manage, or have custody of client funds. All client capital remains under the client's full control within their own brokerage account at all times."
+        },
+        {
+          "title": "Limitation of Liability",
+          "content": "Waves Logix Ltd. shall not be liable for any direct, indirect, incidental, or consequential damages arising from the use of our services or reliance on any information provided. Our maximum liability is limited to the fees paid for the specific service in question."
+        },
+        {
+          "title": "Termination",
+          "content": "Either party may terminate the advisory relationship in accordance with the terms of the applicable service agreement. Waves Logix reserves the right to refuse or discontinue services at its discretion."
+        },
+        {
+          "title": "Governing Law",
+          "content": "These Terms of Use are governed by and construed in accordance with the laws of Saint Lucia. Any disputes arising from these terms shall be subject to the exclusive jurisdiction of the courts of Saint Lucia."
+        },
+        {
+          "title": "Amendments",
+          "content": "Waves Logix reserves the right to update or modify these Terms of Use at any time. Continued use of our services after modifications constitutes acceptance of the revised terms."
+        }
+      ],
+      "contactNote": "For questions regarding these Terms of Use, please contact us via Telegram or through the contact form on our website."
+    },
+    "kycAml": {
+      "title": "KYC / AML Policy",
+      "lastUpdated": "Last updated: January 2026",
+      "introduction": "Waves Logix Ltd. is committed to maintaining the highest standards of compliance with Know Your Customer (KYC) and Anti-Money Laundering (AML) regulations. This policy outlines our procedures for client identification, verification, and ongoing monitoring.",
+      "sections": [
+        {
+          "title": "Purpose",
+          "content": "This policy establishes the framework for preventing money laundering, terrorist financing, and other financial crimes. Waves Logix is committed to operating in full compliance with applicable international anti-money laundering laws and regulations."
+        },
+        {
+          "title": "Client Identification",
+          "content": "All prospective clients are required to provide valid identification documentation before the commencement of services. This may include government-issued identification, proof of address, and documentation verifying the source of funds where applicable."
+        },
+        {
+          "title": "Verification Procedures",
+          "content": "Waves Logix conducts verification procedures proportionate to the risk profile of each client. Enhanced due diligence may be applied for higher-risk clients or jurisdictions. Verification is completed before advisory services are initiated."
+        },
+        {
+          "title": "Ongoing Monitoring",
+          "content": "Client relationships are subject to ongoing monitoring. Waves Logix reserves the right to request updated documentation and to conduct periodic reviews of client information to ensure continued compliance."
+        },
+        {
+          "title": "Suspicious Activity",
+          "content": "Waves Logix has internal procedures for identifying and reporting suspicious activity. All employees and associates are trained to recognize indicators of money laundering and financial crime. Suspicious transactions are reported to the relevant authorities as required by law."
+        },
+        {
+          "title": "Politically Exposed Persons",
+          "content": "Enhanced due diligence procedures are applied to Politically Exposed Persons (PEPs) and their close associates. Additional scrutiny is applied to the source of funds and the nature of the business relationship."
+        },
+        {
+          "title": "Record Keeping",
+          "content": "All client identification documents, transaction records, and compliance records are maintained for a minimum period as required by applicable law. Records are stored securely and accessible only to authorized personnel."
+        },
+        {
+          "title": "Sanctions Screening",
+          "content": "Waves Logix screens all clients against applicable international sanctions lists, including but not limited to those maintained by the United Nations, European Union, and the Office of Foreign Assets Control (OFAC)."
+        },
+        {
+          "title": "Non-Compliance",
+          "content": "Waves Logix reserves the right to refuse or terminate services to any individual or entity that fails to comply with KYC/AML requirements, provides false or misleading information, or is reasonably suspected of involvement in financial crime."
+        },
+        {
+          "title": "Policy Updates",
+          "content": "This policy is reviewed and updated periodically to reflect changes in regulatory requirements and best practices. Clients will be notified of material changes that affect their obligations."
+        }
+      ],
+      "contactNote": "For questions regarding our KYC/AML procedures, please contact us via Telegram or through the contact form on our website."
+    },
+    "privacy": {
+      "title": "Privacy Policy",
+      "lastUpdated": "Last updated: January 2026",
+      "introduction": "Waves Logix Ltd. is committed to protecting the privacy and personal data of our clients and website visitors. This Privacy Policy describes how we collect, use, store, and protect your personal information.",
+      "sections": [
+        {
+          "title": "Information We Collect",
+          "content": "We may collect personal information including your name, email address, phone number, identification documents (for KYC purposes), and communication records. We also collect technical data such as IP addresses, browser type, and usage analytics through standard web technologies."
+        },
+        {
+          "title": "How We Use Your Information",
+          "content": "Personal information is used to provide and improve our services, communicate with you, fulfill legal and compliance obligations (including KYC/AML), and ensure the security of our platform. We do not use personal data for automated decision-making or profiling."
+        },
+        {
+          "title": "Data Sharing",
+          "content": "Waves Logix does not sell, rent, or share your personal information with third parties for marketing purposes. Data may be shared with regulatory authorities where required by law, or with service providers who assist in operating our business under strict confidentiality agreements."
+        },
+        {
+          "title": "Data Security",
+          "content": "We implement appropriate technical and organizational measures to protect personal data against unauthorized access, alteration, disclosure, or destruction. These measures are reviewed and updated regularly."
+        },
+        {
+          "title": "Data Retention",
+          "content": "Personal data is retained for as long as necessary to fulfill the purposes for which it was collected, or as required by applicable law. Client records are retained for the minimum period mandated by financial regulations."
+        },
+        {
+          "title": "Your Rights",
+          "content": "You have the right to access, correct, or request deletion of your personal data, subject to legal and regulatory obligations. You may also request information about how your data is processed. To exercise these rights, please contact us directly."
+        },
+        {
+          "title": "Cookies and Tracking",
+          "content": "Our website uses essential cookies for functionality (such as language preferences). We may use analytics tools to understand website usage patterns. You can manage cookie preferences through your browser settings."
+        },
+        {
+          "title": "International Transfers",
+          "content": "As an international firm, your data may be processed in jurisdictions outside your country of residence. We ensure that appropriate safeguards are in place to protect your data in accordance with applicable privacy laws."
+        },
+        {
+          "title": "Children's Privacy",
+          "content": "Our services are not directed to individuals under the age of 18. We do not knowingly collect personal information from minors."
+        },
+        {
+          "title": "Policy Changes",
+          "content": "Waves Logix reserves the right to update this Privacy Policy at any time. Material changes will be communicated through our website. Continued use of our services after changes constitutes acceptance of the updated policy."
+        }
+      ],
+      "contactNote": "For privacy-related inquiries or to exercise your data rights, please contact us via Telegram or through the contact form on our website."
+    }
   }
 }

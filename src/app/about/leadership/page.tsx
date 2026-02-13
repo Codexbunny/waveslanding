@@ -7,8 +7,8 @@ export async function generateMetadata(): Promise<Metadata> {
   const messages = await getMessages() as Record<string, Record<string, Record<string, string>>>;
   
   const seo = messages.seo?.leadership;
-  const title = seo?.title || 'Leadership | Dr. Georg Gershinski | Waves Logix';
-  const description = seo?.description || 'Meet Dr. Georg Gershinski, Founder and Managing Director of Waves Logix.';
+  const title = seo?.title || 'Team & Structure | Waves Logix';
+  const description = seo?.description || 'A multidisciplinary team applying quantitative research and institutional standards to professional market analysis.';
   
   return {
     title,
@@ -23,7 +23,7 @@ export async function generateMetadata(): Promise<Metadata> {
     alternates: {
       languages: {
         'en': '/about/leadership',
-        'ru': '/about/leadership',
+        'es': '/about/leadership',
       },
     },
   };

@@ -22,7 +22,7 @@ export async function generateMetadata(): Promise<Metadata> {
     alternates: {
       languages: {
         'en': '/research',
-        'ru': '/research',
+        'es': '/research',
       },
     },
   };

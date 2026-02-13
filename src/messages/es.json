@@ -1,0 +1,713 @@
+{
+  "seo": {
+    "home": {
+      "title": "Waves Logix - Análisis Profesional de Forex y Servicios de Asesoría",
+      "description": "Firma analítica y de asesoría independiente especializada en mercados de Forex, oro y petróleo. Análisis de mercado profesional para clientes de alto patrimonio e instituciones."
+    },
+    "accountManagement": {
+      "title": "Servicios Profesionales de Asesoría de Cuentas | Waves Logix",
+      "description": "Asesoría premium para cuentas de corretaje para clientes con capital de $300,000+. Orientación personalizada en mercados de Forex, oro y petróleo con total transparencia."
+    },
+    "analytics": {
+      "title": "Análisis Avanzado del Mercado Forex | Waves Logix",
+      "description": "Análisis de Forex de alta precisión para traders profesionales y empresas de corretaje. Inteligencia de mercado basada en datos y asistida por IA."
+    },
+    "aboutCompany": {
+      "title": "Acerca de Waves Logix Ltd. | Descripción General de la Empresa",
+      "description": "Firma analítica y de asesoría independiente con sede en Santa Lucía. Modelo de asesoría no custodial con operaciones transparentes y estándares profesionales."
+    },
+    "leadership": {
+      "title": "Equipo y Estructura | Waves Logix",
+      "description": "Conozca al equipo multidisciplinario detrás de Waves Logix. Experiencia en mercados financieros, análisis cuantitativo y gestión de riesgos."
+    }
+  },
+  "common": {
+    "learnMore": "Más Información",
+    "contact": "Contacto",
+    "telegram": "Telegram",
+    "startCollaboration": "Iniciar Colaboración",
+    "exploreAnalytics": "Explorar Análisis",
+    "discussObjectives": "Consulte Sus Objetivos",
+    "requestProposal": "Solicitar Propuesta",
+    "readMore": "Leer Más",
+    "viewCertificate": "Ver Certificado",
+    "companyName": "Waves Logix Ltd.",
+    "copyright": "Todos los derechos reservados."
+  },
+  "nav": {
+    "services": "Servicios",
+    "accountManagement": "Asesoría de Cuentas",
+    "analytics": "Análisis Avanzado",
+    "about": "Acerca de",
+    "aboutCompany": "Acerca de la Empresa",
+    "leadership": "Equipo",
+    "faq": "Preguntas Frecuentes",
+    "research": "Investigación",
+    "contact": "Contacto",
+    "certificate": "Certificado",
+    "termsOfUse": "Términos de Uso",
+    "kycAml": "KYC / AML",
+    "privacyPolicy": "Política de Privacidad",
+    "legal": "Legal"
+  },
+  "hero": {
+    "headline": "Donde la ciencia del mercado se encuentra con",
+    "headlineHighlight": "la inteligencia automatizada",
+    "tagline": "¡Explore nuevas oportunidades en Forex!",
+    "subheadline": "Aplicamos la teoría de Elliott Wave, investigación cuantitativa y sistemas automatizados a la gestión profesional de cuentas y al desarrollo de estrategias a largo plazo.",
+    "notSignals": "Sin señales. Sin especulación. Un enfoque estructurado del mercado."
+  },
+  "services": {
+    "title": "Nuestros",
+    "titleHighlight": "Servicios",
+    "subtitle": "Soluciones profesionales para traders e inversores"
+  },
+  "serviceAccountManagement": {
+    "badge": "Asesoría Premium",
+    "title": "Asesoría Profesional de Cuentas de Corretaje",
+    "subtitle": "Para Grandes Capitales",
+    "capitalRequirement": "$300,000+",
+    "description": "Waves Logix proporciona asesoría profesional y soporte analítico para clientes de alto patrimonio que gestionan cuentas de corretaje en los mercados de Forex, oro y petróleo.",
+    "transparencyTitle": "Total Transparencia",
+    "transparencySubtitle": "Control Total de Sus Fondos",
+    "transparencyPoints": [
+      "Su capital permanece siempre bajo su total propiedad",
+      "No recibimos, retenemos ni gestionamos fondos de clientes",
+      "Todas las acciones se realizan únicamente con su consentimiento explícito"
+    ],
+    "features": {
+      "advisory": {
+        "title": "Asesoría de Inversión Personalizada",
+        "description": "Orientación de mercado individual adaptada a sus objetivos financieros, perfil de riesgo y horizonte de inversión."
+      },
+      "monitoring": {
+        "title": "Monitoreo Diario del Mercado",
+        "description": "Análisis continuo de los mercados de Forex, oro y petróleo, combinando estructuras técnicas y factores macroeconómicos."
+      },
+      "recommendations": {
+        "title": "Recomendaciones Claras de Operaciones",
+        "description": "Ideas de operaciones estructuradas con lógica definida, zonas de entrada, objetivos de salida y parámetros de riesgo."
+      },
+      "risk": {
+        "title": "Marco de Gestión de Riesgos",
+        "description": "Orientación sobre dimensionamiento de posiciones, colocación de stop-loss, diversificación y preservación de capital."
+      },
+      "support": {
+        "title": "Comunicación 24/7",
+        "description": "Acceso continuo a consultas, discusiones estratégicas y soporte educativo."
+      }
+    },
+    "paymentTitle": "Estructura de Tarifas Basada en Rendimiento",
+    "paymentDescription": "Las tarifas del servicio se cobran exclusivamente en función de las ganancias generadas. Usted paga solo por resultados.",
+    "howItWorks": {
+      "title": "Cómo Se Estructura Nuestra Cooperación",
+      "steps": [
+        "Se firma un acuerdo formal de asesoría y soporte analítico",
+        "Su cuenta de corretaje permanece bajo su control en todo momento",
+        "Todas las operaciones requieren su consentimiento y supervisión",
+        "Sin acceso a fondos sin autorización directa"
+      ]
+    },
+    "whyChoose": {
+      "title": "Por Qué los Clientes Eligen Waves Logix",
+      "reasons": [
+        "Experiencia comprobada trabajando con cuentas de gran capital",
+        "Enfoque personalizado, confidencial y profesional",
+        "Estructura legal y operativa transparente",
+        "Enfoque exclusivo en mercados de Forex, oro y petróleo",
+        "Cooperación selectiva con clientes verificados"
+      ]
+    },
+    "note": "Nota: Waves Logix no proporciona servicios de análisis ni asesoría relacionados con mercados de acciones o renta variable.",
+    "cta": "¿Listo para Comenzar?"
+  },
+  "serviceAnalytics": {
+    "badge": "Análisis Basado en Datos",
+    "title": "Análisis Avanzado del Mercado Forex",
+    "subtitle": "Para Traders Independientes y Empresas de Corretaje",
+    "description": "Análisis del mercado Forex de alta precisión diseñado para traders independientes y empresas de corretaje que requieren más que pronósticos genéricos.",
+    "approachTitle": "Enfoque Científico Impulsado por Tecnología",
+    "approachPoints": [
+      "Análisis avanzado de la estructura técnica del mercado",
+      "Modelado de volatilidad y liquidez",
+      "Factores macroeconómicos y de política monetaria",
+      "Reconocimiento y validación de patrones asistidos por IA"
+    ],
+    "independentTitle": "Análisis Independiente",
+    "independentSubtitle": "Sin Ejecución, Sin Acceso a Capital",
+    "independentDescription": "Waves Logix no gestiona cuentas de trading, no ejecuta operaciones ni accede a fondos de clientes. Toda la ejecución permanece completamente bajo su control.",
+    "whatIncluded": {
+      "title": "Qué Incluye el Análisis",
+      "items": {
+        "structure": {
+          "title": "Estructura de Mercado de Alta Precisión",
+          "description": "Identificación de tendencias dominantes, fases correctivas y puntos de quiebre estructural en los principales pares de Forex."
+        },
+        "scenarios": {
+          "title": "Pronósticos Basados en Escenarios",
+          "description": "Múltiples escenarios validados con niveles de confirmación e invalidación para diferentes resultados de mercado."
+        },
+        "levels": {
+          "title": "Niveles Clave de Precio y Zonas de Liquidez",
+          "description": "Mapeo preciso de soportes, resistencias, clústeres de liquidez y áreas de interés institucional."
+        },
+        "macro": {
+          "title": "Integración Macro y Fundamental",
+          "description": "Análisis de tasas de interés, inflación, acciones de bancos centrales y factores macroeconómicos globales."
+        },
+        "risk": {
+          "title": "Marco Consciente del Riesgo",
+          "description": "Expectativas de volatilidad, límites de riesgo estructural y consideraciones de riesgo contextuales."
+        }
+      }
+    },
+    "forWhom": {
+      "title": "Para Quién Está Diseñado Este Servicio",
+      "audiences": [
+        "Traders profesionales independientes de Forex",
+        "Traders propietarios y mesas de operaciones",
+        "Empresas de corretaje y equipos de analistas",
+        "Gestores de activos que buscan validación externa",
+        "Instituciones que requieren análisis de terceros"
+      ]
+    },
+    "delivery": {
+      "title": "Formato de Entrega",
+      "formats": [
+        "Informes escritos estructurados",
+        "Gráficos anotados y desgloses técnicos",
+        "Actualizaciones analíticas continuas"
+      ]
+    },
+    "whyChoose": {
+      "title": "Por Qué los Traders Trabajan con Waves Logix",
+      "reasons": [
+        "Análisis basado en datos y estructurado científicamente",
+        "Validación asistida por IA y modelado de escenarios",
+        "Perspectiva objetiva e independiente de la ejecución",
+        "Especialización profunda en mercados de Forex",
+        "Cooperación confidencial y profesional"
+      ]
+    },
+    "cta": "¿Listo para un Análisis de Grado Institucional?"
+  },
+  "miniAbout": {
+    "title": "Acerca de",
+    "titleHighlight": "Waves Logix",
+    "description": "Waves Logix es una firma analítica y de asesoría independiente especializada en inteligencia estructurada de mercados de Forex, oro y petróleo para inversores profesionales, traders e instituciones.",
+    "descriptionContinued": "Operamos estrictamente dentro de un marco de asesoría, combinando profunda experiencia de mercado, métodos analíticos científicos y procesamiento de datos impulsado por tecnología. Todo el capital de los clientes permanece completamente bajo el control del cliente en todo momento.",
+    "motto": "Claridad, disciplina y transparencia en mercados financieros complejos.",
+    "linkCompany": "Acerca de la Empresa",
+    "linkLeadership": "Equipo"
+  },
+  "certificate": {
+    "title": "Registro",
+    "titleHighlight": "Oficial",
+    "subtitle": "Waves Logix Ltd. está oficialmente constituida y regulada",
+    "type": "Certificado de Incorporación",
+    "country": "Santa Lucía",
+    "companyNumber": "2025-00384",
+    "incorporationDate": "23 May 2025",
+    "law": "International Business Companies Act, Cap 12.14: Section 6",
+    "clickToView": "Haga clic para ver el certificado"
+  },
+  "aboutCompany": {
+    "heroTitle": "Acerca de",
+    "heroHighlight": "Waves Logix Ltd.",
+    "heroSubtitle": "Análisis de mercado independiente y soporte de asesoría para clientes profesionales",
+    "modelTitle": "Nuestro Modelo de Negocio",
+    "modelDescription": "La firma trabaja exclusivamente dentro de un modelo de asesoría transparente y no custodial. Waves Logix no retiene fondos de clientes, no proporciona servicios de corretaje y no realiza gestión discrecional de activos. Los clientes mantienen la propiedad y el control total sobre sus cuentas de corretaje en todo momento.",
+    "methodologyTitle": "Marco Analítico",
+    "methodologyDescription": "Nuestro marco analítico combina análisis de estructura de mercado, investigación macroeconómica, metodologías basadas en ondas y procesamiento de datos asistido por IA. Las herramientas de inteligencia artificial se utilizan para mejorar la eficiencia de datos y la validación de escenarios, mientras que todas las conclusiones finales son realizadas por analistas humanos experimentados.",
+    "complianceTitle": "Cumplimiento y Estándares",
+    "complianceDescription": "Waves Logix opera con un fuerte énfasis en el cumplimiento, la documentación y los estándares profesionales. La incorporación oficial y la documentación corporativa están disponibles públicamente y pueden ser revisadas con fines de verificación.",
+    "disclaimerTitle": "Aviso Legal",
+    "disclaimerContent": [
+      "Toda la información proporcionada por Waves Logix Ltd. es únicamente con fines informativos y educativos y no constituye asesoramiento de inversión, asesoramiento financiero ni una recomendación para comprar o vender ningún instrumento financiero.",
+      "El trading y la inversión conllevan riesgos y pueden resultar en pérdida de capital. El rendimiento pasado no garantiza resultados futuros. Waves Logix Ltd. no ofrece garantías sobre el rendimiento o los resultados.",
+      "Los clientes son los únicos responsables de todas las decisiones de trading y deben asegurar el cumplimiento de las leyes y regulaciones aplicables en su jurisdicción."
+    ],
+    "leadershipLink": "Conozca Nuestro Equipo"
+  },
+  "leadership": {
+    "heroTitle": "Equipo y",
+    "heroHighlight": "Estructura",
+    "heroSubtitle": "Experiencia multidisciplinaria al servicio del análisis de mercado",
+    "approachTitle": "Enfoque Analítico",
+    "approachContent": "Nuestro equipo combina experiencia práctica en mercados financieros con formación académica avanzada en economía, derecho y análisis cuantitativo. Este enfoque multidisciplinario permite un análisis de mercado riguroso que integra lógica financiera, conciencia regulatoria y control de riesgos.",
+    "expertiseTitle": "Experiencia y Capacidades",
+    "expertiseContent": "A lo largo de múltiples ciclos de mercado, regímenes de volatilidad y entornos macroeconómicos, el equipo ha desarrollado metodologías analíticas estructuradas basadas en la teoría de ondas, investigación macroeconómica y validación cuantitativa.",
+    "standardsTitle": "Estándares Institucionales",
+    "standardsContent": "Los estándares analíticos, la dirección estratégica y el marco ético de la firma se definen bajo supervisión directa del equipo de liderazgo. Todas las metodologías de investigación y prácticas de asesoría se desarrollan para garantizar consistencia, objetividad y responsabilidad profesional.",
+    "companyLink": "Acerca de Waves Logix Ltd."
+  },
+  "contact": {
+    "title": "Póngase en",
+    "titleHighlight": "Contacto",
+    "subtitle": "Complete el formulario a continuación o contáctenos a través de Telegram",
+    "formTitle": "Envíenos un mensaje",
+    "formSubtitle": "Le responderemos lo antes posible",
+    "nameLabel": "Nombre",
+    "namePlaceholder": "Su nombre",
+    "emailLabel": "Correo Electrónico",
+    "emailPlaceholder": "su.correo@ejemplo.com",
+    "phoneLabel": "Teléfono",
+    "phonePlaceholder": "+1 (555) 123-4567",
+    "messageLabel": "Mensaje (opcional)",
+    "messagePlaceholder": "Su mensaje...",
+    "submitButton": "Enviar Mensaje",
+    "submitting": "Enviando...",
+    "directContact": "O contáctenos directamente",
+    "directContactDescription": "Comuníquese con nosotros a través de Telegram para asistencia inmediata. Estamos aquí para ayudarle con cualquier consulta sobre nuestros servicios."
+  },
+  "footer": {
+    "description": "Desarrollo de estrategias de trading basadas en la teoría de Elliott Wave - enfoque científico del mercado, el rumbo correcto en el océano del mercado Forex.",
+    "quickLinks": "Enlaces Rápidos",
+    "servicesTitle": "Servicios",
+    "aboutTitle": "Acerca de",
+    "contactTitle": "Contacto",
+    "telegramChannel": "Canal de Telegram",
+    "certificateInfo": "Certificado de Incorporación: 23 May 2025 | International Business Companies Act, Cap 12.14: Section 6",
+    "legalTitle": "Legal"
+  },
+  "research": {
+    "metaTitle": "Investigación y Perspectivas | Waves Logix",
+    "metaDescription": "Análisis de mercado en profundidad, artículos de investigación y perspectivas de trading de los expertos de Waves Logix.",
+    "title": "Investigación y",
+    "titleHighlight": "Perspectivas",
+    "subtitle": "Análisis en profundidad e investigación de mercado de nuestro equipo de expertos.",
+    "noPosts": "Nuevos artículos de investigación próximamente.",
+    "backToResearch": "Volver a Investigación",
+    "disclaimer": {
+      "title": "Aviso Legal",
+      "text": "Este artículo es únicamente con fines informativos y no constituye asesoramiento de inversión. El trading conlleva riesgos y puede resultar en pérdida de capital. El rendimiento pasado no garantiza resultados futuros."
+    },
+    "ctaText": "¿Interesado en análisis de mercado profesional? Contáctenos para conocer más sobre nuestros servicios.",
+    "posts": {
+      "elliott-wave-introduction": {
+        "title": "Introducción a la Teoría de Elliott Wave",
+        "excerpt": "Una visión general completa de la Teoría de Elliott Wave y su aplicación en el análisis moderno del mercado Forex.",
+        "content": "La Teoría de Elliott Wave es uno de los métodos más sofisticados de análisis técnico, desarrollado por Ralph Nelson Elliott en la década de 1930. Esta metodología proporciona un marco para comprender la psicología del mercado y los movimientos de precios.\n\n## Los Fundamentos de la Teoría de Ondas\n\nEn su esencia, la Teoría de Elliott Wave sugiere que los precios del mercado se mueven en patrones predecibles llamados ondas. Estos patrones reflejan la psicología colectiva de los participantes del mercado y tienden a repetirse en diferentes marcos temporales.\n\n## Patrones de Cinco Ondas y Tres Ondas\n\nLa estructura básica consiste en movimientos impulsivos de cinco ondas en la dirección de la tendencia principal, seguidos por movimientos correctivos de tres ondas en contra de la tendencia. Comprender estos patrones ayuda a los analistas a identificar posibles puntos de inflexión y pronosticar futuros movimientos de precios.\n\n## Aplicación en los Mercados Forex\n\nEn el mercado Forex, el análisis de Elliott Wave es particularmente efectivo debido a la alta liquidez del mercado y la operación continua. Waves Logix aplica esta metodología junto con la validación cuantitativa para mejorar la precisión.\n\n### Beneficios Clave\n\nEl análisis de Elliott Wave proporciona niveles claros de invalidación, ayudando a los traders a gestionar el riesgo de manera efectiva. Cuando se combina con el análisis macroeconómico, ofrece una visión integral de la estructura del mercado.",
+        "author": "Waves Logix Research",
+        "date": "January 15, 2026",
+        "readTime": "8 min de lectura",
+        "category": "Teoría de Mercado"
+      },
+      "forex-market-structure": {
+        "title": "Comprensión de la Estructura del Mercado Forex",
+        "excerpt": "Cómo los traders institucionales analizan la estructura del mercado y las zonas de liquidez para tomar mejores decisiones de trading.",
+        "content": "El análisis de la estructura del mercado es fundamental para el trading profesional de Forex. Comprender cómo se mueven los precios y dónde se concentra la liquidez otorga a los traders una ventaja significativa.\n\n## ¿Qué es la Estructura del Mercado?\n\nLa estructura del mercado se refiere al patrón de máximos más altos y mínimos más altos (tendencia alcista) o máximos más bajos y mínimos más bajos (tendencia bajista) que los precios crean a lo largo del tiempo. Este concepto simple forma la base del análisis de tendencias.\n\n## Zonas de Liquidez\n\nLas zonas de liquidez son áreas donde se concentran órdenes significativas de compra o venta. Estas suelen formarse alrededor de máximos y mínimos anteriores, números redondos y niveles técnicos.\n\n## Perspectiva Institucional vs. Minorista\n\nLos traders institucionales a menudo apuntan a áreas donde los traders minoristas colocan sus stop-loss. Comprender esta dinámica ayuda a los traders profesionales a posicionarse de manera más efectiva.\n\n### Aplicación Práctica\n\nEn Waves Logix, combinamos el análisis de estructura de mercado con metodologías basadas en ondas para identificar escenarios de trading de alta probabilidad. Este enfoque integrado proporciona claridad en condiciones de mercado complejas.",
+        "author": "Waves Logix Research",
+        "date": "January 10, 2026",
+        "readTime": "6 min de lectura",
+        "category": "Análisis Técnico"
+      },
+      "risk-management-principles": {
+        "title": "Principios Profesionales de Gestión de Riesgos",
+        "excerpt": "Estrategias esenciales de gestión de riesgos para proteger el capital en mercados Forex volátiles.",
+        "content": "La gestión efectiva de riesgos es la piedra angular del éxito a largo plazo en el trading. Sin controles de riesgo adecuados, incluso el mejor análisis puede conducir a pérdidas significativas.\n\n## Fundamentos del Dimensionamiento de Posiciones\n\nEl dimensionamiento de posiciones determina cuánto capital arriesgar en cada operación. Los traders profesionales típicamente arriesgan entre el 1-2% de su cuenta por operación, lo que les permite sobrevivir a rachas de pérdidas.\n\n## Estrategias de Stop-Loss\n\nLos stop-loss deben colocarse en niveles técnicos lógicos donde la tesis de la operación queda invalidada. Este enfoque asegura que los stops sean significativos en lugar de arbitrarios.\n\n## Gestión de Correlación\n\nEn el trading de Forex, muchos pares de divisas están correlacionados. Operar múltiples posiciones correlacionadas aumenta efectivamente la exposición al riesgo. Gestionar la correlación es esencial para la estabilidad de la cartera.\n\n### El Papel del Soporte de Asesoría\n\nWaves Logix proporciona soporte de asesoría que incluye marcos de gestión de riesgos adaptados a perfiles individuales de clientes. Este enfoque personalizado ayuda a los clientes a mantener la disciplina y proteger su capital.",
+        "author": "Waves Logix Research",
+        "date": "January 5, 2026",
+        "readTime": "7 min de lectura",
+        "category": "Gestión de Riesgos"
+      }
+    }
+  },
+  "faq": {
+    "metaTitle": "FAQ - Preguntas Frecuentes | Waves Logix",
+    "metaDescription": "Encuentre respuestas a preguntas comunes sobre los servicios de Waves Logix, modelo de asesoría, mercados cubiertos y cómo trabajamos con los clientes.",
+    "title": "Preguntas",
+    "titleHighlight": "Frecuentes",
+    "subtitle": "Encuentre respuestas a preguntas comunes sobre nuestros servicios, modelo de asesoría y cómo trabajamos con los clientes.",
+    "disclaimerTitle": "Aviso Importante",
+    "disclaimerText": "La información proporcionada en esta página es únicamente con fines informativos y no constituye asesoramiento de inversión ni una recomendación para comprar o vender ningún instrumento financiero. El trading conlleva riesgos y puede resultar en pérdida de capital.",
+    "categories": [
+      {
+        "title": "Acerca de Waves Logix",
+        "items": [
+          {
+            "question": "¿Qué es Waves Logix?",
+            "answer": "Waves Logix es una firma analítica y de asesoría independiente que proporciona análisis de mercado y soporte de asesoría no discrecional en mercados de Forex, oro y petróleo."
+          },
+          {
+            "question": "¿Es Waves Logix una empresa de gestión de activos?",
+            "answer": "No. Waves Logix no proporciona servicios de gestión de activos ni de gestión discrecional de carteras."
+          }
+        ]
+      },
+      {
+        "title": "Fondos y Control",
+        "items": [
+          {
+            "question": "¿Gestionan o controlan los fondos de los clientes?",
+            "answer": "No. Los fondos de los clientes permanecen siempre bajo el control total del cliente dentro de su cuenta de corretaje."
+          },
+          {
+            "question": "¿Ejecutan operaciones en nombre de los clientes?",
+            "answer": "No. No ejecutamos operaciones ni colocamos órdenes a menos que estemos explícitamente autorizados bajo un poder limitado, y solo con el consentimiento del cliente."
+          },
+          {
+            "question": "¿Aceptan depósitos o retienen dinero de los clientes?",
+            "answer": "No. Waves Logix no acepta, retiene ni custodia fondos de clientes."
+          },
+          {
+            "question": "¿Puede Waves Logix acceder a mi cuenta de corretaje?",
+            "answer": "Solo si está explícitamente autorizado y dentro de límites definidos."
+          },
+          {
+            "question": "¿Puedo retirar fondos en cualquier momento?",
+            "answer": "Sí. Los clientes conservan plenos derechos de retiro en todo momento."
+          }
+        ]
+      },
+      {
+        "title": "Servicios y Audiencia",
+        "items": [
+          {
+            "question": "¿Qué servicios proporciona Waves Logix?",
+            "answer": "Proporcionamos análisis de mercado, investigación analítica y soporte de asesoría no discrecional relacionados con mercados de Forex, oro y petróleo."
+          },
+          {
+            "question": "¿Para quién están diseñados sus servicios?",
+            "answer": "Nuestros servicios están diseñados para traders profesionales, personas de alto patrimonio y empresas de corretaje."
+          },
+          {
+            "question": "¿Existe un requisito mínimo de capital?",
+            "answer": "Sí. Los servicios de asesoría se ofrecen típicamente a clientes con un capital a partir de $300,000."
+          },
+          {
+            "question": "¿Proporcionan servicios a inversores minoristas?",
+            "answer": "No. No ofrecemos servicios de inversión masivos ni minoristas."
+          },
+          {
+            "question": "¿Es su servicio adecuado para empresas de corretaje?",
+            "answer": "Sí. Trabajamos con firmas de corretaje y equipos internos de analistas que requieren soporte analítico externo."
+          },
+          {
+            "question": "¿Ofrecen educación o formación?",
+            "answer": "Se pueden proporcionar explicaciones educativas como parte de la comunicación de asesoría."
+          }
+        ]
+      },
+      {
+        "title": "Naturaleza de la Asesoría",
+        "items": [
+          {
+            "question": "¿Proporcionan asesoramiento de inversión?",
+            "answer": "Proporcionamos únicamente información analítica y de asesoría. Todas las decisiones finales de inversión son responsabilidad del cliente."
+          },
+          {
+            "question": "¿Es su análisis un asesoramiento financiero regulado?",
+            "answer": "No. Nuestro análisis es de naturaleza informativa y de asesoría y no constituye asesoramiento financiero regulado."
+          },
+          {
+            "question": "¿Garantizan ganancias o rendimiento?",
+            "answer": "No. No garantizamos resultados ni rentabilidad."
+          }
+        ]
+      },
+      {
+        "title": "Mercados y Análisis",
+        "items": [
+          {
+            "question": "¿Qué mercados cubren?",
+            "answer": "Nos especializamos en mercados de Forex, oro y petróleo."
+          },
+          {
+            "question": "¿Proporcionan análisis de acciones o renta variable?",
+            "answer": "No. No proporcionamos servicios de análisis ni asesoría relacionados con acciones o mercados de renta variable."
+          },
+          {
+            "question": "¿Cómo se crea su análisis?",
+            "answer": "Nuestro análisis combina análisis técnico, metodologías basadas en ondas, investigación macroeconómica y procesamiento de datos asistido por IA."
+          },
+          {
+            "question": "¿Utilizan inteligencia artificial?",
+            "answer": "Sí. Las herramientas de IA se utilizan para apoyar el procesamiento de datos y la validación de escenarios, mientras que las conclusiones finales son realizadas por analistas humanos."
+          },
+          {
+            "question": "¿Quién es responsable de las decisiones analíticas finales?",
+            "answer": "Todas las conclusiones finales son revisadas y aprobadas por analistas humanos experimentados."
+          },
+          {
+            "question": "¿Cómo se aborda el riesgo en su análisis?",
+            "answer": "Las consideraciones de riesgo se incorporan a través de la evaluación de volatilidad, límites estructurales y niveles de invalidación de escenarios."
+          },
+          {
+            "question": "¿Se puede personalizar su análisis?",
+            "answer": "Sí. El resultado analítico puede adaptarse a estilos de trading específicos, instrumentos y marcos temporales."
+          },
+          {
+            "question": "¿Proporcionan señales de trading?",
+            "answer": "Proporcionamos perspectivas analíticas y escenarios estructurados, no señales de trading automatizadas ni garantizadas."
+          },
+          {
+            "question": "¿Con qué frecuencia se proporciona el análisis?",
+            "answer": "La frecuencia depende del acuerdo de servicio y las condiciones del mercado."
+          },
+          {
+            "question": "¿Cómo reciben los clientes el análisis?",
+            "answer": "El análisis se entrega a través de informes escritos, gráficos y actualizaciones estructuradas."
+          }
+        ]
+      },
+      {
+        "title": "Legal y Cumplimiento",
+        "items": [
+          {
+            "question": "¿Está Waves Logix legalmente constituida?",
+            "answer": "Sí. Waves Logix Ltd. es una empresa legalmente constituida."
+          },
+          {
+            "question": "¿Puedo verificar el registro de su empresa?",
+            "answer": "Sí. La documentación corporativa puede ser revisada previa solicitud."
+          },
+          {
+            "question": "¿Tienen licencia como gestores de inversiones?",
+            "answer": "No. Waves Logix no tiene licencia como gestor de activos."
+          },
+          {
+            "question": "¿Requieren un contrato?",
+            "answer": "Sí. Toda cooperación se rige por un acuerdo formal."
+          },
+          {
+            "question": "¿Es su servicio compatible con los estándares internacionales?",
+            "answer": "Sí. Nuestras operaciones están estructuradas para alinearse con los estándares legales y de cumplimiento internacionales aplicables."
+          },
+          {
+            "question": "¿Operan a nivel global?",
+            "answer": "Sí. Trabajamos con clientes internacionales, sujeto a consideraciones legales y jurisdiccionales."
+          },
+          {
+            "question": "¿Es su servicio adecuado para clientes con sede en el Reino Unido?",
+            "answer": "Sí, siempre que los servicios se utilicen en una capacidad de asesoría no discrecional."
+          },
+          {
+            "question": "¿Emite Waves Logix promociones financieras reguladas?",
+            "answer": "No. No emitimos promociones financieras reguladas."
+          },
+          {
+            "question": "¿Dónde puedo encontrar los avisos legales?",
+            "answer": "Los avisos legales están publicados en nuestro sitio web e incluidos en los acuerdos de servicio."
+          }
+        ]
+      },
+      {
+        "title": "Tarifas y Privacidad",
+        "items": [
+          {
+            "question": "¿Cómo se estructuran las tarifas?",
+            "answer": "Las tarifas dependen del modelo de servicio y pueden estar basadas en rendimiento cuando la legislación lo permita."
+          },
+          {
+            "question": "¿Se cobran tarifas si no se generan ganancias?",
+            "answer": "Los términos de las tarifas se definen contractualmente y pueden variar según el servicio."
+          },
+          {
+            "question": "¿Es confidencial la información de los clientes?",
+            "answer": "Sí. Toda la información de los clientes se maneja con estricta confidencialidad."
+          },
+          {
+            "question": "¿Comparten datos de los clientes con terceros?",
+            "answer": "No. Los datos de los clientes no se comparten excepto cuando la ley lo requiera."
+          }
+        ]
+      },
+      {
+        "title": "Operaciones y Trabajo con Nosotros",
+        "items": [
+          {
+            "question": "¿Se puede utilizar su análisis para trading automatizado?",
+            "answer": "Nuestro análisis no está diseñado como un sistema de trading automatizado."
+          },
+          {
+            "question": "¿Cómo evitan los conflictos de interés?",
+            "answer": "No operamos en contra de los clientes ni nos beneficiamos de las pérdidas de los clientes."
+          },
+          {
+            "question": "¿Operan con su propio capital?",
+            "answer": "Los directivos de la empresa pueden operar de forma independiente, sujeto a políticas internas."
+          },
+          {
+            "question": "¿Se publica el rendimiento pasado?",
+            "answer": "No. El rendimiento pasado no se promueve como indicador de resultados futuros."
+          },
+          {
+            "question": "¿Cómo aseguran la calidad analítica?",
+            "answer": "La calidad se mantiene a través de metodologías documentadas y supervisión de alto nivel."
+          },
+          {
+            "question": "¿Se pueden terminar los servicios?",
+            "answer": "Sí. La cooperación puede terminarse de acuerdo con los términos contractuales."
+          },
+          {
+            "question": "¿Qué sucede si las condiciones del mercado cambian?",
+            "answer": "El análisis se actualiza para reflejar las estructuras de mercado en evolución."
+          },
+          {
+            "question": "¿Proporcionan asesoramiento legal o fiscal?",
+            "answer": "No. No proporcionamos asesoramiento legal ni fiscal."
+          },
+          {
+            "question": "¿Están obligados los clientes a seguir su análisis?",
+            "answer": "No. Los clientes son libres de tomar decisiones independientes."
+          },
+          {
+            "question": "¿Existe conflicto con los servicios de corretaje?",
+            "answer": "No. Somos independientes de los servicios de ejecución de corretaje."
+          },
+          {
+            "question": "¿Cómo puedo comenzar a trabajar con Waves Logix?",
+            "answer": "Puede contactarnos para discutir sus requisitos y elegibilidad."
+          }
+        ]
+      }
+    ]
+  },
+  "legal": {
+    "terms": {
+      "title": "Términos de Uso",
+      "lastUpdated": "Última actualización: Enero 2026",
+      "introduction": "Estos Términos de Uso rigen su acceso y uso del sitio web y los servicios proporcionados por Waves Logix Ltd. Al acceder o utilizar nuestros servicios, usted acepta estar sujeto a estos términos. Si no está de acuerdo, por favor no utilice nuestros servicios.",
+      "sections": [
+        {
+          "title": "Alcance de los Servicios",
+          "content": "Waves Logix Ltd. proporciona servicios analíticos y de asesoramiento relacionados con los mercados de Forex, oro y petróleo. Nuestros servicios son de naturaleza informativa y de asesoramiento y no constituyen asesoramiento de inversión regulado, gestión de activos ni servicios de corretaje."
+        },
+        {
+          "title": "Elegibilidad",
+          "content": "Nuestros servicios están destinados a traders profesionales, individuos de alto patrimonio neto y clientes institucionales. Al utilizar nuestros servicios, usted declara que cumple con los requisitos de elegibilidad aplicables y que el uso de nuestros servicios es legal en su jurisdicción."
+        },
+        {
+          "title": "Sin Asesoramiento de Inversión",
+          "content": "Toda la información, análisis y recomendaciones proporcionadas por Waves Logix son únicamente con fines informativos y educativos. No constituyen asesoramiento de inversión ni una recomendación para comprar o vender ningún instrumento financiero. Todas las decisiones de trading e inversión son su exclusiva responsabilidad."
+        },
+        {
+          "title": "Divulgación de Riesgos",
+          "content": "El trading en Forex, oro, petróleo y otros instrumentos financieros implica un riesgo significativo de pérdida. El rendimiento pasado no garantiza resultados futuros. Debe considerar cuidadosamente su situación financiera y tolerancia al riesgo antes de participar en los mercados financieros."
+        },
+        {
+          "title": "Propiedad Intelectual",
+          "content": "Todo el contenido, análisis, informes y materiales proporcionados por Waves Logix son propiedad intelectual de Waves Logix Ltd. La reproducción, distribución o uso comercial no autorizado está estrictamente prohibido."
+        },
+        {
+          "title": "Fondos del Cliente",
+          "content": "Waves Logix no acepta, retiene, gestiona ni tiene custodia de fondos de clientes. Todo el capital del cliente permanece bajo el control total del cliente dentro de su propia cuenta de corretaje en todo momento."
+        },
+        {
+          "title": "Limitación de Responsabilidad",
+          "content": "Waves Logix Ltd. no será responsable de ningún daño directo, indirecto, incidental o consecuente derivado del uso de nuestros servicios o de la dependencia de cualquier información proporcionada. Nuestra responsabilidad máxima se limita a las tarifas pagadas por el servicio específico en cuestión."
+        },
+        {
+          "title": "Terminación",
+          "content": "Cualquiera de las partes puede terminar la relación de asesoramiento de acuerdo con los términos del acuerdo de servicio aplicable. Waves Logix se reserva el derecho de rechazar o discontinuar servicios a su discreción."
+        },
+        {
+          "title": "Ley Aplicable",
+          "content": "Estos Términos de Uso se rigen e interpretan de acuerdo con las leyes de Santa Lucía. Cualquier disputa que surja de estos términos estará sujeta a la jurisdicción exclusiva de los tribunales de Santa Lucía."
+        },
+        {
+          "title": "Modificaciones",
+          "content": "Waves Logix se reserva el derecho de actualizar o modificar estos Términos de Uso en cualquier momento. El uso continuado de nuestros servicios después de las modificaciones constituye la aceptación de los términos revisados."
+        }
+      ],
+      "contactNote": "Para preguntas sobre estos Términos de Uso, contáctenos a través de Telegram o mediante el formulario de contacto en nuestro sitio web."
+    },
+    "kycAml": {
+      "title": "Política KYC / AML",
+      "lastUpdated": "Última actualización: Enero 2026",
+      "introduction": "Waves Logix Ltd. está comprometida con mantener los más altos estándares de cumplimiento con las regulaciones de Conozca a su Cliente (KYC) y Anti-Lavado de Dinero (AML). Esta política describe nuestros procedimientos para la identificación, verificación y monitoreo continuo de clientes.",
+      "sections": [
+        {
+          "title": "Propósito",
+          "content": "Esta política establece el marco para prevenir el lavado de dinero, la financiación del terrorismo y otros delitos financieros. Waves Logix está comprometida a operar en pleno cumplimiento con las leyes y regulaciones internacionales aplicables contra el lavado de dinero."
+        },
+        {
+          "title": "Identificación del Cliente",
+          "content": "Todos los clientes potenciales deben proporcionar documentación de identificación válida antes del inicio de los servicios. Esto puede incluir identificación emitida por el gobierno, comprobante de domicilio y documentación que verifique el origen de los fondos cuando corresponda."
+        },
+        {
+          "title": "Procedimientos de Verificación",
+          "content": "Waves Logix realiza procedimientos de verificación proporcionales al perfil de riesgo de cada cliente. Se puede aplicar una diligencia debida mejorada para clientes o jurisdicciones de mayor riesgo. La verificación se completa antes de iniciar los servicios de asesoramiento."
+        },
+        {
+          "title": "Monitoreo Continuo",
+          "content": "Las relaciones con los clientes están sujetas a monitoreo continuo. Waves Logix se reserva el derecho de solicitar documentación actualizada y realizar revisiones periódicas de la información del cliente para garantizar el cumplimiento continuo."
+        },
+        {
+          "title": "Actividad Sospechosa",
+          "content": "Waves Logix cuenta con procedimientos internos para identificar y reportar actividades sospechosas. Todos los empleados y asociados están capacitados para reconocer indicadores de lavado de dinero y delitos financieros. Las transacciones sospechosas se reportan a las autoridades pertinentes según lo exija la ley."
+        },
+        {
+          "title": "Personas Expuestas Políticamente",
+          "content": "Se aplican procedimientos de diligencia debida mejorada a las Personas Expuestas Políticamente (PEP) y sus asociados cercanos. Se aplica un escrutinio adicional al origen de los fondos y la naturaleza de la relación comercial."
+        },
+        {
+          "title": "Conservación de Registros",
+          "content": "Todos los documentos de identificación del cliente, registros de transacciones y registros de cumplimiento se mantienen durante el período mínimo requerido por la ley aplicable. Los registros se almacenan de forma segura y son accesibles solo para el personal autorizado."
+        },
+        {
+          "title": "Verificación de Sanciones",
+          "content": "Waves Logix verifica a todos los clientes contra las listas de sanciones internacionales aplicables, incluyendo pero no limitándose a las mantenidas por las Naciones Unidas, la Unión Europea y la Oficina de Control de Activos Extranjeros (OFAC)."
+        },
+        {
+          "title": "Incumplimiento",
+          "content": "Waves Logix se reserva el derecho de rechazar o terminar servicios a cualquier individuo o entidad que no cumpla con los requisitos KYC/AML, proporcione información falsa o engañosa, o sea razonablemente sospechoso de estar involucrado en delitos financieros."
+        },
+        {
+          "title": "Actualizaciones de la Política",
+          "content": "Esta política se revisa y actualiza periódicamente para reflejar cambios en los requisitos regulatorios y las mejores prácticas. Los clientes serán notificados de cambios materiales que afecten sus obligaciones."
+        }
+      ],
+      "contactNote": "Para preguntas sobre nuestros procedimientos KYC/AML, contáctenos a través de Telegram o mediante el formulario de contacto en nuestro sitio web."
+    },
+    "privacy": {
+      "title": "Política de Privacidad",
+      "lastUpdated": "Última actualización: Enero 2026",
+      "introduction": "Waves Logix Ltd. está comprometida con la protección de la privacidad y los datos personales de nuestros clientes y visitantes del sitio web. Esta Política de Privacidad describe cómo recopilamos, usamos, almacenamos y protegemos su información personal.",
+      "sections": [
+        {
+          "title": "Información que Recopilamos",
+          "content": "Podemos recopilar información personal incluyendo su nombre, dirección de correo electrónico, número de teléfono, documentos de identificación (para fines de KYC) y registros de comunicación. También recopilamos datos técnicos como direcciones IP, tipo de navegador y análisis de uso a través de tecnologías web estándar."
+        },
+        {
+          "title": "Cómo Usamos su Información",
+          "content": "La información personal se utiliza para proporcionar y mejorar nuestros servicios, comunicarnos con usted, cumplir con obligaciones legales y de cumplimiento (incluyendo KYC/AML) y garantizar la seguridad de nuestra plataforma. No utilizamos datos personales para la toma de decisiones automatizada ni la elaboración de perfiles."
+        },
+        {
+          "title": "Compartición de Datos",
+          "content": "Waves Logix no vende, alquila ni comparte su información personal con terceros con fines de marketing. Los datos pueden compartirse con autoridades reguladoras cuando lo exija la ley, o con proveedores de servicios que ayudan a operar nuestro negocio bajo estrictos acuerdos de confidencialidad."
+        },
+        {
+          "title": "Seguridad de Datos",
+          "content": "Implementamos medidas técnicas y organizativas apropiadas para proteger los datos personales contra el acceso no autorizado, la alteración, la divulgación o la destrucción. Estas medidas se revisan y actualizan periódicamente."
+        },
+        {
+          "title": "Retención de Datos",
+          "content": "Los datos personales se conservan durante el tiempo necesario para cumplir con los fines para los que fueron recopilados, o según lo exija la ley aplicable. Los registros de clientes se conservan durante el período mínimo exigido por las regulaciones financieras."
+        },
+        {
+          "title": "Sus Derechos",
+          "content": "Usted tiene derecho a acceder, corregir o solicitar la eliminación de sus datos personales, sujeto a obligaciones legales y regulatorias. También puede solicitar información sobre cómo se procesan sus datos. Para ejercer estos derechos, contáctenos directamente."
+        },
+        {
+          "title": "Cookies y Seguimiento",
+          "content": "Nuestro sitio web utiliza cookies esenciales para la funcionalidad (como preferencias de idioma). Podemos utilizar herramientas de análisis para comprender los patrones de uso del sitio web. Puede gestionar las preferencias de cookies a través de la configuración de su navegador."
+        },
+        {
+          "title": "Transferencias Internacionales",
+          "content": "Como firma internacional, sus datos pueden ser procesados en jurisdicciones fuera de su país de residencia. Nos aseguramos de que existan las salvaguardas apropiadas para proteger sus datos de acuerdo con las leyes de privacidad aplicables."
+        },
+        {
+          "title": "Privacidad de Menores",
+          "content": "Nuestros servicios no están dirigidos a personas menores de 18 años. No recopilamos deliberadamente información personal de menores."
+        },
+        {
+          "title": "Cambios en la Política",
+          "content": "Waves Logix se reserva el derecho de actualizar esta Política de Privacidad en cualquier momento. Los cambios materiales se comunicarán a través de nuestro sitio web. El uso continuado de nuestros servicios después de los cambios constituye la aceptación de la política actualizada."
+        }
+      ],
+      "contactNote": "Para consultas relacionadas con la privacidad o para ejercer sus derechos sobre datos, contáctenos a través de Telegram o mediante el formulario de contacto en nuestro sitio web."
+    }
+  }
+}

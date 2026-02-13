@@ -51,7 +51,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     alternates: {
       languages: {
         'en': `/research/${slug}`,
-        'ru': `/research/${slug}`,
+        'es': `/research/${slug}`,
       },
     },
   };

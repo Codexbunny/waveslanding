@@ -31,7 +31,7 @@ export async function generateMetadata(): Promise<Metadata> {
       canonical: 'https://waveslogix.space/services/account-management',
       languages: {
         'en': '/services/account-management',
-        'ru': '/services/account-management',
+        'es': '/services/account-management',
       },
     },
   };
