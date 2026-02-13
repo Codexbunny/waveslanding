@@ -2,6 +2,8 @@
 
 Modern landing page for Waves Logix - a professional Forex trading and account management agency.
 
+**Full website description:** [WEBSITE_SUMMARY.md](WEBSITE_SUMMARY.md) — structure, tech stack, routes, components, i18n, SEO, deployment.
+
 ## Features
 
 - 🎨 Modern, light design with purple accents and 3D liquid glass effects
